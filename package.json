@@ -1,7 +1,7 @@
 {
   "name": "i4ch-rebuild",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Getting Started",
   "main": "index.js",
   "dependencies": {
     "webpack-cli": "^3.2.3",
@@ -14,5 +14,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsymester/i4ch-rebuild.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nsymester/i4ch-rebuild/issues"
+  },
+  "homepage": "https://github.com/nsymester/i4ch-rebuild#readme"
 }
