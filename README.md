@@ -11,7 +11,7 @@ $ npm install
 ### To run on a local server
 
 ```bash
-$ npm run start
+$ npm run dev
 ```
 
 Then enter **http://localhost:3000** in a web browser
@@ -71,3 +71,15 @@ These files are organised according to the ITCSS (Inverted Triangle CSS) Archite
 ```
 
 The top layer of the triangle, **Settings**, contains the most generic styles and as you progress downwards the styles become more and more specific ending with **Overrides**.
+
+## Styling
+
+Command line styling
+
+`npx prettier --write "**/*.js"`
+
+`npx prettier --write "**/*.json"`
+
+Accessibility testing
+
+`npm run pally`
