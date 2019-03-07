@@ -11,7 +11,7 @@ $ npm install
 ### To run on a local server
 
 ```bash
-$ npm run dev
+$ npm run start
 ```
 
 Then enter **http://localhost:3000** in a web browser
@@ -24,10 +24,9 @@ $ npm run build
 
 ## Tests
 
-For the stylelint use either:
-
-- stylelint-config-recommended or
-- stylelint-config-standard
+```bash
+$ npm run test
+```
 
 ## Build
 
@@ -73,6 +72,10 @@ These files are organised according to the ITCSS (Inverted Triangle CSS) Archite
 The top layer of the triangle, **Settings**, contains the most generic styles and as you progress downwards the styles become more and more specific ending with **Overrides**.
 
 ## Styling
+
+Formatting
+
+`npm run format`
 
 Command line styling
 
