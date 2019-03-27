@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="tab-container">
+    <div class="nav nav-tabs">
+      <button class="nav-link nav-link__car active" href="#" data-vehicle="car">
+        <span class="nav-badge nav-badge--car"></span>Car
+      </button>
+      <button class="nav-link nav-link__van" href="#" data-vehicle="van">
+        <span class="nav-badge nav-badge--van"></span>Van
+      </button>
+    </div>
+    <div class="inner">
+      <div class="tab tab-car">
+        <h2>Which Cover is best for me?</h2>
+        <div class="form-group">
+          <label class="form-control-label mt-2" for=""
+            >What kind of cover do you need?</label
+          >
+          <div class="form-check-flex">
+            <div
+              class="custom-control icon-radio form-check-inline radio-button-box"
+            >
+              <input
+                class="custom-control-input radio-button-box__input"
+                type="radio"
+                name="trip"
+                id="trip-single"
+                value="Sinlge"
+                required=""
+              />
+              <label
+                class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+                for="trip-single"
+                ><span>Single Trip</span></label
+              >
+              <div class="invalid-feedback">
+                Please select number of trips.
+              </div>
+            </div>
+
+            <div
+              class="custom-control icon-radio form-check-inline radio-button-box"
+            >
+              <input
+                class="custom-control-input radio-button-box__input"
+                type="radio"
+                name="trip"
+                id="trip-multi"
+                value="Multi"
+                required=""
+              />
+              <label
+                class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+                for="trip-multi"
+                ><span>Multi Trip</span></label
+              >
+            </div>
+            <!-- form-check -->
+          </div>
+
+          <!-- form-check -->
+        </div>
+        <!--//.form-group-->
+        <div class="form-group">
+          <button
+            class="btn btn-cta btn--block"
+            type="submit"
+            data-href="other.html"
+          >
+            View Cover Options
+          </button>
+        </div>
+        <!--//.form-group-->
+        <div class="media media-warning">
+          <img
+            class="media-image"
+            src="../images/warning.png"
+            alt="Generic placeholder image"
+          />
+          <div class="media-body">
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+            scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
+            vulputate fringilla. Donec lacinia congue felis in faucibus.
+          </div>
+        </div>
+        <!--//.media-warning-->
+      </div>
+      <!--//.tab-car-->
+      <div class="tab tab-van">
+        <h2>Which Cover is best for me?</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+          repellat, illum error vero sed distinctio itaque cum a aperiam quam
+          deleniti accusamus dolor dicta earum ullam laudantium quos! Eligendi,
+          itaque.
+        </p>
+      </div>
+      <!--//.tab-van-->
+    </div>
+    <!--//.inner-->
+  </div>
+</div>
+<!--//.tab-container-->

@@ -1,6 +1,41 @@
 /**
-  * @desc layout and positioning styles, 
+  * @desc layout and positioning styles,
           includes layout and positioning styles,
           contains business logic
   * @author Neil Symester neil.symester@towergate.co.uk
   */
+
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .container {
+//     width: 750px;
+//   }
+// }
+
+/* -------------------------------------------------------------------------
+ Section
+---------------------------------------------------------------------------- */
+/**
+ * Section layout styles.
+ */
+section,
+footer {
+  margin-bottom: 50px;
+}
+
+.articles {
+  margin-bottom: 80px;
+}
+
+.trust {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 50px 40px;
+}

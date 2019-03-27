@@ -1,0 +1,54 @@
+<form>
+  <fieldset>
+    <legend>Form Fields Custom</legend>
+
+    <div class="form-group">
+      <label class="form-control-label mt-2" for=""
+        >What kind of cover do you need?</label
+      >
+      <div class="form-check-flex">
+        <div
+          class="custom-control icon-radio form-check-inline radio-button-box"
+        >
+          <input
+            class="custom-control-input radio-button-box__input"
+            type="radio"
+            name="journey"
+            id="journey-single"
+            value="Sinlge"
+            required=""
+          />
+          <label
+            class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+            for="journey-single"
+            ><span>Single Trip</span></label
+          >
+          <div class="invalid-feedback">
+            Please select number of trips.
+          </div>
+        </div>
+
+        <div
+          class="custom-control icon-radio form-check-inline radio-button-box"
+        >
+          <input
+            class="custom-control-input radio-button-box__input"
+            type="radio"
+            name="journey"
+            id="journey-multi"
+            value="Multi"
+            required=""
+          />
+          <label
+            class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+            for="journey-multi"
+            ><span>Multi Trip</span></label
+          >
+        </div>
+        <!-- form-check -->
+      </div>
+
+      <!-- form-check -->
+    </div>
+  </fieldset>
+</form>

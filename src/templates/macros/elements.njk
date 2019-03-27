@@ -1,0 +1,55 @@
+{# All files to be processed must live inside the template directory.
+    This is because the environment was set to 'src/templates'
+   #}
+
+{% macro renderTitleFromPath(pPath, parent) %}
+  {# $unwantedChars = array("/", "-", "_", "."); #}
+  {% set filename = pPath | replace(".html","") | replace(".","-") | replace("/","-") | replace("_","-") %}
+  {% set id = pPath | replace(".","-") | replace("/","-") | replace("_","-") %}
+
+  {% if parent != '' %}
+    <{{parent}} id="sg-{{id}}" class="sg-{{parent}} sg-title">{{filename}}</{{parent}}>
+  {% else %}
+    <a href="#sg-{{id}}"> {{filename}}</a>
+  {% endif %}
+{% endmacro %}
+
+{% macro renderFile(pPath, pDirectoryName) %}
+  <div class="sg-section">
+    {{ renderTitleFromPath(pPath, 'h2') }}
+    {{ renderFileDoc(pPath, pDirectoryName) }}
+    {{ renderFileExample(pPath, pDirectoryName) }}
+    {{ renderFileSource(pPath, pDirectoryName) }}
+  </div>
+{% endmacro %}
+
+{%- macro renderFileDoc(pPath, pDirectoryName) %}
+  {% set doc = "./doc/" + pDirectoryName + "/" + pPath | replace(".html",".md") %}
+  <div class="sg-sub-section sg-doc">
+    <div class="markdown-body">
+      {%- markdown doc -%}
+    </div>
+  </div>
+{% endmacro -%}
+
+{% macro renderFileExample(pPath, pDirectoryName) %}
+  {% set doc = "../markup/" + pDirectoryName + "/" + pPath %}
+  <div class="sg-sub-section sg-example">
+    <h3 class="sg-h3 sg-title">Example</h3>
+    {%- include doc -%}
+  </div>
+{% endmacro %}
+
+{%- macro renderFileSource(pPath, pDirectoryName) %}
+  {% set doc = "./markup/" + pDirectoryName + "/" + pPath %}
+  <div class="sg-sub-section">
+    <div class="sg-markup-controls">
+      <button type="button" class="sg-btn sg-btn--source">View Source</button>
+      <a class="sg-btn--top" href="#top">Back to Top</a>
+    </div>
+    <div class="sg-source">
+      <button type="button" class="sg-btn sg-btn--select">Copy Source</button>
+      <pre class="line-numbers"><code class="language-markup">{%- markdown doc -%}</code></pre>
+    </div>
+  </div>
+{% endmacro -%}
