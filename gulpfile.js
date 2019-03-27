@@ -144,7 +144,7 @@ gulp.task('pages', function() {
   // - for MAC OS X use 'Google Chrome'
   var browser = isWin ? 'Chrome' : 'Google Chrome';
   browserSync.init({
-    injectChanges: true,
+    // injectChanges: true,
     server: {
       baseDir: './dist'
     },
