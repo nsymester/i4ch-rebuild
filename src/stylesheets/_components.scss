@@ -356,7 +356,7 @@ label.form-control-label {
     }
   }
 
-  &-tab--disabled {
+  &-cta--disabled {
     color: $white;
     background-color: $lightGrayishBlue;
     border: 2px solid $lightGrayishBlue;
@@ -372,6 +372,7 @@ label.form-control-label {
 
     &:hover,
     &:focus {
+      color: $white;
       //box-shadow: 0 0 0 0.1rem $darkCyan
     }
   }
@@ -1133,6 +1134,45 @@ footer {
 .video {
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+/* -------------------------------------------------------------------------
+ Help icon
+---------------------------------------------------------------------------- */
+/**
+ * Help icon styles.
+ */
+.help-tip {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  text-align: left;
+  padding: 0px 7px;
+  margin: 0;
+  background-color: white;
+  border-radius: 20px;
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 39px;
+  cursor: pointer;
+  box-shadow: 1px 1px 12px 1px $darkGrey;
+
+  span {
+    padding-left: 5px;
+    vertical-align: top;
+  }
+
+  &:before {
+    content: '?';
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin: 0;
+  }
 }
 
 /* -------------------------------------------------------------------------
