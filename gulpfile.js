@@ -26,12 +26,8 @@ const $ = require('gulp-load-plugins')({
   rename: {
     'gulp-strip-debug': 'stripdebug',
     'gulp-nunjucks': 'gulpnunjucks',
-    'run-sequence': 'runSequence',
-    'vinyl-source-stream': 'source',
-    'vinyl-buffer': 'buffer',
-    'event-stream': 'es',
     'nunjucks-markdown': 'markdown',
-    gulplog: 'log',
+    'fancy-log': 'log',
     'lodash.assign': 'assign'
   },
   scope: ['devDependencies']
@@ -55,8 +51,7 @@ var sassOptions = {
 var isWatching = true;
 
 var onError = function(err) {
-  // $.gutil.beep();
-  console.log(err);
+  $.log.error(err);
 };
 
 // fetch command line arguments
@@ -160,7 +155,7 @@ gulp.task('css', function() {
   var postCssOpts = [$.autoprefixer({ browsers: ['last 2 versions', '> 2%'] })];
 
   if (!devBuild) {
-    console.log('css build ', devBuild);
+    $.log.info('css build ', devBuild);
     sassOptions.style = 'compressed';
     sassOptions.comments = false;
   }
@@ -179,7 +174,7 @@ gulp.task('css', function() {
         sourceComments: false,
         imagePath: 'images/',
         errLogToConsole: true
-      }).on('error', $.util.log)
+      }).on('error', $.log)
     )
     .pipe($.postcss(postCssOpts))
     .pipe(
@@ -202,7 +197,7 @@ gulp.task('js', function() {
   let files = ['./src/scripts/index.js', './src/scripts/application.js'];
 
   // start fresh
-  $.del.sync(['/build/js/application.bundle.js', 'index.bundle.js']);
+  $.del.sync(['/dist/js/application.bundle.js', 'index.bundle.js']);
 
   var tasks = files.map(function(entry) {
     var bundler = $.browserify({
@@ -218,7 +213,7 @@ gulp.task('js', function() {
           .bundle() // Start bundle
           .on('error', function(err) {
             // print the error (can replace with gulp-util)
-            console.log(err.message);
+            $.log.error(err.message);
             // end this stream
             this.emit('end');
           })
@@ -230,7 +225,7 @@ gulp.task('js', function() {
               extname: '.bundle.js' // Output file
             })
           )
-          .pipe(gulp.dest('build/js')) // Output path
+          .pipe(gulp.dest('dist/js')) // Output path
           .pipe(
             reload({
               stream: true,

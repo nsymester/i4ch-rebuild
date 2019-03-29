@@ -39,24 +39,30 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 32px;
+  color: $mainTextColour;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 28px;
+  color: $mainTextColour;
 }
 
 h3 {
   font-size: 25px;
+  color: $mainTextColour;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 21px;
+  color: $mainTextColour;
 }
 
 label {
   display: inline-block;
-  margin-bottom: calc($base-fontSize * 0.5);
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 /* -------------------------------------------------------------------------
