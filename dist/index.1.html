@@ -1,0 +1,554 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,900|Oswald:400,700"
+      rel="stylesheet"
+    />
+
+    <title>Insurance 4 Car Hire</title>
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+    <!-- Custom -->
+    <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+<body role="document">
+
+
+
+
+<div class="container-fluid">
+   <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle"
+          id="js-navbar-toggle"
+          class="navbar-toggle"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <picture class="logo">
+            <source
+              class="logo__mobile"
+              media="(min-width: 576px)"
+              srcset="./images/logo.png"
+            />
+            <img
+              src="./images/logo.png"
+              class="img-fluid logo"
+              alt="Insurance 4 Car Hire"
+            />
+          </picture>
+        </a>
+      </div>
+      <!--//.navbar-header-->
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" id="js-menu">
+          <li class="active"><a href="#">Car Hire Excess Insurance</a></li>
+          <li><a href="#">Van Hire Excess Insurance</a></li>
+          <li><a href="#">Claims</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="#"
+              ><span class="sr-only">Account</span
+              ><img
+                class="person-icon"
+                src="images/person-icon.png"
+                alt="Account icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!--//.nav-collapse -->
+    </div>
+    <!--//.container-fluid -->
+  </nav>
+  <!--//.navbar -->
+</div>
+<div class="container grid">
+  <section class="hero">
+    <div class="tab-container">
+
+  <div class="nav nav-tabs">
+    <button class="nav-link nav-link__car active" href="#" data-vehicle="car">
+      <span class="nav-badge nav-badge--car"></span>Car
+    </button>
+    <button class="nav-link nav-link__van" href="#" data-vehicle="van">
+      <span class="nav-badge nav-badge--van"></span>Van
+    </button>
+  </div>
+  <div class="inner">
+    <div class="tab tab-car">
+      <h2>Which Cover is best for me?</h2>
+      <div class="form-group">
+        <label class="form-control-label mt-2" for=""
+          >What kind of cover do you need?</label
+        >
+        <div class="form-check-flex">
+          <div
+            class="custom-control icon-radio form-check-inline radio-button-box"
+          >
+            <input
+              class="custom-control-input radio-button-box__input"
+              type="radio"
+              name="trip"
+              id="trip-single"
+              value="Sinlge"
+              required=""
+            />
+            <label
+              class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+              for="trip-single"
+              ><span>Single Trip</span></label
+            >
+            <div class="invalid-feedback">
+              Please select number of trips.
+            </div>
+          </div>
+
+          <div
+            class="custom-control icon-radio form-check-inline radio-button-box"
+          >
+            <input
+              class="custom-control-input radio-button-box__input"
+              type="radio"
+              name="trip"
+              id="trip-multi"
+              value="Multi"
+              required=""
+            />
+            <label
+              class="custom-control-label form-check-label radio-button-box__label radio-button-box__label--single-line"
+              for="trip-multi"
+              ><span>Multi Trip</span></label
+            >
+          </div>
+          <!-- form-check -->
+        </div>
+
+        <!-- form-check -->
+      </div>
+      <!--//.form-group-->
+      <div class="form-group">
+        <button
+          class="btn btn-cta--disabled btn--block"
+          type="submit"
+          data-href="other.html"
+        >
+          View Cover Options
+        </button>
+      </div>
+      <!--//.form-group-->
+      <div class="media media-warning">
+        <img
+          class="media-image"
+          src="../images/warning.png"
+          alt="Generic placeholder image"
+        />
+        <div class="media-body">
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+          scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+          vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
+          vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </div>
+      <!--//.media-warning-->
+    </div>
+    <!--//.tab-car-->
+    <div class="tab tab-van">
+      <h2>Which Cover is best for me?</h2>
+      <div class="form-group">
+        <label for="vanCoverDays">How many days do you need van cover for?</label>
+        <div class="custom-select">
+          <select id="vanCoverDays" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <!--//.form-group-->
+      <div class="form-group">
+        <label for="vanTerritory">What territory is your van hire for?</label>
+        <div class="custom-select">
+          <select id="vanTerritory" class="form-control">
+            <option value="europe">Europe</option>
+            <option value="worldwide">Worldwide</option>
+          </select>
+        </div>
+      </div>
+      <!--//.form-group-->
+      <div class="form-group">
+        <button
+          class="btn btn-cta btn--block"
+          type="submit"
+          data-href="other.html"
+        >
+          View Cover Options
+        </button>
+      </div>
+      <!--//.form-group-->
+
+    </div>
+    <!--//.tab-van-->
+  </div><!--//.inner -->
+</div><!--//.tab-container--> <div class="info-box">
+  <h2>How does Excess Insurance work?</h2>
+  <ul class="info-steps">
+    <li class="info-step-item"><div class="info-step-block"><p>1.</p><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></div? </li>
+      <li class="info-step-item"><div class="info-step-block"><p>2.</p><p>sit amet consectetur adipisicing elit.</p></div> </li>
+    <li class="info-step-item"><div class="info-step-block"><p>3.</p><p>Id tenetur quibusdam blanditiis eius aliquam dolorem eaque dicta</p></div></li>
+  </ul>
+  <button
+  class="btn btn-info btn--block"
+  type="submit"
+  data-href="other.html"
+  >
+  More Information
+  </button>
+</div>
+  </section>
+  <!--//.hero-->
+
+  <section class="reviews">
+        <div
+      id="feefo-service-review-carousel-widgetId"
+      class="feefo-review-carousel-widget-service"
+    ></div>
+  </section>
+
+  <section class="excess">
+    <h2>What is Excess Insurance?</h2>
+
+    <p>
+      Car hire companies often charge an excess for damage caused to the car
+      whilst you're behind the wheel even if it's not your fault. This can be
+      upwards of £1000, meaning that if you're involved in an accident, you'll
+      have to pay a contribution to cover the damage.
+    </p>
+    <p>
+      With an annual car hire insurance policy from insurance4carhire, you're
+      able to reclaim the excess you’d have to pay in the unfortunate event of
+      an accident or your car being stolen.
+    </p>
+
+    <iframe
+      class="video"
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/wjGjQSrJyvI"
+    ></iframe>
+
+    <img
+      class="img-responsive excess-image"
+      src="./images/excess-insurance.jpg"
+      alt="Samller Section Image size"
+    />
+  </section>
+
+  <section class="cover">
+    <h2>What do we cover?</h2>
+
+    <ul class="std-list">
+      <li>Drivers between the ages of 18 and 85</li>
+      <li>
+        Drivers who are residents of*:<br />France, Germany, Ireland, Italy,
+        Netherlands, Spain, Sweden, UK
+      </li>
+      <li>Trips up to 60 days in-a-row</li>
+      <li>
+        As well as excess cover, we also offer Collision Damage Waiver (CDW) and
+        Supplemental Liability Insurance (SLI). Altough many car rental
+        companies automatically include these covers in their car rental
+        insurance, some don’t - so it’s important to chek the terms of your car
+        rental agreement.
+      </li>
+    </ul>
+  </section>
+
+  <section class="drive">
+    <h2>Where can I drive?</h2>
+<div class="dropdown dropdown--car">
+    <button
+    class="btn btn-default dropdown-toggle btn-car"
+    type="button"
+    id="dropdownMenu1"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="true"
+  >
+    Car
+    <span class="down-arrow"></span>
+  </button>
+  <ul
+    class="dropdown-menu dropdown-menu--block"
+    aria-labelledby="dropdownMenu1"
+  >
+    <li><a href="#">Europe Annual</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Worldwide Single Trip</a></li>
+    <li><a href="#">Worldwide Annual</a></li>
+    <li><a href="#">Annual Plus CDW & SLI</a></li>
+  </ul>
+</div>
+<button class="btn btn-default btn-van">Van <span class="right-arrow"></span></button>
+  </section>
+
+  <section class="comparison">
+    <div class="inner">
+      <img
+        class="scale-icon img-responsive"
+        src="./images/scale-icon.png"
+        alt="Comparison image"
+      />
+      <p>
+        Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
+        assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="articles">
+    <h2>Releated Articles</h2>
+
+<div class="card card-article">
+  <img
+    class="card-img-top img-responsive"
+    data-src="article-img-sample-1.jpg"
+    alt="286%x180"
+    src="./images/article-img-sample-1.jpg"
+    data-holder-rendered="true"
+  />
+    <h3 class="card-title">Card title</h3>
+    <div class="card-body">
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="">View article</a>
+    </div>
+  </div>
+  <!--//.card-->
+
+  <div class="card card-article">
+    <img
+      class="card-img-top img-responsive"
+      data-src="./images/article-img-sample-2.jpg"
+      alt="286%x180"
+      src="./images/article-img-sample-2.jpg"
+      data-holder-rendered="true"
+    />
+    <h3 class="card-title">Card title</h3>
+    <div class="card-body">
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="">View article</a>
+    </div>
+  </div>
+  <!--//.card-->
+
+  <div class="card card-article">
+    <img
+      class="card-img-top img-responsive"
+      data-src="./images/article-img-sample-3.jpg"
+      alt="286%x180"
+      src="./images/article-img-sample-3.jpg"
+      data-holder-rendered="true"
+    />
+    <h3 class="card-title">Card title</h3>
+    <div class="card-body">
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <a href="#" class="">View article</a>
+    </div>
+  </div>
+  <!--//.card-->
+
+  <button
+  class="btn btn-default btn--block"
+  type="submit"
+  data-href="other.html"
+>
+  More Articles</span>
+</button>
+  </section>
+
+  <section class="trust">
+    <div class="card card-info">
+  <img
+    class="card-img-top"
+    alt="91x91"
+    style="height: 91px; width: 91px; display: block;"
+    src="../images/help-icon.png"
+    data-holder-rendered="true"
+  />
+  <h3 class="card-title">Help</h3>
+  <div class="card-body">
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+  </div>
+</div>
+<!--//.card-->
+<div class="card card-info">
+  <img
+    class="card-img-top"
+    alt="91x91"
+    style="height: 91px; width: 91px; display: block;"
+    src="../images/payment-icon.png"
+    data-holder-rendered="true"
+  />
+  <h3 class="card-title">Payment</h3>
+  <div class="card-body">
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+  </div>
+</div>
+<!--//.card-->
+<div class="card card-info">
+  <img
+    class="card-img-top"
+    alt="91x91"
+    style="height: 91px; width: 91px; display: block;"
+    src="../images/security-icon.png"
+    data-holder-rendered="true"
+  />
+  <h3 class="card-title">Security</h3>
+  <div class="card-body">
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+  </div>
+</div>
+<!--//.card-->
+<div class="card card-info">
+  <img
+    class="card-img-top"
+    alt="91x91"
+    style="height: 91px; width: 91px; display: block;"
+    src="../images/faqs-icon.png"
+    data-holder-rendered="true"
+  />
+  <h3 class="card-title">FAQs</h3>
+  <div class="card-body">
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the
+      bulk of the card's content.
+    </p>
+  </div>
+</div>
+<!--//.card-->
+
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.reviews-->
+  <footer>
+    <ul class="footer-list">
+  <li><a href="">About Us</a></li>
+  <li><a href="">Who are we?</a></li>
+  <li><a href="">What do we do?</a></li>
+  <li><a href="">Product Comparison</a></li>
+</ul>
+
+<ul class="footer-list">
+  <li><a href="">Regulatory Information</a></li>
+  <li><a href="">Fair Processing Notice</a></li>
+  <li><a href="">Modern Slavery Act Statement</a></li>
+  <li><a href="">Other Regulations</a></li>
+</ul>
+
+<ul class="footer-list">
+  <li><a href="">FAQs</a></li>
+</ul>
+
+<ul class="footer-list">
+  <li><a href="">Contact Us</a></li>
+</ul>
+
+<div class="social-icons">
+  <!-- <ul>
+  <li><a href="" class="facebook-icon">Facebook</a></li>
+  <li><a href="" class="twitter-icon">Twitter</a></li>
+  <li><a href="" class="instagram-icon">Instagram</a></li>
+</ul> -->
+
+  <a href=""><i class="facebook icon">Facebook</i></a>
+  <a href=""><i class="twitter icon">Twitter</i></a>
+  <a href=""><i class="instagram icon">Instagram</i></a>
+</div>
+
+  </footer>
+
+     <button class="help-tip">
+    <span>Help</span>
+  </button>
+</div>
+<!--//.container-->
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="/js/index.bundle.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+
+<script src="//api.feefo.com/api/javascript/insurance4carhire" aync></script>
+
+
+
+</body>
+</html>
+

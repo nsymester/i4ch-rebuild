@@ -28,7 +28,9 @@ const $ = require('gulp-load-plugins')({
     'gulp-nunjucks': 'gulpnunjucks',
     'nunjucks-markdown': 'markdown',
     'fancy-log': 'log',
-    'lodash.assign': 'assign'
+    'lodash.assign': 'assign',
+    'vinyl-source-stream': 'source',
+    'event-stream': 'es'
   },
   scope: ['devDependencies']
 });

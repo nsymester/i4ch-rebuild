@@ -28,32 +28,42 @@ audio {
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   font-family: Oswald, Times, 'Times New Roman', serif;
   font-weight: bold;
   margin-top: 0;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: 32px;
   color: $mainTextColour;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 28px;
   color: $mainTextColour;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: 25px;
   color: $mainTextColour;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 21px;
   color: $mainTextColour;
 }
@@ -72,7 +82,9 @@ label {
  * Standard List styles for home page.
  */
 
-.std-list {
+.std-list,
+.tick-list,
+.cross-list {
   padding-left: 0;
 
   li {
@@ -92,5 +104,37 @@ label {
 
   &--alt {
     padding-left: 20px;
+  }
+}
+
+.tick-list,
+.cross-list {
+  padding-left: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid $darkGrey;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  li {
+    margin: 0 0px 30px 0px;
+    position: relative;
+    padding-left: 25px;
+
+    &:before {
+      content: url(../images/check.png);
+      margin-right: 15px;
+      position: absolute;
+    }
+  }
+}
+
+.cross-list {
+  li {
+    &:before {
+      content: url(../images/cross.png);
+      top: 5px;
+    }
   }
 }

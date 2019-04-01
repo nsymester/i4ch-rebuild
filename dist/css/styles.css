@@ -385,28 +385,38 @@ audio {
   max-width: 100%; }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   font-family: Oswald, Times, 'Times New Roman', serif;
   font-weight: bold;
   margin-top: 0; }
 
-h1 {
+h1,
+.h1 {
   font-size: 32px;
   color: #3b424d; }
 
-h2 {
+h2,
+.h2 {
   font-size: 28px;
   color: #3b424d; }
 
-h3 {
+h3,
+.h3 {
   font-size: 25px;
   color: #3b424d; }
 
-h4 {
+h4,
+.h4 {
   font-size: 21px;
   color: #3b424d; }
 
@@ -422,12 +432,18 @@ label {
 /**
  * Standard List styles for home page.
  */
-.std-list {
+.std-list,
+.tick-list,
+.cross-list {
   padding-left: 0; }
-  .std-list li {
+  .std-list li,
+  .tick-list li,
+  .cross-list li {
     list-style: none;
     margin: 0 0 30px 15px; }
-    .std-list li:before {
+    .std-list li:before,
+    .tick-list li:before,
+    .cross-list li:before {
       content: '\25CF';
       color: #01dbab;
       position: relative;
@@ -435,8 +451,33 @@ label {
       left: -5px;
       padding: 0;
       margin-left: -10px; }
-  .std-list--alt {
+  .std-list--alt,
+  .tick-list--alt,
+  .cross-list--alt {
     padding-left: 20px; }
+
+.tick-list,
+.cross-list {
+  padding-left: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid #b7b7b7; }
+  .tick-list:last-child,
+  .cross-list:last-child {
+    border-bottom: none; }
+  .tick-list li,
+  .cross-list li {
+    margin: 0 0px 30px 0px;
+    position: relative;
+    padding-left: 25px; }
+    .tick-list li:before,
+    .cross-list li:before {
+      content: url(../images/check.png);
+      margin-right: 15px;
+      position: absolute; }
+
+.cross-list li:before {
+  content: url(../images/cross.png);
+  top: 5px; }
 
 /* @group objects */
 /**
@@ -987,7 +1028,7 @@ label.form-control-label {
   border-radius: 5px;
   max-width: 535px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   /* info steps */ }
   .info-box h2 {
     color: white;
@@ -1043,6 +1084,27 @@ label.form-control-label {
       padding-left: 10px;
       color: white; }
 
+.policy-summary h3 {
+  color: white;
+  margin-bottom: 20px; }
+
+.policy-summary dl {
+  display: block; }
+  .policy-summary dl dt,
+  .policy-summary dl dd {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: normal; }
+  .policy-summary dl dt {
+    color: #01dbab;
+    float: left; }
+  .policy-summary dl dd {
+    text-align: right; }
+
+.policy-summary .btn-cta {
+  margin-bottom: 0; }
+
 /* -------------------------------------------------------------------------
  Standard Card
 ---------------------------------------------------------------------------- */
@@ -1068,7 +1130,8 @@ label.form-control-label {
   width: 100%;
   padding: 30px 15px 0 15px;
   -webkit-box-shadow: 0 2px 12px 2px #e7e8ed;
-          box-shadow: 0 2px 12px 2px #e7e8ed; }
+          box-shadow: 0 2px 12px 2px #e7e8ed;
+  margin-bottom: 15px; }
   .card-img-top {
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
@@ -1094,8 +1157,7 @@ label.form-control-label {
   border-radius: 0;
   padding: 1px;
   -webkit-box-shadow: none;
-          box-shadow: none;
-  margin-bottom: 15px; }
+          box-shadow: none; }
   .card-article .card-title {
     text-align: left;
     padding-left: 15px;
@@ -1109,6 +1171,19 @@ label.form-control-label {
     margin-top: 0; }
   .card-article:nth-child(4) {
     margin-bottom: 30px; }
+
+.card-cover-option .card-title {
+  text-align: left;
+  margin-bottom: 20px; }
+
+.card-cover-option .card-price {
+  color: #01866b;
+  font-family: Oswald;
+  font-size: 26px;
+  font-weight: bold; }
+
+.card-cover-option.active {
+  border: 3px solid #01dbab; }
 
 /* -------------------------------------------------------------------------
  Card Info
@@ -1464,7 +1539,8 @@ footer {
   line-height: 39px;
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 12px 1px #b7b7b7;
-          box-shadow: 1px 1px 12px 1px #b7b7b7; }
+          box-shadow: 1px 1px 12px 1px #b7b7b7;
+  border: 0; }
   .help-tip span {
     padding-left: 5px;
     vertical-align: top; }
@@ -1477,6 +1553,56 @@ footer {
     border-radius: 50%;
     padding: 2px 8px;
     margin: 0; }
+
+/* -------------------------------------------------------------------------
+ Accordion
+---------------------------------------------------------------------------- */
+/**
+ * Accordion styles.
+ */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the accordion panel. Note: hidden by default */ }
+  .accordion .accordion-btn {
+    background-color: #023742;
+    color: white;
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    position: relative;
+    border-top: 1px solid white; }
+    .accordion .accordion-btn:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      margin-top: -2.1px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-top-color: #18d9ac; }
+  .accordion .active:after {
+    content: '';
+    border-top-color: transparent;
+    margin-top: -12px;
+    border-bottom-color: #18d9ac; }
+  .accordion accordion-btn:hover {
+    background-color: #ccc; }
+  .accordion .accordion-panel {
+    padding: 0;
+    background-color: #023742;
+    max-height: 0;
+    overflow: hidden;
+    color: white;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out; }
 
 /* -------------------------------------------------------------------------
  Section

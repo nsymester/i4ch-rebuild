@@ -47,7 +47,9 @@ function ScrollToTop() {
   const backToTopBtn = document.querySelector('.js-back-to-top');
 
   // Bind Events
-  backToTopBtn.addEventListener('click', backToTopBtnHandler);
+  if (backToTopBtn != null) {
+    backToTopBtn.addEventListener('click', backToTopBtnHandler);
+  }
 
   // Event Handlers
   function backToTopBtnHandler(evt) {
