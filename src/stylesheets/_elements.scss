@@ -75,6 +75,11 @@ label {
   font-weight: normal;
 }
 
+.sub-title {
+  color: $lightText;
+  font-family: Oswald;
+}
+
 /* -------------------------------------------------------------------------
  Standard List
 ---------------------------------------------------------------------------- */
@@ -126,6 +131,14 @@ label {
       content: url(../images/check.png);
       margin-right: 15px;
       position: absolute;
+    }
+  }
+}
+
+.tick-list.blue-tick {
+  li {
+    &:before {
+      content: url(../images/check-blue.png);
     }
   }
 }

@@ -1,0 +1,83 @@
+{% block header %} {% import './macros/header.njk' as header %}
+{{ header.styles('/css/styles.css') }}
+{% endblock %}
+
+<div class="container-fluid">
+  {% include "./partials/nav.njk" %}
+</div>
+<div class="container grid">
+  <section class="product-hero">
+    <h1 class="has-sub-title">Annual Worldwide</h1>
+    <p class="sub-title">Car Hire Excess Insurance</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.</p>
+
+      <div class="price-and-btn">
+        <p class="price">£99.99</p>
+        <button class="btn btn-cta btn--block">
+          Buy Now
+        </button>
+      </div>
+  </section>
+
+  <section class="product-about row">
+    <h2>About Annual Worldwide</h2>
+    <div class="inner">
+      {% include "./partials/included-excluded.njk" %}
+    </div>
+  </section>
+  <!--//.product-about-->
+
+  <section class="policy-info">
+    {% include "./partials/policy-info.njk" %}
+  </section>
+
+  <section class="comparison row">
+    <div class="inner">
+      <img
+        class="scale-icon img-responsive"
+        src="./images/scale-icon.png"
+        alt="Comparison image"
+      />
+      <p>
+        Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
+        assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="reviews">
+    {% include "./partials/reviews.njk" %}
+  </section>
+  <!--//.reviews-->
+
+  <section class="articles bg-grey row">
+    {% include "./partials/articles.njk" %}
+  </section>
+  <!--//.articles-->
+
+  <section class="trust row">
+    {% include "./partials/trust-box.njk" %}
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.trust-->
+
+  <footer class="row">
+    {% include './partials/links.njk' %}
+  </footer>
+
+  {% include './partials/help-icon.njk' %}
+</div>
+<!--//.container-->
+
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}

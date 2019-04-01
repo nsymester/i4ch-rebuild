@@ -143,6 +143,18 @@
   
 
   
+    <a href="#sg-lists-html"> lists</a>
+  
+
+          </li>
+            
+          <li>
+            
+  
+  
+  
+
+  
     <a href="#sg-media-html"> media</a>
   
 
@@ -156,18 +168,6 @@
 
   
     <a href="#sg-sample-content-block-html"> sample-content-block</a>
-  
-
-          </li>
-            
-          <li>
-            
-  
-  
-  
-
-  
-    <a href="#sg-std-list-html"> std-list</a>
   
 
           </li>
@@ -673,10 +673,18 @@
       <button class="btn btn-default btn-van">Van <span class="right-arrow"></span></button>
     </div>
 
+    <div class="form-group">
+      <div class="price-and-btn">
+        <p class="price">£99.99</p>
+        <button class="btn btn-cta btn--block">
+          Buy Now
+        </button>
+      </div>
+    </div>
+
     <button class="help-tip" style="position:static;">
       <span>Help</span>
     </button>
-
   </fieldset>
 </form>
 </div>
@@ -744,6 +752,15 @@
 
 &lt;div class=&quot;form-group&quot;&gt;
   &lt;button class=&quot;btn btn-default btn-van&quot;&gt;Van &lt;span class=&quot;right-arrow&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;price-and-btn&quot;&gt;
+    &lt;p class=&quot;price&quot;&gt;£99.99&lt;/p&gt;
+    &lt;button class=&quot;btn btn-cta btn--block&quot;&gt;
+      Buy Now
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;button class=&quot;help-tip&quot; style=&quot;position:static;&quot;&gt;
@@ -1046,6 +1063,111 @@
   
 
   
+    <h2 id="sg-lists-html" class="sg-h2 sg-title">lists</h2>
+  
+
+    
+  
+  <div class="sg-sub-section sg-doc">
+    <div class="markdown-body"><p>Has a vivid cyan bullet character by default.</p>
+</div>
+  </div>
+
+    
+  
+  <div class="sg-sub-section sg-example">
+    <h3 class="sg-h3 sg-title">Example</h3><h3>Standard list</h3>
+<ul class="std-list">
+  <li>Drivers between the ages of 18 and 85</li>
+  <li>Drivers who are residents of*:France, Germany, Ireland,</li>
+  <li>Trips up to 60 days in-a-row</li>
+  <li>As well as excess cover, we also offer Collision Damage Waive</li>
+</ul>
+
+<h3>Tick list</h3>
+<ul class="tick-list">
+  <li>Drivers between the ages of 18 and 85</li>
+  <li>Drivers who are residents of*:France, Germany, Ireland,</li>
+  <li>Trips up to 60 days in-a-row</li>
+  <li>As well as excess cover, we also offer Collision Damage Waive</li>
+</ul>
+
+<h3>Cross list</h3>
+<ul class="cross-list">
+  <li>Drivers between the ages of 18 and 85</li>
+  <li>Drivers who are residents of*:France, Germany, Ireland,</li>
+  <li>Trips up to 60 days in-a-row</li>
+  <li>As well as excess cover, we also offer Collision Damage Waive</li>
+</ul>
+
+<h3>Blue Tick list</h3>
+<ul class="tick-list blue-tick">
+  <li>Drivers between the ages of 18 and 85</li>
+  <li>Drivers who are residents of*:France, Germany, Ireland,</li>
+  <li>Trips up to 60 days in-a-row</li>
+  <li>As well as excess cover, we also offer Collision Damage Waive</li>
+</ul>
+</div>
+
+    
+  
+  <div class="sg-sub-section">
+    <div class="sg-markup-controls">
+      <button type="button" class="sg-btn sg-btn--source">View Source</button>
+      <a class="sg-btn--top" href="#top">Back to Top</a>
+    </div>
+    <div class="sg-source">
+      <button type="button" class="sg-btn sg-btn--select">Copy Source</button>
+      <pre class="line-numbers"><code class="language-markup"><p>&lt;h3&gt;Standard list&lt;/h3&gt;
+&lt;ul class=&quot;std-list&quot;&gt;
+  &lt;li&gt;Drivers between the ages of 18 and 85&lt;/li&gt;
+  &lt;li&gt;Drivers who are residents of*:France, Germany, Ireland,&lt;/li&gt;
+  &lt;li&gt;Trips up to 60 days in-a-row&lt;/li&gt;
+  &lt;li&gt;As well as excess cover, we also offer Collision Damage Waive&lt;/li&gt;
+&lt;/ul&gt;
+
+</p>
+<p>&lt;h3&gt;Tick list&lt;/h3&gt;
+&lt;ul class=&quot;tick-list&quot;&gt;
+  &lt;li&gt;Drivers between the ages of 18 and 85&lt;/li&gt;
+  &lt;li&gt;Drivers who are residents of*:France, Germany, Ireland,&lt;/li&gt;
+  &lt;li&gt;Trips up to 60 days in-a-row&lt;/li&gt;
+  &lt;li&gt;As well as excess cover, we also offer Collision Damage Waive&lt;/li&gt;
+&lt;/ul&gt;
+
+</p>
+<p>&lt;h3&gt;Cross list&lt;/h3&gt;
+&lt;ul class=&quot;cross-list&quot;&gt;
+  &lt;li&gt;Drivers between the ages of 18 and 85&lt;/li&gt;
+  &lt;li&gt;Drivers who are residents of*:France, Germany, Ireland,&lt;/li&gt;
+  &lt;li&gt;Trips up to 60 days in-a-row&lt;/li&gt;
+  &lt;li&gt;As well as excess cover, we also offer Collision Damage Waive&lt;/li&gt;
+&lt;/ul&gt;
+
+</p>
+<p>&lt;h3&gt;Blue Tick list&lt;/h3&gt;
+&lt;ul class=&quot;tick-list blue-tick&quot;&gt;
+  &lt;li&gt;Drivers between the ages of 18 and 85&lt;/li&gt;
+  &lt;li&gt;Drivers who are residents of*:France, Germany, Ireland,&lt;/li&gt;
+  &lt;li&gt;Trips up to 60 days in-a-row&lt;/li&gt;
+  &lt;li&gt;As well as excess cover, we also offer Collision Damage Waive&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+</code></pre>
+    </div>
+  </div>
+
+  </div>
+
+            
+            
+  <div class="sg-section">
+    
+  
+  
+  
+
+  
     <h2 id="sg-media-html" class="sg-h2 sg-title">media</h2>
   
 
@@ -1297,58 +1419,6 @@
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 &lt;/p&gt;
-</p>
-</code></pre>
-    </div>
-  </div>
-
-  </div>
-
-            
-            
-  <div class="sg-section">
-    
-  
-  
-  
-
-  
-    <h2 id="sg-std-list-html" class="sg-h2 sg-title">std-list</h2>
-  
-
-    
-  
-  <div class="sg-sub-section sg-doc">
-    <div class="markdown-body"><p>Has a vivid cyan bullet character by default.</p>
-</div>
-  </div>
-
-    
-  
-  <div class="sg-sub-section sg-example">
-    <h3 class="sg-h3 sg-title">Example</h3><ul class="std-list">
-  <li>Drivers between the ages of 18 and 85</li>
-  <li>Drivers who are residents of*:France, Germany, Ireland,</li>
-  <li>Trips up to 60 days in-a-row</li>
-  <li>As well as excess cover, we also offer Collision Damage Waive</li>
-</ul>
-</div>
-
-    
-  
-  <div class="sg-sub-section">
-    <div class="sg-markup-controls">
-      <button type="button" class="sg-btn sg-btn--source">View Source</button>
-      <a class="sg-btn--top" href="#top">Back to Top</a>
-    </div>
-    <div class="sg-source">
-      <button type="button" class="sg-btn sg-btn--select">Copy Source</button>
-      <pre class="line-numbers"><code class="language-markup"><p>&lt;ul class=&quot;std-list&quot;&gt;
-  &lt;li&gt;Drivers between the ages of 18 and 85&lt;/li&gt;
-  &lt;li&gt;Drivers who are residents of*:France, Germany, Ireland,&lt;/li&gt;
-  &lt;li&gt;Trips up to 60 days in-a-row&lt;/li&gt;
-  &lt;li&gt;As well as excess cover, we also offer Collision Damage Waive&lt;/li&gt;
-&lt;/ul&gt;
 </p>
 </code></pre>
     </div>

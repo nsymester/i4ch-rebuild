@@ -68,7 +68,7 @@
     {% include "./partials/where-can-i-drive.njk" %}
   </section>
 
-  <section class="comparison">
+  <section class="comparison row">
     <div class="inner">
       <img
         class="scale-icon img-responsive"
@@ -82,11 +82,11 @@
     </div>
   </section>
 
-  <section class="articles">
+  <section class="articles row">
     {% include "./partials/articles.njk" %}
   </section>
 
-  <section class="trust">
+  <section class="trust row">
     {% include "./partials/trust-box.njk" %}
 
     <button class="back-to-top js-back-to-top">
@@ -99,7 +99,7 @@
     </button>
   </section>
   <!--//.reviews-->
-  <footer>
+  <footer class="row">
     {% include './partials/links.njk' %}
   </footer>
 
@@ -107,9 +107,6 @@
 </div>
 <!--//.container-->
 
-{% block corejavascript %}
-{% include './partials/core-javascript.njk' %}
-{%endblock %}
-{% block footer %}
-{% include './partials/footer.njk' %}
-{% endblock %}
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}
