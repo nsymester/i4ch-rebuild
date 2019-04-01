@@ -13,6 +13,8 @@ function VehicleSelector() {
   function openVehicle(evt) {
     var i, x, tabButtons;
 
+    console.log(evt);
+
     // hide all tab contents
     x = document.querySelectorAll('.tab-container .tab');
     for (i = 0; i < x.length; i++) {
@@ -27,7 +29,7 @@ function VehicleSelector() {
 
     // highlight tab button and
     // show the selected tab content
-    vehicle = this.getAttribute('data-vehicle');
+    let vehicle = evt.currentTarget.getAttribute('data-vehicle');
     document.querySelector('.tab-' + vehicle).style.display = 'block';
     evt.currentTarget.className += ' active';
   }
