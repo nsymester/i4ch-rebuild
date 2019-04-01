@@ -21,24 +21,24 @@ function DropdownMenu() {
     let dropDown = carBtn.parentElement;
     // Bind events
     carBtn.addEventListener('click', carBtnHandler);
-  }
 
-  // Event handlers
-  function carBtnHandler(evt) {
-    evt.preventDefault();
-    evt.stopPropagation();
+    // Event handlers
+    function carBtnHandler(evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
 
-    // toggle display
-    if (
-      dropDownMenu.style.display === 'none' ||
-      dropDownMenu.style.display === ''
-    ) {
-      dropDownMenu.style.display = 'block';
-      dropDown.style.height =
-        dropDown.offsetHeight + dropDownMenu.offsetHeight + 'px';
-    } else {
-      dropDownMenu.style.display = 'none';
-      dropDown.style.height = 'auto';
+      // toggle display
+      if (
+        dropDownMenu.style.display === 'none' ||
+        dropDownMenu.style.display === ''
+      ) {
+        dropDownMenu.style.display = 'block';
+        dropDown.style.height =
+          dropDown.offsetHeight + dropDownMenu.offsetHeight + 'px';
+      } else {
+        dropDownMenu.style.display = 'none';
+        dropDown.style.height = 'auto';
+      }
     }
   }
 }
