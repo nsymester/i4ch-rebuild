@@ -27,3 +27,11 @@ $darkGreen: rgb(5, 55, 64); // #053740
 $lightGreen: rgb(24, 217, 172); // #18D9AC
 $mainGreen: rgb(15, 133, 106); // #0F856A
 $ctaHover: rgb(239, 153, 138); // #EF998A
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

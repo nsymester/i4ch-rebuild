@@ -61,4 +61,33 @@ function ScrollToTop() {
   }
 }
 
-export { ScrollToTop };
+function WindowWidth() {
+  console.log('WindowWidth');
+
+  // cache DOM
+  const accordionBtns = document.querySelectorAll(
+    '.card-products .accordion-btn'
+  );
+
+  window.addEventListener('resize', function() {
+    let w =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (w > 1200) {
+      let i;
+      for (i = 0; i < accordionBtns.length; i++) {
+        accordionBtns[i].setAttribute('disabled', false);
+      }
+    }
+
+    if (w <= 1200) {
+      let i;
+      for (i = 0; i < accordionBtns.length; i++) {
+        accordionBtns[i].setAttribute('disabled', true);
+      }
+    }
+  });
+}
+
+export { ScrollToTop, WindowWidth };

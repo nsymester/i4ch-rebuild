@@ -4,67 +4,87 @@
 
 <div class="container-fluid">
   {% include "./partials/nav.njk" %}
-</div>
-<div class="container grid">
-  <section class="hero">
+  <section class="hero row">
     {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
   </section>
-  <!--//.hero-->
+</div>
 
-  <section class="reviews">
+<div class="container">
+  <!--//.hero-->
+  <section class="reviews row">
     {% include "./partials/reviews.njk" %}
   </section>
 
-  <section class="excess">
-    <h2>What is Excess Insurance?</h2>
+  <section class="excess row">
+    <div>
+      <img
+        class="img-responsive excess-image-top "
+        src="./images/excess-insurance.jpg"
+      />
+    </div>
+    <div class="inner">
+      <h2>What is Excess Insurance?</h2>
 
-    <p>
-      Car hire companies often charge an excess for damage caused to the car
-      whilst you're behind the wheel even if it's not your fault. This can be
-      upwards of £1000, meaning that if you're involved in an accident, you'll
-      have to pay a contribution to cover the damage.
-    </p>
-    <p>
-      With an annual car hire insurance policy from insurance4carhire, you're
-      able to reclaim the excess you’d have to pay in the unfortunate event of
-      an accident or your car being stolen.
-    </p>
+      <p>
+        Car hire companies often charge an excess for damage caused to the car
+        whilst you're behind the wheel even if it's not your fault. This can be
+        upwards of £1000, meaning that if you're involved in an accident, you'll
+        have to pay a contribution to cover the damage.
+      </p>
+      <p>
+        With an annual car hire insurance policy from insurance4carhire, you're
+        able to reclaim the excess you’d have to pay in the unfortunate event of
+        an accident or your car being stolen.
+      </p>
 
-    <iframe
-      class="video"
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/wjGjQSrJyvI"
-    ></iframe>
+      <iframe
+        class="video"
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/wjGjQSrJyvI"
+      ></iframe>
+    </div>
 
     <img
-      class="img-responsive excess-image"
-      src="./images/excess-insurance.jpg"
-      alt="Samller Section Image size"
+      class="img-responsive excess-image-bottom"
+      src="./images/excess-insurance-m.jpg"
     />
   </section>
+</div>
+<!--//.container-fluid-->
 
-  <section class="cover">
-    <h2>What do we cover?</h2>
+<div class="container grid">
+  <section class="cover row">
+    <div class="inner">
+      <h2>What do we cover?</h2>
 
-    <ul class="std-list">
-      <li>Drivers between the ages of 18 and 85</li>
-      <li>
-        Drivers who are residents of*:<br />France, Germany, Ireland, Italy,
-        Netherlands, Spain, Sweden, UK
-      </li>
-      <li>Trips up to 60 days in-a-row</li>
-      <li>
-        As well as excess cover, we also offer Collision Damage Waiver (CDW) and
-        Supplemental Liability Insurance (SLI). Altough many car rental
-        companies automatically include these covers in their car rental
-        insurance, some don’t - so it’s important to chek the terms of your car
-        rental agreement.
-      </li>
-    </ul>
+      <ul class="std-list">
+        <li>Drivers between the ages of 18 and 85</li>
+        <li>
+          Drivers who are residents of*:<br />France, Germany, Ireland, Italy,
+          Netherlands, Spain, Sweden, UK
+        </li>
+        <li>Trips up to 60 days in-a-row</li>
+        <li>
+          As well as excess cover, we also offer Collision Damage Waiver (CDW)
+          and Supplemental Liability Insurance (SLI). Altough many car rental
+          companies automatically include these covers in their car rental
+          insurance, some don’t - so it’s important to chek the terms of your
+          car rental agreement.
+        </li>
+      </ul>
+    </div>
+
+    <div class="">
+      <img
+        class="img-responsive cover-image"
+        src="./images/cover-image.jpg"
+        alt="Samller Section Image size"
+      />
+    </div>
   </section>
 
-  <section class="drive">
+  <section class="drive row">
     {% include "./partials/where-can-i-drive.njk" %}
   </section>
 

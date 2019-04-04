@@ -1,5 +1,5 @@
 import { Goodbye, World } from './components/GoodbyeWorld';
-import { Screen, ScrollToTop } from './components/Screen';
+import { ScrollToTop, WindowWidth } from './components/Screen';
 import { Accordion } from './components/Accordion';
 import { CountrySelector } from './components/CountrySelector';
 import { VehicleSelector } from './components/VehicleSelector';
@@ -14,6 +14,7 @@ function start() {
   DropdownMenu();
   ScrollToTop();
   Accordion();
+  WindowWidth();
 }
 
 function ready(fn) {
