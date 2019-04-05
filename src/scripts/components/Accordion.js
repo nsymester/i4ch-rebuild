@@ -11,13 +11,13 @@ function Accordion() {
   }
 
   // Event Handlers
-  function accordionHandler() {
+  function accordionHandler(evt) {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
-    this.classList.toggle('active');
+    evt.currentTarget.classList.toggle('active');
 
     /* Toggle between hiding and showing the active panel */
-    let panel = this.nextElementSibling;
+    let panel = evt.currentTarget.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       panel.style.marginTop = '0';
