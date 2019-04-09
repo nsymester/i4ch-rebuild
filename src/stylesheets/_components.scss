@@ -561,12 +561,11 @@ label.form-control-label {
   width: 100%;
   padding: 1px;
   border: 1px solid $lightGrayishBlue;
-  overflow: hidden;
 
   &__items {
     list-style: none;
     height: 90px;
-    overflow: scroll;
+    overflow: hidden;
     border: 2px solid transparent;
     width: auto;
     margin: 10px 0;
