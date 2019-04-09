@@ -561,6 +561,7 @@ label.form-control-label {
   width: 100%;
   padding: 1px;
   border: 1px solid $lightGrayishBlue;
+  overflow: hidden;
 
   &__items {
     list-style: none;
@@ -589,6 +590,7 @@ label.form-control-label {
     box-shadow: none;
     color: white;
     cursor: pointer;
+    border: 0;
 
     &:focus {
       border: 0;

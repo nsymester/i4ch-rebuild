@@ -1064,7 +1064,8 @@ label.form-control-label {
   margin: 0 auto;
   width: 100%;
   padding: 1px;
-  border: 1px solid #e7e8ed; }
+  border: 1px solid #e7e8ed;
+  overflow: hidden; }
   .country-scroller__items {
     list-style: none;
     height: 90px;
@@ -1086,7 +1087,8 @@ label.form-control-label {
     -webkit-box-shadow: none;
             box-shadow: none;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    border: 0; }
     .country-scroller button:focus {
       border: 0;
       outline: 0; }
