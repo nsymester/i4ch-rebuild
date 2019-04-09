@@ -1788,7 +1788,8 @@ section h2 {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      padding: 0 40px; } }
+      padding: 0 40px 0 0;
+      margin-right: 80px; } }
 
 .drive .inner {
   padding: 0 10px; }

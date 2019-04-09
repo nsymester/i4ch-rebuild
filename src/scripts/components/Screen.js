@@ -77,14 +77,14 @@ function WindowWidth() {
     if (w > 1200) {
       let i;
       for (i = 0; i < accordionBtns.length; i++) {
-        accordionBtns[i].setAttribute('disabled', false);
+        accordionBtns[i].setAttribute('disabled', true);
       }
     }
 
     if (w <= 1200) {
       let i;
       for (i = 0; i < accordionBtns.length; i++) {
-        accordionBtns[i].setAttribute('disabled', true);
+        accordionBtns[i].setAttribute('disabled', false);
       }
     }
   });
