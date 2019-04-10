@@ -563,7 +563,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px 0; }
+  padding: 0; }
   @media (min-width: 1199px) {
     .hero {
       background: url(../images/home-hero-image.jpg) no-repeat center center;
@@ -638,7 +638,7 @@ footer {
  */
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
-  max-width: 535px;
+  max-width: 435px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,8 +679,8 @@ footer {
  */
 .tab-container {
   min-width: 360px;
-  width: 535px;
-  margin: 0 10px; }
+  width: 435px;
+  margin: 60px 10px; }
   .tab-container .inner {
     border: 1px solid transparent;
     border-color: #fff #dee2e6 #dee2e6 #dee2e6;
@@ -688,7 +688,7 @@ footer {
     border-top-left-radius: 0;
     padding: 2rem 2rem 1.5rem 2rem;
     background-color: white;
-    max-width: 535px;
+    max-width: 435px;
     width: 100%;
     /* h-offset v-offset blur spread color */
     -webkit-box-shadow: 2px 2px 15px 1px #e3e3e3;
@@ -1107,14 +1107,14 @@ label.form-control-label {
  * Info Box styles for home page.
  */
 .info-box-container {
-  width: 535px;
+  width: 435px;
   min-width: 360px;
   margin: 0 10px; }
   .info-box-container .info-box {
     background-color: #023742;
     padding: 35px;
     border-radius: 5px;
-    max-width: 535px;
+    max-width: 435px;
     width: 100%;
     margin-top: 60px;
     margin-bottom: 10px;
@@ -1304,8 +1304,6 @@ label.form-control-label {
   .card-info .card-text {
     margin-top: 0;
     text-align: center; }
-  .card-info:last-child {
-    padding-bottom: 70px; }
   .card-info:first-child {
     padding-top: 30px; }
 
@@ -1553,21 +1551,23 @@ label.form-control-label {
 /**
  * Comparison styles.
  */
-.comparison .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .comparison .inner p {
-    font-weight: normal; }
-  .comparison .inner a {
-    color: white;
-    text-decoration: underline;
-    font-weight: bold; }
-  .comparison .inner :first-child {
-    margin-right: 10px; }
+.comparison {
+  margin-bottom: 60px; }
+  .comparison .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .comparison .inner p {
+      font-weight: normal; }
+    .comparison .inner a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold; }
+    .comparison .inner :first-child {
+      margin-right: 10px; }
 
 .scale-icon {
   width: 72px;
@@ -1764,7 +1764,7 @@ section h2 {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        padding: 0 20px; } }
+        padding: 0 0 0 80px; } }
 
 .cover-image {
   max-width: 535px;
@@ -1772,6 +1772,9 @@ section h2 {
   @media (max-width: 1199px) {
     .cover-image {
       display: none; } }
+
+.cover h2 {
+  margin-top: 50px; }
 
 .cover .inner {
   max-width: 535px;
@@ -1789,8 +1792,11 @@ section h2 {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      padding: 0 40px 0 0;
+      padding: 0 0px 0 55px;
       margin-right: 80px; } }
+
+.drive h2 {
+  margin-bottom: 60px; }
 
 .drive .inner {
   padding: 0 10px; }
@@ -1811,7 +1817,8 @@ section h2 {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  margin-bottom: 60px; }
   @media (min-width: 1200px) {
     .accordion.card-products {
       -webkit-box-orient: horizontal;
@@ -1863,7 +1870,9 @@ section h2 {
               flex-flow: row wrap;
       -webkit-box-align: baseline;
           -ms-flex-align: baseline;
-              align-items: baseline; } }
+              align-items: baseline;
+      padding-top: 50px;
+      margin-bottom: 40px; } }
 
 .trust .card-info {
   -webkit-box-flex: 1;
@@ -1950,6 +1959,8 @@ footer {
 
 section.articles {
   padding: 20px 20px; }
+  section.articles h2 {
+    margin-bottom: 40px; }
   section.articles .inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1971,7 +1982,7 @@ section.articles {
                   flex: 0 1 305px; } }
   section.articles .btn-articles {
     width: 100%;
-    margin: 0 auto; }
+    margin: 40px auto; }
     @media (min-width: 1200px) {
       section.articles .btn-articles {
         width: 300px;
