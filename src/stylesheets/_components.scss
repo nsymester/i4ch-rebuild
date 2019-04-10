@@ -75,7 +75,11 @@
 .tab-container {
   min-width: 360px;
   width: 435px;
-  margin: 60px 10px;
+  margin: 30px 10px;
+
+  @media (min-width: 1199px) {
+    margin: 60px 10px;
+  }
 
   .inner {
     border: 1px solid transparent;
@@ -299,6 +303,10 @@ label.form-control-label {
   border-radius: 0;
   max-width: 100%; //235px;
   width: 100%;
+}
+
+a.btn {
+  line-height: 40px;
 }
 
 .btn {
@@ -1162,7 +1170,7 @@ label.form-control-label {
  * Comparison styles.
  */
 .comparison {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 
   .inner {
     p {
@@ -1445,7 +1453,11 @@ section h2 {
 
 .drive {
   h2 {
-    margin-bottom: 60px;
+    text-align: left;
+    @media (min-width: 1199px) {
+      text-align: center;
+      margin-bottom: 60px;
+    }
   }
 
   .inner {
@@ -1621,7 +1633,11 @@ section.articles {
   padding: 20px 20px;
 
   h2 {
+    text-align: left;
     margin-bottom: 40px;
+    @media (min-width: 1199px) {
+      text-align: center;
+    }
   }
 
   .inner {
@@ -1649,4 +1665,8 @@ section.articles {
       justify-content: center;
     }
   }
+}
+
+.hero {
+  margin-bottom: 30px;
 }
