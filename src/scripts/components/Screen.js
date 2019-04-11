@@ -84,7 +84,7 @@ function WindowWidth() {
     if (w <= 1200) {
       let i;
       for (i = 0; i < accordionBtns.length; i++) {
-        accordionBtns[i].setAttribute('disabled', false);
+        accordionBtns[i].removeAttribute('disabled');
       }
     }
   });

@@ -568,7 +568,8 @@ a.btn {
   margin: 0 auto;
   width: 100%;
   padding: 1px;
-  border: 1px solid $lightGrayishBlue;
+  background-color: $white !important;
+  border: 1px solid $lightGrayishBlue !important;
 
   &__items {
     list-style: none;
@@ -810,7 +811,8 @@ a.btn {
   }
 
   .card-body {
-    padding: 0 15px 15px 15px;
+    padding: 0 15px 0 15px;
+    height:100%;
 
     a {
       text-decoration: underline;
@@ -993,6 +995,12 @@ a.btn {
 
     a {
       color: $white;
+
+      &:hover, &:focus, &:active:hover {
+        color: white;
+        background-color: #01dbab;
+        outline: 0;
+    }
     }
   }
 }
@@ -1270,6 +1278,7 @@ footer {
 .video {
   margin-top: 30px;
   margin-bottom: 40px;
+  max-width:435px
 }
 
 /* -------------------------------------------------------------------------
@@ -1460,16 +1469,29 @@ section h2 {
     }
   }
 
-  .inner {
-    padding: 0 10px;
-
+  &-bg{
     @media (min-width: 1200px) {
       background: linear-gradient(0, $white 7%, rgba(0, 0, 0, 0) 7%),
-        linear-gradient(0, $darkCyan 94%, $white 94%);
+      linear-gradient(0, $darkCyan 94%, $white 94%);
+      /* IE10 Consumer Preview */
+      background-image: -ms-linear-gradient(top, $white 7%, rgba(0, 0, 0, 0) 7%), -ms-linear-gradient(bottom, #FFFFFF 10%, $darkCyan 94%);
+
+    }
+  }
+
+  .inner {
+    max-width: 535px;
+    width: 100%;
+    padding: 0 20px;
+    margin:0 auto;
+
+    @media(min-width:1199px){
+      max-width: 100%;
     }
 
     .card {
-      box-shadow: none;
+      box-shadow: 0px 0px 6px 2px #e7e8ed;
+      background-color: $white !important;
     }
   }
 }
@@ -1479,10 +1501,16 @@ section h2 {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
+    align-items: stretch;
     margin-bottom: 60px;
 
     @media (min-width: 1200px) {
       flex-flow: row wrap;
+    }
+
+    .col-lg-4 {
+      display: flex;
+      justify-content: center;
     }
   }
   .card-product {
@@ -1492,7 +1520,7 @@ section h2 {
     @media (min-width: 1200px) {
       max-width: 311px;
       display: block;
-      width: 33.33333333%;
+      // width: 33.33333333%;
     }
     .accordion-btn {
       text-align: left;
@@ -1518,11 +1546,14 @@ section h2 {
     }
 
     .accordion-panel {
-      background-color: $white;
+      background-color: $white !important;
       color: $mainTextColour;
 
+      .form-group{
+        background-color: $white !important;
+      }
       @media (min-width: 1200px) {
-        max-height: initial;
+        max-height: 100%;
         overflow: visible;
       }
     }
@@ -1548,14 +1579,22 @@ section h2 {
 }
 
 .comparison {
-  background-color: $veryDarkCyan;
-  color: $white;
-  padding: 30px;
 
   .inner {
+    background-color: $veryDarkCyan;
+    color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 535px;
+    width: 100%;
+    padding: 30px;
+    margin:0 auto;
+
+    @media(min-width:1199px){
+      max-width: 100%;
+    }
+
   }
 }
 
@@ -1634,7 +1673,10 @@ section.articles {
 
   h2 {
     text-align: left;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
+    max-width: 535px;
+    width: 100%;
+
     @media (min-width: 1199px) {
       text-align: center;
     }
@@ -1643,12 +1685,21 @@ section.articles {
   .inner {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 535px;
+    width: 100%;
+    margin: auto;
+
+    @media (min-width: 1199px) {
+      justify-content: space-between;
+      width: 100%;
+      max-width: 100%;
+    }
 
     .card-article {
       width: 100%;
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1199px) {
         width: 100%;
         flex: 0 1 305px;
       }
@@ -1656,10 +1707,12 @@ section.articles {
   }
 
   .btn-articles {
+    max-width: 535px;
     width: 100%;
     margin: 40px auto;
+    display:block;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1199px) {
       width: 300px;
       display: flex;
       justify-content: center;

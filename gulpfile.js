@@ -154,7 +154,7 @@ gulp.task('pages', function() {
  * @desc css task - compile sass to css, compress and add prefixes
  */
 gulp.task('css', function() {
-  var postCssOpts = [$.autoprefixer({ browsers: ['last 2 versions', '> 2%'] })];
+  var postCssOpts = [$.autoprefixer({ browsers: ['last 4 versions', '> 2%'] })];
 
   if (!devBuild) {
     $.log.info('css build ', devBuild);
@@ -288,7 +288,7 @@ gulp.task('watch', function() {
 
   // js changes
   gulp
-    .watch(folder.src + 'scripts/*.js', ['js'])
+    .watch(folder.src + 'scripts/**/*.js', ['js'])
     .on('change', browserSync.reload);
 });
 
