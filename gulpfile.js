@@ -199,7 +199,10 @@ gulp.task('js', function() {
   let files = ['./src/scripts/index.js', './src/scripts/application.js'];
 
   // start fresh
-  $.del.sync(['/dist/js/application.bundle.js', 'index.bundle.js']);
+  $.del.sync([
+    '/dist/scripts/application.bundle.js',
+    '/dist/scripts/index.bundle.js'
+  ]);
 
   var tasks = files.map(function(entry) {
     var bundler = $.browserify({
@@ -227,7 +230,7 @@ gulp.task('js', function() {
               extname: '.bundle.js' // Output file
             })
           )
-          .pipe(gulp.dest('dist/js')) // Output path
+          .pipe(gulp.dest('dist/scripts')) // Output path
           .pipe(
             reload({
               stream: true,
