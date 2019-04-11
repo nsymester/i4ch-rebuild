@@ -10,14 +10,26 @@ body {
   color: rgba(0, 0, 0, 0.75);
   font-family: 'Lato', 'Helvetica', Arial, sans-serif;
   font-weight: 300;
-  line-height: 1.5;
-  font-size: $base-fontSize;
+  line-height: 24px;
+  font-size: 18px;
+
+  @media (min-width: 1199px) {
+    line-height: 20px;
+    font-size: $base-fontSize;
+  }
 }
 
 a {
   color: $darkCyan;
   text-decoration: none;
   background-color: transparent;
+  line-height: 24px;
+  font-size: 18px;
+
+  @media (min-width: 1199px) {
+    line-height: 20px;
+    font-size: $base-fontSize;
+  }
 }
 
 img,
@@ -46,26 +58,47 @@ h6,
 
 h1,
 .h1 {
-  font-size: 32px;
+  font-size: 36px;
   color: $mainTextColour;
+  line-height: 50px;
+
+  @media (min-width: 1199px) {
+    line-height: 32px;
+    font-size: 32px;
+  }
 }
 
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 36px;
+  line-height: 50px;
   color: $mainTextColour;
+
+  @media (min-width: 1199px) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 h3,
 .h3 {
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 35px;
   color: $mainTextColour;
+
+  @media (min-width: 1199px) {
+    font-size: 25px;
+    line-height: 25px;
+  }
 }
 
 h4,
 .h4 {
   font-size: 21px;
   color: $mainTextColour;
+}
+
+p {
 }
 
 label {
