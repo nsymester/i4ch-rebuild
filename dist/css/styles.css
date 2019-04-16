@@ -1461,7 +1461,8 @@ a.btn {
     .navbar-nav li:before {
       content: ''; }
     .navbar-nav li a {
-      color: white; }
+      color: white;
+      padding: 10px; }
       .navbar-nav li a:hover, .navbar-nav li a:focus, .navbar-nav li a:active:hover {
         color: white;
         background-color: #01dbab;
@@ -1561,8 +1562,7 @@ a.btn {
     .navbar-nav li a {
       font-size: 13px;
       color: white;
-      display: inline;
-      padding: 0; }
+      display: inline; }
   .nav-links {
     margin-left: 40px; }
   .logo {

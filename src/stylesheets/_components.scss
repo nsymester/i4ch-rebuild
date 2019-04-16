@@ -1013,6 +1013,7 @@ a.btn {
 
     a {
       color: $white;
+      padding: 10px;
 
       &:hover,
       &:focus,
@@ -1128,7 +1129,6 @@ a.btn {
       font-size: 13px;
       color: $white;
       display: inline;
-      padding: 0;
     }
   }
   .nav-links {

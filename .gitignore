@@ -1,1 +1,4 @@
 node_modules
+dist/css/maps
+dist/css/styles.css
+dist/*.html
