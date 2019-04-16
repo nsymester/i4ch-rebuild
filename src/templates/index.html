@@ -1,5 +1,6 @@
-{% block header %} {% import './macros/header.njk' as header %}
-{{ header.styles('/css/styles.css') }}
+{% block headerContent %}
+{% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'home') }}
 {% endblock %}
 
 <div class="container-fluid">
@@ -105,7 +106,10 @@
   </section>
 
   <section class="articles row">
-    {% include "./partials/articles.njk" %}
+    <h2 class="text-center">Releated Articles</h2>
+    <div class="inner">
+      {% include "./partials/articles.njk" %}
+    </div>
 
     <a class="btn btn-default btn-articles" href="other.html">
       <span>More Articles</span>

@@ -163,7 +163,7 @@ gulp.task('css', function() {
   }
 
   return gulp
-    .src(`${folder.src}/stylesheets/*.scss`)
+    .src(`${folder.src}/stylesheets/**/*.scss`)
     .pipe(
       $.plumber({
         errorHandler: onError
@@ -286,7 +286,7 @@ gulp.task('watch', function() {
 
   // css changes
   gulp
-    .watch(folder.src + 'stylesheets/*.scss', ['css'])
+    .watch(folder.src + 'stylesheets/**/*.scss', ['css'])
     .on('change', browserSync.reload);
 
   // js changes

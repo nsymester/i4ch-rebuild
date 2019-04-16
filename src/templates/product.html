@@ -1,5 +1,6 @@
-{% block header %} {% import './macros/header.njk' as header %}
-{{ header.styles('/css/styles.css') }}
+{% block headerContent %}
+{% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'product') }}
 {% endblock %}
 
 <div class="container-fluid">
@@ -7,10 +8,22 @@
 </div>
 <div class="container grid">
   <section class="product-hero">
-    <h1 class="has-sub-title">Annual Worldwide</h1>
-    <p class="sub-title">Car Hire Excess Insurance</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.</p>
+    <div class="inner">
+      <img src="/images/product-hero.png" class="img-responsive" alt="" />
+    </div>
+    <div class="inner">
+      <h1 class="has-sub-title">Annual Worldwide</h1>
+      <p class="sub-title">Car Hire Excess Insurance</p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus,
+        aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat
+        eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus,
+        aspernatur? Non sint, qui illum nesciunt magni, nostrum quis quaerat
+        eius enim, similique rerum ea quisquam expedita dolore amet vel quidem.
+      </p>
 
       <div class="price-and-btn">
         <p class="price">£99.99</p>
@@ -18,6 +31,8 @@
           Buy Now
         </button>
       </div>
+      <!--//.inner-->
+    </div>
   </section>
 
   <section class="product-about row">
@@ -52,7 +67,10 @@
   <!--//.reviews-->
 
   <section class="articles bg-grey row">
-    {% include "./partials/articles.njk" %}
+    <div class="inner">
+      <h2 class="text-center">Releated Articles</h2>
+      {% include "./partials/articles.njk" %}
+    </div>
   </section>
   <!--//.articles-->
 

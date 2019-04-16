@@ -1,4 +1,5 @@
- 
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@
     <link href="/css/styles.css" rel="stylesheet" type="text/css"/>
 
   </head>
-<body role="document">
+<body role="document" id="product-options">
 
 
 
@@ -96,77 +97,86 @@
   </nav>
   <!--//.navbar -->
 </div>
+<div class="container-fluid">
+  <div class="container">
+    <section class="product-hero row">
+      <div class="inner">
+        <h1 class="has-sub-title">Compare Your Product Options</h1>
+        <p class="sub-title">We provide product options based on your selection</p>
+      </div>
+    </section>
+  </div>
+</div>
+
 <div class="container grid">
-  <section class="product-hero">
-    <h1>Compare Your Product Options</h1>
-    <p>We provide product options based on your selection</p>
-  </section>
   <section class="cover-options">
     <h2>Cover options</h2>
-    <div class="card card-cover-option active">
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-price">£11.99</p>
-      <p class="card-text">
-        Some quick example text to build on the card.
-      </p>
-      <div class="form-group">
-        <input type="text" value="" class="form-control" />
-      </div>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
+    <div class="inner">
+
+      <div class="cover-options-container">
+        <div class="card card-cover-option active">
+  <h4 class="card-title">Card title</h4>
+  <div class="card-body">
+    <p class="card-price">£11.99</p>
+    <p class="card-text">
+      Some quick example text to build on the card.
+    </p>
+    <div class="form-group">
+      <input type="text" value="" class="form-control" />
     </div>
-    <!--//.card-body-->
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk
+      of the card's content.
+    </p>
   </div>
-  <!--.card-->
+  <!--//.card-body-->
+</div>
+<!--.card-->
+
+<div class="card card-cover-option">
+  <h4 class="card-title">Card title</h4>
+  <div class="card-body">
+    <p class="card-price">£11.99</p>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk
+      of the card's content.
+    </p>
+  </div>
+  <!--//.card-body-->
+</div>
+<!--.card-->
 
   <div class="card card-cover-option">
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-price">£11.99</p>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <!--//.card-body-->
+  <h4 class="card-title">Card title</h4>
+  <div class="card-body">
+    <p class="card-price">£11.99</p>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk
+      of the card's content.
+    </p>
   </div>
-  <!--.card-->
+  <!--//.card-body-->
+</div>
+<!--.card-->
 
-    <div class="card card-cover-option">
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-price">£11.99</p>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <!--//.card-body-->
+  <div class="card card-cover-option">
+  <h4 class="card-title">Card title</h4>
+  <div class="card-body">
+    <p class="card-price">£11.99</p>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk
+      of the card's content.
+    </p>
   </div>
-  <!--.card-->
+  <!--//.card-body-->
+</div>
+<!--.card-->
+      </div>
 
-    <div class="card card-cover-option">
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-price">£11.99</p>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-    </div>
-    <!--//.card-body-->
-  </div>
-  <!--.card-->
-  </section>
-  <!--//.hero-->
-
-  <section class="policy-summary">
-    <div class="info-box policy-summary">
-  <h2>Policy Summary</h2>
-  <h3>Single-Trip Worldwide</h3>
+      <div class="info-box-container policy-summary">
+        <div class="info-box">
+  <h3>Policy Summary</h3>
+  <h4>Single-Trip Worldwide</h4>
   <dl class="itinerary">
     <dt>Duration</dt>
     <dd>Single Trip</dd>
@@ -180,7 +190,7 @@
     <dd>1</dd>
   </dl>
   <div class="accordion">
-    <button class="accordion-btn h3">Section 1</button>
+    <button class="accordion-btn h4">Section 1</button>
     <div class="accordion-panel">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
@@ -188,7 +198,7 @@
       </p>
     </div>
 
-    <button class="accordion-btn h3">Section 2</button>
+    <button class="accordion-btn h4">Section 2</button>
     <div class="accordion-panel">
       <ul class="tick-list">
         <li>Excess on damageand theft up t0 £6,500 per year</li>
@@ -218,6 +228,8 @@
   </button>
 </div>
 <!--//.info-box-->
+      </div>
+    </div>
   </section>
 
   <section class="trust row">

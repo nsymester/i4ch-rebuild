@@ -1,4 +1,4 @@
-{% macro styles(href='') %}
+{% macro config(href='', template='')%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +26,6 @@
     <link href="{{ href }}" rel="stylesheet" type="text/css"/>
 
   </head>
-<body role="document">
+<body role="document" id="{{ template }}">
 
 {% endmacro %}

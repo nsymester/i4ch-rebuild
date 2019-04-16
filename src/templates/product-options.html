@@ -1,23 +1,35 @@
-{% block header %} {% import './macros/header.njk' as header %}
-{{ header.styles('/css/styles.css') }}
+{% block headerContent %}
+{% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'product-options') }}
 {% endblock %}
 
 <div class="container-fluid">
   {% include "./partials/nav.njk" %}
 </div>
+<div class="container-fluid">
+  <div class="container">
+    <section class="product-hero row">
+      <div class="inner">
+        <h1 class="has-sub-title">Compare Your Product Options</h1>
+        <p class="sub-title">We provide product options based on your selection</p>
+      </div>
+    </section>
+  </div>
+</div>
+
 <div class="container grid">
-  <section class="product-hero">
-    <h1>Compare Your Product Options</h1>
-    <p>We provide product options based on your selection</p>
-  </section>
   <section class="cover-options">
     <h2>Cover options</h2>
-    {% include "./partials/cover-options.njk" %}
-  </section>
-  <!--//.hero-->
+    <div class="inner">
 
-  <section class="policy-summary">
-    {% include "./partials/policy-summary.njk" %}
+      <div class="cover-options-container">
+        {% include "./partials/cover-options.njk" %}
+      </div>
+
+      <div class="info-box-container policy-summary">
+        {% include "./partials/policy-summary.njk" %}
+      </div>
+    </div>
   </section>
 
   <section class="trust row">

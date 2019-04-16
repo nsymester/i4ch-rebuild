@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: 300;
   src: local("Signika Light"), local("Signika-Light"), url(https://fonts.gstatic.com/s/signika/v9/vEFU2_JTCgwQ5ejvE_oEE3lJamIe2tKnXg.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
 @font-face {
@@ -32,7 +32,7 @@
   font-style: normal;
   font-weight: 300;
   src: local("Signika Light"), local("Signika-Light"), url(https://fonts.gstatic.com/s/signika/v9/vEFU2_JTCgwQ5ejvE_oEE3dJamIe2tI.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 /* latin-ext */
 @font-face {
@@ -40,7 +40,7 @@
   font-style: normal;
   font-weight: 600;
   src: local("Signika SemiBold"), local("Signika-SemiBold"), url(https://fonts.gstatic.com/s/signika/v9/vEFU2_JTCgwQ5ejvE44CE3lJamIe2tKnXg.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 /* latin */
 @font-face {
@@ -48,7 +48,7 @@
   font-style: normal;
   font-weight: 600;
   src: local("Signika SemiBold"), local("Signika-SemiBold"), url(https://fonts.gstatic.com/s/signika/v9/vEFU2_JTCgwQ5ejvE44CE3dJamIe2tI.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -644,13 +644,49 @@ footer {
           -ms-flex-pack: end;
               justify-content: flex-end; } }
 
+.product-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0; }
+  @media (min-width: 1199px) {
+    .product-hero {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      margin-bottom: 70px; } }
+  .product-hero .inner {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .product-hero .inner:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    max-width: 670px;
+    width: 100%; }
+    @media (min-width: 1199px) {
+      .product-hero .inner:first-child {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; } }
+  .product-hero .inner:last-child {
+    margin: 30px 10px; }
+    @media (min-width: 1199px) {
+      .product-hero .inner:last-child {
+        margin-left: 80px;
+        margin-right: 0; } }
+
+.cover-options {
+  margin-bottom: 80px; }
+
 /* @group components */
-/**
-  * @desc UI components, building blocks that we use on the page, self contained
-  *       e.g.: lists, media box,
-          contains business logic
-  * @author Neil Symester neil.symester@towergate.co.uk
-  */
 .nav-link {
   display: block;
   padding: 1rem 1rem;
@@ -702,6 +738,142 @@ footer {
     background-image: none; }
 
 /* -------------------------------------------------------------------------
+ Tab Navigation Icons
+---------------------------------------------------------------------------- */
+/**
+ * Tab Navigation Icons styles for home page.
+ */
+.nav-badge {
+  background-repeat: no-repeat;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 15px; }
+  .nav-badge--car {
+    background-image: url(../images/car-icon.png);
+    width: 55px;
+    margin-top: 10px; }
+  .nav-badge--van {
+    background-image: url(../images/van-icon.png);
+    width: 34px;
+    height: 26px; }
+
+/* -------------------------------------------------------------------------
+ Country Scroller
+---------------------------------------------------------------------------- */
+/**
+ * Country Scroller styles for home page.
+ */
+.country-scroller {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1px;
+  background-color: white !important;
+  border: 1px solid #e7e8ed !important; }
+  .country-scroller__items {
+    list-style: none;
+    height: 90px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    width: auto;
+    margin: 10px 0;
+    text-align: center;
+    padding: 0; }
+  .country-scroller__item {
+    height: 30px;
+    color: #3b424d; }
+    .country-scroller__item:before {
+      content: ''; }
+  .country-scroller button {
+    width: 100%;
+    height: 35px;
+    background-color: #01dbab;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: white;
+    cursor: pointer;
+    border: 0; }
+    .country-scroller button:focus {
+      border: 0;
+      outline: 0; }
+  .country-scroller button:first-child:before {
+    content: url(../images/up-arrow.png);
+    width: 10px;
+    height: 5px; }
+  .country-scroller button:last-child:before {
+    content: url(../images/down-arrow.png);
+    width: 10px;
+    height: 5px; }
+
+section.articles {
+  padding: 20px 20px; }
+  section.articles h2 {
+    text-align: left;
+    margin: 0 auto 40px;
+    max-width: 535px;
+    width: 100%; }
+    @media (min-width: 1199px) {
+      section.articles h2 {
+        text-align: center; } }
+  section.articles .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 535px;
+    width: 100%;
+    margin: auto; }
+    @media (min-width: 1199px) {
+      section.articles .inner {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 100%;
+        max-width: 100%; } }
+    section.articles .inner .card-article {
+      width: 100%; }
+      @media (min-width: 1199px) {
+        section.articles .inner .card-article {
+          width: 100%;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 305px;
+                  flex: 0 1 305px; } }
+  section.articles .btn-articles {
+    max-width: 535px;
+    width: 100%;
+    margin: 40px auto;
+    display: block; }
+    @media (min-width: 1199px) {
+      section.articles .btn-articles {
+        width: 300px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+
+#product .articles h2 {
+  text-align: left;
+  max-width: 100%; }
+
+/**
+  * @desc UI components, building blocks that we use on the page, self contained
+  *       e.g.: lists, media box,
+          contains business logic
+  * @author Neil Symester neil.symester@towergate.co.uk
+  */
+/* -------------------------------------------------------------------------
  Tab Container styles
 ---------------------------------------------------------------------------- */
 /**
@@ -732,27 +904,6 @@ footer {
       display: none; }
       .tab-container .inner .tab-van .form-group:nth-child(3) {
         margin-bottom: 50px; }
-
-/* -------------------------------------------------------------------------
- Tab Navigation Icons
----------------------------------------------------------------------------- */
-/**
- * Tab Navigation Icons styles for home page.
- */
-.nav-badge {
-  background-repeat: no-repeat;
-  height: 100%;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 15px; }
-  .nav-badge--car {
-    background-image: url(../images/car-icon.png);
-    width: 55px;
-    margin-top: 10px; }
-  .nav-badge--van {
-    background-image: url(../images/van-icon.png);
-    width: 34px;
-    height: 26px; }
 
 /* -------------------------------------------------------------------------
  Form Items
@@ -904,11 +1055,11 @@ a.btn {
   padding: 15px 0; }
 
 .btn {
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
   .btn-info {
     color: white;
     font-family: inherit;
@@ -989,6 +1140,12 @@ a.btn {
         color: white; }
   .btn--block {
     width: 100%; }
+  @media (min-width: 1199px) {
+    .btn-default {
+      max-width: 290px;
+      width: 100%;
+      margin: 0 auto;
+      display: block; } }
 
 .price-and-btn {
   padding: 20px 20px 5px;
@@ -1004,6 +1161,10 @@ a.btn {
     line-height: 38px; }
   .price-and-btn .btn {
     margin-bottom: 15px; }
+  @media (min-width: 1199px) {
+    .price-and-btn {
+      max-width: 370px;
+      width: 100%; } }
 
 /* -------------------------------------------------------------------------
  Dropdown menu
@@ -1101,53 +1262,6 @@ a.btn {
   font-size: 11px; }
 
 /* -------------------------------------------------------------------------
- Country Scroller
----------------------------------------------------------------------------- */
-/**
- * Country Scroller styles for home page.
- */
-.country-scroller {
-  margin: 0 auto;
-  width: 100%;
-  padding: 1px;
-  background-color: white !important;
-  border: 1px solid #e7e8ed !important; }
-  .country-scroller__items {
-    list-style: none;
-    height: 90px;
-    overflow: hidden;
-    border: 2px solid transparent;
-    width: auto;
-    margin: 10px 0;
-    text-align: center;
-    padding: 0; }
-  .country-scroller__item {
-    height: 30px;
-    color: #3b424d; }
-    .country-scroller__item:before {
-      content: ''; }
-  .country-scroller button {
-    width: 100%;
-    height: 35px;
-    background-color: #01dbab;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    color: white;
-    cursor: pointer;
-    border: 0; }
-    .country-scroller button:focus {
-      border: 0;
-      outline: 0; }
-  .country-scroller button:first-child:before {
-    content: url(../images/up-arrow.png);
-    width: 10px;
-    height: 5px; }
-  .country-scroller button:last-child:before {
-    content: url(../images/down-arrow.png);
-    width: 10px;
-    height: 5px; }
-
-/* -------------------------------------------------------------------------
  Info Box
 ---------------------------------------------------------------------------- */
 /**
@@ -1228,7 +1342,10 @@ a.btn {
     .info-box-squared-container .info-box-squared h3 {
       margin-bottom: 30px; }
 
-.policy-summary h3 {
+.policy-summary .info-box-container {
+  margin: 0 auto; }
+
+.policy-summary h3, .policy-summary h4 {
   color: white;
   margin-bottom: 20px; }
 
@@ -1238,7 +1355,7 @@ a.btn {
   .policy-summary dl dd {
     color: white;
     margin-bottom: 10px;
-    font-size: 20px;
+    line-height: 32px;
     font-weight: normal; }
   .policy-summary dl dt {
     color: #01dbab;
@@ -1247,7 +1364,8 @@ a.btn {
     text-align: right; }
 
 .policy-summary .btn-cta {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border-radius: 2px; }
 
 /* -------------------------------------------------------------------------
  Standard Card
@@ -1279,7 +1397,6 @@ a.btn {
   .card-img-top {
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    height: 100%;
     width: 100%;
     display: block;
     margin-bottom: 15px; }
@@ -1330,7 +1447,8 @@ a.btn {
   color: #01866b;
   font-family: Oswald;
   font-size: 26px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 31px; }
 
 .card-cover-option.active {
   border: 3px solid #01dbab; }
@@ -2033,15 +2151,21 @@ footer {
     footer .social-icons a {
       margin-left: 50px; }
 
-.product-hero {
-  margin: 30px 10px; }
-  .product-hero p {
-    margin-bottom: 20px; }
-    .product-hero p:nth-child(4) {
-      margin-bottom: 40px; }
+.product-hero p {
+  margin-bottom: 20px; }
+  .product-hero p:nth-child(4) {
+    margin-bottom: 40px; }
+
+@media (min-width: 1199px) {
+  .product-about {
+    margin-bottom: 60px; } }
 
 .product-about h2 {
   padding: 0px 30px; }
+  @media (min-width: 1199px) {
+    .product-about h2 {
+      text-align: center;
+      margin-bottom: 60px; } }
 
 .product-about .inner {
   padding: 20px 20px 30px;
@@ -2052,64 +2176,32 @@ footer {
   .product-about .inner .card {
     -webkit-box-shadow: none;
             box-shadow: none; }
-
-section.articles {
-  padding: 20px 20px; }
-  section.articles h2 {
-    text-align: left;
-    margin: 0 auto 40px;
-    max-width: 535px;
-    width: 100%; }
     @media (min-width: 1199px) {
-      section.articles h2 {
+      .product-about .inner .card {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 420px;
+                flex: 0 1 420px; } }
+    @media (min-width: 1199px) {
+      .product-about .inner .card h3 {
         text-align: center; } }
-  section.articles .inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    max-width: 535px;
-    width: 100%;
-    margin: auto; }
-    @media (min-width: 1199px) {
-      section.articles .inner {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        width: 100%;
-        max-width: 100%; } }
-    section.articles .inner .card-article {
-      width: 100%; }
-      @media (min-width: 1199px) {
-        section.articles .inner .card-article {
-          width: 100%;
-          -webkit-box-flex: 0;
-              -ms-flex: 0 1 305px;
-                  flex: 0 1 305px; } }
-  section.articles .btn-articles {
-    max-width: 535px;
-    width: 100%;
-    margin: 40px auto;
-    display: block; }
-    @media (min-width: 1199px) {
-      section.articles .btn-articles {
-        width: 300px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
+  @media (min-width: 1199px) {
+    .product-about .inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      padding-bottom: 0; } }
+
+@media (min-width: 1199px) {
+  .policy-info .btn-default {
+    color: #01dbab;
+    border-color: #01dbab; } }
 
 .hero {
   margin-bottom: 30px; }
@@ -2196,5 +2288,73 @@ section.articles {
 
 .bdr-dark-grey {
   border: 1px solid #b7b7b7; }
+
+#product-options .container-fluid .container {
+  padding-left: 0;
+  padding-right: 0; }
+  @media (min-width: 749px) {
+    #product-options .container-fluid .container {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media (min-width: 1199px) {
+    #product-options .container-fluid .container {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      margin-bottom: 20px; } }
+
+@media (min-width: 1199px) {
+  #product-options .cover-options .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+@media (min-width: 1199px) {
+  #product-options .cover-options .inner .info-box-container, #product-options .cover-options .inner .info-box-container .info-box {
+    margin-top: 0; } }
+
+#product-options .cover-options .cover-options-container {
+  margin-right: 10px; }
+
+#product-options .product-hero {
+  display: block;
+  margin: 30px auto 0; }
+  @media (min-width: 1199px) {
+    #product-options .product-hero {
+      background-color: #01866b;
+      margin: 0 -15px; } }
+  #product-options .product-hero .inner {
+    margin: 0 auto;
+    min-width: 100%;
+    width: 100%; }
+    @media (min-width: 1199px) {
+      #product-options .product-hero .inner {
+        padding: 70px; } }
+  #product-options .product-hero h1 {
+    margin-bottom: 20px; }
+  #product-options .product-hero h1, #product-options .product-hero p {
+    text-align: left; }
+    @media (min-width: 1199px) {
+      #product-options .product-hero h1, #product-options .product-hero p {
+        text-align: center;
+        color: white; } }
+
+#product-options h2, #product-options h3 {
+  margin-bottom: 40px; }
+
+#product-options h4 {
+  margin-bottom: 25px; }
+
+#product-options .info-box-container {
+  width: 435px;
+  min-width: 360px;
+  margin: 55px auto 40px; }
 
 /*# sourceMappingURL=maps/styles.css.map */

@@ -146,3 +146,43 @@ footer {
     justify-content: flex-end;
   }
 }
+
+.product-hero {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0;
+
+  @media (min-width: 1199px) {
+    justify-content: space-around;
+    margin-bottom: 70px;
+  }
+
+  .inner {
+    flex:1;
+  }
+
+  .inner:first-child {
+    flex: 0;
+    max-width:670px;
+    width:100%;
+
+    @media (min-width: 1199px) {
+      flex: 1;
+    }
+  }
+
+  .inner:last-child{
+    margin: 30px 10px;
+
+    @media (min-width: 1199px) {
+      margin-left:80px;
+      margin-right:0;
+    }
+  }
+}
+
+
+.cover-options{
+  margin-bottom: 80px;
+}

@@ -1,0 +1,85 @@
+.nav-link {
+  display: block;
+  padding: 1rem 1rem;
+  height: 100%;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ Tab Navigation
+---------------------------------------------------------------------------- */
+/**
+ * Tab Navigation styles for home page.
+ */
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+  max-width: 435px;
+  width: 100%;
+  display: flex;
+
+  .nav-link {
+    margin-bottom: -1px;
+    height: 57px;
+    width: 100%;
+    max-width: 190px;
+    text-align: center;
+  }
+
+  .nav-link {
+    border: 1px solid #eee;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background-image: linear-gradient(#fff, #eee);
+    color: #495057;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    outline: 0;
+  }
+
+  .nav-link.active,
+  .nav-link.show {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    background-image: none;
+  }
+
+  button:not(.active):hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    background-image: none;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ Tab Navigation Icons
+---------------------------------------------------------------------------- */
+/**
+ * Tab Navigation Icons styles for home page.
+ */
+ .nav-badge {
+  background-repeat: no-repeat;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 15px;
+
+  &--car {
+    background-image: url(../images/car-icon.png);
+    width: 55px;
+    margin-top: 10px;
+  }
+
+  &--van {
+    background-image: url(../images/van-icon.png);
+    width: 34px;
+    height: 26px;
+  }
+}
