@@ -1075,6 +1075,7 @@ a.btn {
       background-color: #01dbab;
       outline: 0; }
   .btn-cta {
+    height: 60px;
     color: white;
     background-color: #e33101;
     border: 2px solid #e33101;
@@ -1097,6 +1098,7 @@ a.btn {
     .btn-cta:active:hover {
       outline: 0; }
   .btn-cta--disabled {
+    height: 60px;
     color: white;
     background-color: #e7e8ed;
     border: 2px solid #e7e8ed;
@@ -1364,6 +1366,7 @@ a.btn {
     text-align: right; }
 
 .policy-summary .btn-cta {
+  height: 60px;
   margin-bottom: 0;
   border-radius: 2px; }
 
@@ -2319,6 +2322,10 @@ footer {
 @media (min-width: 1199px) {
   #productOptions .cover-options .inner .info-box-container, #productOptions .cover-options .inner .info-box-container .info-box {
     margin-top: 0; } }
+
+#productOptions .cover-options .inner .product-options-days-cover {
+  max-width: 280px;
+  width: 100%; }
 
 @media (min-width: 1199px) {
   #productOptions .cover-options .cover-options-container {

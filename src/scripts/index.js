@@ -57,6 +57,41 @@ function start() {
     $('.tab-car .btn').addClass('btn-cta');
     $('.tab-car .btn').unbind();
   });
+
+  let coverOptions = [];
+  // get price
+  if ($('.card-cover-option')) {
+    $('.card-cover-option').each(function(index, element) {
+      coverOptions.push({
+        name: $('.inner .card-title ', element).text(),
+        cost: $('.inner .card-price .amount', element).text()
+      });
+    });
+  }
+
+  $('.product-options-days-cover').keyup(function(evt) {
+    let parentClass = $(this)
+      .parent()
+      .parent()
+      .parent()
+      .attr('class')
+      .split(' ');
+
+    let coverOptionPrice = coverOptions.filter(coverOption => {
+      return (
+        coverOption.name ==
+        $('.' + parentClass[2] + ' .inner .card-title').text()
+      );
+    });
+
+    $('.' + parentClass[2] + ' .inner .card-price .amount').text(
+      parseFloat(coverOptionPrice[0].cost * evt.currentTarget.value) == 0
+        ? coverOptionPrice[0].cost
+        : parseFloat(
+            coverOptionPrice[0].cost * evt.currentTarget.value
+          ).toFixed(2)
+    );
+  });
 }
 
 function ready(fn) {
