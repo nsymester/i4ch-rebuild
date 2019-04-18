@@ -1,6 +1,5 @@
-{% block headerContent %}
-{% import './macros/header.njk' as header %}
-{{ header.config('/css/styles.css', 'product-options') }}
+{% block headerContent %} {% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'productOptions') }}
 {% endblock %}
 
 <div class="container-fluid">
@@ -11,7 +10,9 @@
     <section class="product-hero row">
       <div class="inner">
         <h1 class="has-sub-title">Compare Your Product Options</h1>
-        <p class="sub-title">We provide product options based on your selection</p>
+        <p class="sub-title">
+          We provide product options based on your selection
+        </p>
       </div>
     </section>
   </div>
@@ -21,14 +22,7 @@
   <section class="cover-options">
     <h2>Cover options</h2>
     <div class="inner">
-
-      <div class="cover-options-container">
-        {% include "./partials/cover-options.njk" %}
-      </div>
-
-      <div class="info-box-container policy-summary">
-        {% include "./partials/policy-summary.njk" %}
-      </div>
+      {% include "./partials/cover-options.njk" %}
     </div>
   </section>
 

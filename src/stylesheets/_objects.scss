@@ -168,7 +168,7 @@ footer {
     width:100%;
 
     @media (min-width: 1199px) {
-      flex: 1;
+      flex: 1 1 100%;
     }
   }
 
@@ -181,7 +181,6 @@ footer {
     }
   }
 }
-
 
 .cover-options{
   margin-bottom: 80px;

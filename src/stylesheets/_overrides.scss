@@ -107,7 +107,7 @@
 }
 
 
-#product-options{
+#productOptions{
 
   .container-fluid {
     .container {
@@ -144,8 +144,43 @@
     }
 
     .cover-options-container {
-      margin-right: 10px;
+
+      @media(min-width:1199px){
+        margin-right: 25px;
+      }
     }
+
+    .card-cover-option {
+      padding:35px 45px 25px;
+
+      &:hover {
+        border: 3px solid #01dbab;
+        padding: 32px 42px 22px !important;
+      }
+
+      .card-icons {
+        display:none;
+
+        img {
+          width:30px;
+          height:30px;
+        }
+      }
+
+      &.active {
+        padding: 32px 42px 22px !important;
+
+        .card-icons {
+          display:block;
+        }
+      }
+
+      .inner {
+        display:flex;
+        justify-content: space-between;
+      }
+    }
+
   }
 
   .product-hero{
@@ -199,5 +234,46 @@
     margin: 55px auto 40px;
   }
 
+}
+
+.docs {
+  display:flex;
+  justify-content: center;
+  flex-flow:row wrap;
+}
+
+.docpdf {
+  display: inline-block;
+  width: 8em;
+  vertical-align: top;
+  position: relative;
+  padding-top: 4em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &:before {
+    content: "";
+    background: url(/images/pdf-icon.jpg) no-repeat center center;
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    background-size: contain;
+  }
+
+  .doc-name {
+    text-align:center;
+  }
+
+  .docsize {
+    color: #999;
+    font-size: 75%;
+    margin-bottom: 1em;
+    line-height: 2em;
+    text-transform: uppercase;
+  }
 }
 
