@@ -1159,6 +1159,7 @@ a.btn {
       background-color: #01dbab;
       outline: 0; }
   .btn-cta {
+    height: 60px;
     color: white;
     background-color: #e33101;
     border: 2px solid #e33101;
@@ -1181,6 +1182,7 @@ a.btn {
     .btn-cta:active:hover {
       outline: 0; }
   .btn-cta--disabled {
+    height: 60px;
     color: white;
     background-color: #e7e8ed;
     border: 2px solid #e7e8ed;

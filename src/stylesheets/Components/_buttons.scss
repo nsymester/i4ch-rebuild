@@ -60,6 +60,7 @@ a.btn {
   }
 
   &-cta {
+    height: 60px;
     color: $white;
     background-color: $vividRed;
     border: 2px solid $vividRed;
@@ -91,6 +92,7 @@ a.btn {
   }
 
   &-cta--disabled {
+    height: 60px;
     color: $white;
     background-color: $lightGrayishBlue;
     border: 2px solid $lightGrayishBlue;
