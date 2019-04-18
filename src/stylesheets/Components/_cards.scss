@@ -1,0 +1,142 @@
+/* -------------------------------------------------------------------------
+ Standard Card
+---------------------------------------------------------------------------- */
+/**
+ * Standard Card styles for home page.
+ */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.65rem;
+  max-width: 100%; //308px;
+  width: 100%;
+  padding: 30px 15px 0 15px;
+  box-shadow: 0 2px 12px 2px $lightGrayishBlue;
+  margin-bottom: 15px;
+
+  &-img-top {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    // height: 100%; // 180px;
+    width: 100%; // 286px;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &-body {
+    flex: 1 1 auto;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ Article Card
+---------------------------------------------------------------------------- */
+/**
+ * Article Card styles for home page.
+ */
+.card-article {
+  border-radius: 0;
+  padding: 1px;
+  box-shadow: none;
+
+  .card-title {
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 20px; // 30px;
+  }
+
+  .card-body {
+    padding: 0 15px 20px 15px;
+    height: 100%;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .card-text {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  &:nth-child(4) {
+    margin-bottom: 30px;
+  }
+
+  .card-published {
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    color: $darkGrey;
+  }
+}
+
+.card-cover-option {
+  .card-title {
+    text-align: left;
+    margin-bottom: 20px; // 30px;
+  }
+
+  .card-price {
+    color: $darkCyan;
+    font-family: Oswald;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 31px;
+  }
+
+  &.active {
+    border: 3px solid $vividCyan;
+  }
+}
+/* -------------------------------------------------------------------------
+ Card Info
+---------------------------------------------------------------------------- */
+/**
+ * Card Info styles for home page.
+ */
+
+.trust {
+  background-color: $superLightGrey;
+}
+
+.card-info {
+  background-color: $superLightGrey;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%; // 300px;
+  width: 100%;
+  padding: 15px 30px;
+  border: 0;
+
+  .card-img-top {
+    margin: 0 auto 20px;
+  }
+
+  .card-title {
+    margin-bottom: 30px;
+  }
+
+  .card-text {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &:last-child {
+    // padding-bottom: 70px;
+  }
+  &:first-child {
+    padding-top: 30px;
+  }
+}

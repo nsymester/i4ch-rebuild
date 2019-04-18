@@ -1,0 +1,68 @@
+/* -------------------------------------------------------------------------
+ Footer
+---------------------------------------------------------------------------- */
+/**
+ * Footer styles.
+ */
+
+footer {
+  background-color: $veryDarkCyan;
+}
+
+// footer list
+.footer-list {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 20px;
+    a {
+      color: $white;
+    }
+
+    &:first-child {
+      a {
+        font-weight: bold;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: center;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+  text-indent: 100%;
+  color: transparent;
+  text-align: center;
+}
+
+.facebook {
+  background: url(../images/facebook-icon.png) no-repeat center center;
+  width: 15px;
+  height: 30px;
+}
+.twitter {
+  background: url(../images/twitter-icon.png) no-repeat center center;
+  width: 28px;
+  height: 23px;
+}
+.instagram {
+  background: url(../images/instagram-icon.png) no-repeat center center;
+  width: 30px;
+  height: 30px;
+}

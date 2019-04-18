@@ -5,469 +5,6 @@
   * @author Neil Symester neil.symester@towergate.co.uk
   */
 
-
-
-/* -------------------------------------------------------------------------
- Tab Container styles
----------------------------------------------------------------------------- */
-/**
- * Tab Container styles for home page.
- */
-
-.tab-container {
-  min-width: 360px;
-  width: 435px;
-  margin: 30px 10px;
-
-  @media (min-width: 1199px) {
-    margin: 60px 10px;
-  }
-
-  .inner {
-    border: 1px solid transparent;
-    border-color: #fff #dee2e6 #dee2e6 #dee2e6;
-    border-radius: 0.25rem;
-    border-top-left-radius: 0;
-    padding: 2rem 2rem 1.5rem 2rem;
-    background-color: $white;
-    max-width: 435px;
-    width: 100%;
-    /* h-offset v-offset blur spread color */
-    box-shadow: 2px 2px 15px 1px #e3e3e3;
-
-    h2 {
-      margin-bottom: 40px; // 60px;
-    }
-
-    .tab-van {
-      display: none;
-
-      .form-group:nth-child(3) {
-        margin-bottom: 50px;
-      }
-    }
-  }
-}
-
-
-
-/* -------------------------------------------------------------------------
- Form Items
----------------------------------------------------------------------------- */
-/**
- * Form Items styles for home page.
- */
-.form-group {
-  margin-bottom: 1rem;
-}
-
-label.form-control-label {
-  height: calc(36px - 50%);
-  color: $veryDarkGrayishBlue;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5rem;
-  margin-bottom: 30px;
-}
-
-.form-check-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-/* -------------------------------------------------------------------------
- Radio Buttons
----------------------------------------------------------------------------- */
-/**
-  @group radio buttons
- */
-
-.radio-button-box {
-  max-width: 150px;
-  width: 100%;
-  height: 48px;
-  padding-left: 0;
-
-  @media screen and (min-width: 768px) {
-    max-width: 150px;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &__input {
-    display: none;
-
-    &:checked {
-      + .radio-button-box__label {
-        background-color: $vividCyan;
-        border-color: $vividCyan;
-
-        span {
-          color: $veryDarkCyan;
-        }
-      }
-    }
-  }
-
-  &__label {
-    height: 100%;
-    width: 100%;
-    border: 1px solid $veryDarkGrayishBlue;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    transition: all 250ms ease;
-    will-change: transition;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    font-family: $base-font;
-    color: $veryDarkGrayishBlue;
-
-    &:active {
-      transform: translateY(10px);
-    }
-
-    // single line of text
-    &--single-line {
-      span {
-        display: block;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 48px;
-        text-transform: uppercase;
-      }
-    }
-
-    // double line of text
-    &--double-line {
-      span {
-        display: block;
-        font-size: 0.8rem;
-        font-weight: 600;
-        line-height: 1rem;
-        padding-top: 0.1rem;
-      }
-    }
-
-    // icon
-    &--icon {
-      // style the radio button label
-      span {
-        position: relative;
-        transform: translate(0, 30px);
-        left: 0%;
-        right: 0%;
-        //transition: all 300ms ease;
-        font-size: 0.85em;
-        user-select: none;
-        //color: $veryDarkGrayishBlue;
-        display: inline-block;
-        bottom: 32px;
-        line-height: 36px;
-        font-weight: 600;
-
-        // icon
-        &:before {
-          position: absolute;
-          left: -60px;
-          top: 3px;
-          content: ' ';
-          background-repeat: no-repeat;
-          display: inline-block;
-          //transform: translateY(-80px);
-          //transition: all 300ms ease-in-out;
-          //font-weight: normal;
-          color: $veryDarkGrayishBlue;
-          background-size: 60% 60%;
-          width: 60px;
-          height: 50px;
-        }
-      }
-
-      span {
-        bottom: 22px;
-        left: 30px;
-      }
-    }
-  }
-}
-
-/* -------------------------------------------------------------------------
- Buttons
----------------------------------------------------------------------------- */
-/**
- * Buttons styles for home page.
- */
-.btn {
-  height: 60px;
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  user-select: none;
-  padding: 0.375rem 0.75rem;
-  color: $darkCyan;
-  line-height: 24px;
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 1px solid $veryDarkCyan;
-  border-radius: 0;
-  max-width: 100%; //235px;
-  width: 100%;
-
-  @media (min-width: 1199px) {
-    height: 46px;
-    line-height: 20px;
-    font-size: $base-fontSize;
-  }
-}
-
-a.btn {
-  padding: 15px 0;
-}
-
-.btn {
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  &-info {
-    color: $white;
-    font-family: inherit;
-    //font-size: calc(24px - 50%);
-    font-size: inherit;
-    font-weight: normal;
-    line-height: calc(38px - 50%);
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid $white;
-    max-width: 100%;
-    &:hover,
-    &:focus,
-    &:active:hover {
-      color: $white;
-      background-color: $vividCyan;
-      outline: 0;
-      //box-shadow: 0 0 0 0.1rem $darkCyan
-    }
-  }
-
-  &-cta {
-    color: $white;
-    background-color: $vividRed;
-    border: 2px solid $vividRed;
-    color: $white;
-    font-family: inherit;
-    //font-size: calc(24px - 50%);
-    font-size: inherit;
-    font-weight: normal;
-    line-height: calc(38px - 50%);
-    text-align: center;
-    margin-bottom: 24px;
-    max-width: 100%;
-    box-shadow: none;
-
-    &:focus {
-      color: $white;
-      background-color: $vividRed;
-      //box-shadow: 0 0 0 0.1rem $darkCyan
-    }
-
-    &:hover {
-      background-color: #fff;
-      color: $vividRed;
-    }
-
-    &:active:hover {
-      outline: 0;
-    }
-  }
-
-  &-cta--disabled {
-    color: $white;
-    background-color: $lightGrayishBlue;
-    border: 2px solid $lightGrayishBlue;
-    color: $white;
-    font-family: inherit;
-    //font-size: calc(24px - 50%);
-    font-size: inherit;
-    font-weight: normal;
-    line-height: calc(38px - 50%);
-    text-align: center;
-    margin-bottom: 24px;
-    max-width: 100%;
-
-    &:hover,
-    &:focus {
-      color: $white;
-      //box-shadow: 0 0 0 0.1rem $darkCyan
-    }
-  }
-
-  &-price {
-    color: $veryDarkGrayishBlue;
-    background-color: $white;
-    border-color: $lightGrayishBlue;
-    position: relative;
-    text-transform: initial;
-    text-decoration: none;
-    text-align: left;
-    border-radius: 0;
-    max-width: 100%;
-    margin-bottom: 20px;
-    font-size: inherit;
-
-    :after {
-      // content: '\25BA';
-      content: url(../images/green-right-arrow.png);
-      position: absolute;
-      right: 10px;
-      color: $vividCyan;
-    }
-
-    span {
-      color: $darkCyan;
-      font-weight: bold;
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-      background-color: $vividCyan;
-      //box-shadow: 0 0 0 0.1rem $darkCyan
-
-      span {
-        color: $white;
-      }
-
-      :after {
-        content: url(../images/white-right-arrow.png);
-        color: $white;
-      }
-    }
-  }
-
-  &--block {
-    width: 100%;
-  }
-
-  &-default {
-    @media(min-width:1199px){
-      max-width: 290px;
-      width:100%;
-      margin:0 auto;
-      display:block;
-    }
-  }
-}
-
-.price-and-btn {
-  padding: 20px 20px 5px;
-  border: 3px solid $vividCyan;
-  border-radius: 5px;
-
-  .price {
-    margin-bottom: 30px;
-    text-align: center;
-    color: $darkCyan;
-    font-size: 45px;
-    font-family: Oswald;
-    font-weight: bold;
-    line-height: 38px;
-  }
-
-  .btn {
-    margin-bottom: 15px;
-  }
-
-  @media(min-width:1199px){
-    max-width:370px;
-    width:100%;
-  }
-}
-
-/* -------------------------------------------------------------------------
- Dropdown menu
----------------------------------------------------------------------------- */
-/**
- * Dropdown menu styles for home page.
- */
-
-.dropdown--car {
-  margin-top: 10px;
-  /* h-offset v-offset blur spread color */
-  box-shadow: 2px 2px 15px 1px #e3e3e3;
-  border-radius: 10px;
-}
-
-.btn-van,
-.btn-car {
-  position: relative;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  font-family: Oswald;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-  text-transform: capitalize;
-  color: $veryDarkCyan;
-  width: 100%;
-  max-width: 100%;
-  text-align: left;
-  padding: 10px 0 10px 10px;
-  margin-top: 0px;
-
-  span {
-    display: inline-block;
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-
-  &:hover {
-    color: #333;
-    background-color: white;
-    border-color: white;
-  }
-}
-
-.btn-van {
-  margin-top: 10px;
-  box-shadow: 2px 2px 15px 1px #e3e3e3;
-  border-radius: 10px;
-}
-
-.dropdown--car .dropdown-menu {
-  width: 100%;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-top-color: transparent;
-  position: relative;
-  top: -0px;
-  box-shadow: none;
-  border: 1px solid white;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top: 1px solid transparent;
-  z-index: 0;
-}
-
-.open > .dropdown--car .dropdown-toggle.btn-car,
-.dropdown--car .dropdown-toggle.btn-car {
-  &:focus {
-    color: black;
-    background-color: white;
-    border-color: transparent;
-    outline: 0;
-  }
-}
-
 /* -------------------------------------------------------------------------
  Alert
 ---------------------------------------------------------------------------- */
@@ -496,7 +33,6 @@ a.btn {
     font-size: 11px;
   }
 }
-
 
 /* -------------------------------------------------------------------------
  Info Box
@@ -606,11 +142,12 @@ a.btn {
 }
 
 .policy-summary {
-  .info-box-container{
+  .info-box-container {
     margin: 0 auto;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     color: $white;
     margin-bottom: 20px;
   }
@@ -621,7 +158,7 @@ a.btn {
     dd {
       color: $white;
       margin-bottom: 10px;
-      line-height:32px;
+      line-height: 32px;
       font-weight: normal;
     }
 
@@ -636,150 +173,7 @@ a.btn {
 
   .btn-cta {
     margin-bottom: 0;
-    border-radius:2px;
-  }
-}
-
-/* -------------------------------------------------------------------------
- Standard Card
----------------------------------------------------------------------------- */
-/**
- * Standard Card styles for home page.
- */
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.65rem;
-  max-width: 100%; //308px;
-  width: 100%;
-  padding: 30px 15px 0 15px;
-  box-shadow: 0 2px 12px 2px $lightGrayishBlue;
-  margin-bottom: 15px;
-
-  &-img-top {
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-    // height: 100%; // 180px;
-    width: 100%; // 286px;
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  &-body {
-    flex: 1 1 auto;
-  }
-
-  &-title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-}
-
-/* -------------------------------------------------------------------------
- Article Card
----------------------------------------------------------------------------- */
-/**
- * Article Card styles for home page.
- */
-.card-article {
-  border-radius: 0;
-  padding: 1px;
-  box-shadow: none;
-
-  .card-title {
-    text-align: left;
-    padding-left: 15px;
-    margin-bottom: 20px; // 30px;
-  }
-
-  .card-body {
-    padding: 0 15px 20px 15px;
-    height: 100%;
-
-    a {
-      text-decoration: underline;
-    }
-  }
-
-  .card-text {
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  &:nth-child(4) {
-    margin-bottom: 30px;
-  }
-
-  .card-published {
-    position: absolute;
-    right: 15px;
-    bottom: 20px;
-    color: $darkGrey;
-  }
-}
-
-.card-cover-option {
-  .card-title {
-    text-align: left;
-    margin-bottom: 20px; // 30px;
-  }
-
-  .card-price {
-    color: $darkCyan;
-    font-family: Oswald;
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom:31px;
-  }
-
-  &.active {
-    border: 3px solid $vividCyan;
-  }
-}
-/* -------------------------------------------------------------------------
- Card Info
----------------------------------------------------------------------------- */
-/**
- * Card Info styles for home page.
- */
-
-.trust {
-  background-color: $superLightGrey;
-}
-
-.card-info {
-  background-color: $superLightGrey;
-  border-radius: 0;
-  box-shadow: none;
-  max-width: 100%; // 300px;
-  width: 100%;
-  padding: 15px 30px;
-  border: 0;
-
-  .card-img-top {
-    margin: 0 auto 20px;
-  }
-
-  .card-title {
-    margin-bottom: 30px;
-  }
-
-  .card-text {
-    margin-top: 0;
-    text-align: center;
-  }
-
-  &:last-child {
-    // padding-bottom: 70px;
-  }
-  &:first-child {
-    padding-top: 30px;
+    border-radius: 2px;
   }
 }
 
@@ -835,241 +229,6 @@ a.btn {
 }
 
 /* -------------------------------------------------------------------------
- Menu
----------------------------------------------------------------------------- */
-/**
- * Menu styles.
- */
-.navbar {
-  position: relative;
-  height: 55px;
-  margin-bottom: 0;
-  border: 1px solid transparent;
-  background-color: $veryDarkCyan;
-  border-radius: 0;
-
-  .container-fluid,
-  .container {
-    height: 100%;
-  }
-}
-
-.navbar-brand {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 5px;
-  padding: 0 0 0 15px;
-  float: none;
-  height: 34px;
-  line-height: initial;
-  width: 227px;
-}
-
-.navbar-header {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  height: 100%;
-}
-
-.navbar-nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style-type: none;
-  display: none;
-  background-color: $veryDarkCyan;
-  z-index: 1;
-
-  li {
-    text-align: center;
-    margin: 15px auto;
-
-    &:before {
-      content: '';
-    }
-
-    a {
-      color: $white;
-      padding: 10px;
-
-      &:hover,
-      &:focus,
-      &:active:hover {
-        color: white;
-        background-color: #01dbab;
-        outline: 0;
-      }
-    }
-  }
-}
-
-.navbar-toggle {
-  position: absolute;
-  top: 7px;
-  right: 20px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 24px;
-  padding: 9px 10px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  margin-right: initial;
-  margin-top: initial;
-  margin-bottom: initial;
-  float: none;
-  // border-color: #ddd;
-}
-
-.active {
-  display: block;
-}
-
-.navbar-toggle .icon-bar {
-  background-color: $white;
-  display: block;
-  width: 32px;
-  height: 2px;
-  border-radius: 1px;
-}
-
-.navbar-toggle .icon-bar + .icon-bar {
-  margin-top: 7px;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-@media screen and (min-width: 960px) {
-  .navbar {
-    // display: flex;
-    // justify-content: space-between;
-    padding-bottom: 0;
-    // align-items: center;
-
-    .container-fluid,
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-    }
-  }
-  .navbar-nav {
-    display: flex;
-    margin-right: 0;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 0;
-  }
-  .navbar-nav li {
-    margin: 0 0 0 20px;
-    flex: 1 0 auto;
-    float: none;
-    clear: both;
-
-    &:first-child:before {
-      display: none;
-    }
-
-    & + li:before {
-      content: '|';
-      color: $white;
-      padding-right: 19px;
-    }
-
-    &:last-child {
-      position: relative;
-      top: 2px;
-      left: 0;
-      &:before {
-        display: none;
-      }
-    }
-
-    .person-icon {
-      width: 18px;
-      height: 14px;
-      vertical-align: baseline;
-    }
-
-    a {
-      font-size: 13px;
-      color: $white;
-      display: inline;
-    }
-  }
-  .nav-links {
-    margin-left: 40px;
-  }
-  .logo {
-    margin-top: 0;
-    vertical-align: baseline;
-  }
-  .navbar-toggle {
-    display: none;
-  }
-  .logo:hover,
-  .nav-links:hover {
-    color: rgba(255, 255, 255, 1);
-  }
-}
-
-.navbar-collapse {
-  display: block;
-  z-index: 1;
-  position: relative;
-}
-
-@media (max-width: 960px) {
-  .navbar-header {
-    float: none;
-  }
-  .navbar-left,
-  .navbar-right {
-    float: none !important;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
-  // .navbar-collapse.collapse {
-  //   display: none !important;
-  // }
-  .navbar-nav {
-    float: none !important;
-    margin-top: 7.5px;
-  }
-  .navbar-nav > li {
-    float: none;
-  }
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .collapse.in {
-    display: block !important;
-  }
-}
-
-/* -------------------------------------------------------------------------
  Comparison
 ---------------------------------------------------------------------------- */
 /**
@@ -1102,75 +261,6 @@ a.btn {
   width: 72px;
   height: 72px;
   margin-right: 15px;
-}
-
-/* -------------------------------------------------------------------------
- Footer
----------------------------------------------------------------------------- */
-/**
- * Footer styles.
- */
-
-footer {
-  background-color: $veryDarkCyan;
-}
-
-// footer list
-.footer-list {
-  list-style: none;
-  text-align: center;
-  padding-left: 0;
-
-  li {
-    margin-bottom: 20px;
-    a {
-      color: $white;
-    }
-
-    &:first-child {
-      a {
-        font-weight: bold;
-      }
-    }
-
-    &:last-child {
-      margin-bottom: 45px;
-    }
-  }
-}
-
-.social-icons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  align-items: center;
-
-  ul {
-    list-style: none;
-  }
-}
-
-.icon {
-  display: inline-block;
-  text-indent: 100%;
-  color: transparent;
-  text-align: center;
-}
-
-.facebook {
-  background: url(../images/facebook-icon.png) no-repeat center center;
-  width: 15px;
-  height: 30px;
-}
-.twitter {
-  background: url(../images/twitter-icon.png) no-repeat center center;
-  width: 28px;
-  height: 23px;
-}
-.instagram {
-  background: url(../images/instagram-icon.png) no-repeat center center;
-  width: 30px;
-  height: 30px;
 }
 
 .video {
@@ -1216,64 +306,6 @@ footer {
     border-radius: 50%;
     padding: 2px 8px;
     margin: 0;
-  }
-}
-
-/* -------------------------------------------------------------------------
- Accordion
----------------------------------------------------------------------------- */
-/**
- * Accordion styles.
- */
-/* Style the buttons that are used to open and close the accordion panel */
-
-.accordion {
-  .accordion-btn {
-    background-color: $veryDarkCyan;
-    color: $white;
-    cursor: pointer;
-    padding: 18px 0;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    position: relative;
-    border-top: 1px solid $white;
-
-    &:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      margin-top: -2.1px;
-      right: 10px;
-      width: 0;
-      height: 0;
-      border: 7px solid transparent;
-      border-top-color: #18d9ac;
-    }
-  }
-  .active:after {
-    content: '';
-    border-top-color: transparent;
-    margin-top: -12px;
-    border-bottom-color: #18d9ac;
-  }
-
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  accordion-btn:hover {
-    background-color: #ccc;
-  }
-  /* Style the accordion panel. Note: hidden by default */
-  .accordion-panel {
-    padding: 0;
-    background-color: $veryDarkCyan;
-    max-height: 0;
-    //display: none;
-    overflow: hidden;
-    color: $white;
-    transition: max-height 0.2s ease-out;
   }
 }
 
@@ -1394,70 +426,6 @@ section h2 {
   }
 }
 
-.accordion {
-  &.card-products {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    margin-bottom: 60px;
-
-    @media (min-width: 1200px) {
-      flex-flow: row wrap;
-    }
-
-    .col-lg-4 {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  .card-product {
-    width: 100%;
-    padding-top: 0;
-
-    @media (min-width: 1200px) {
-      max-width: 311px;
-      display: block;
-      // width: 33.33333333%;
-    }
-    .accordion-btn {
-      text-align: left;
-      background-color: $white;
-      color: $mainTextColour;
-
-      @media (min-width: 1200px) {
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      &:after {
-        display: inline-block;
-
-        @media (min-width: 1200px) {
-          display: none;
-        }
-      }
-    }
-
-    .btn {
-      margin-bottom: 0;
-    }
-
-    .accordion-panel {
-      background-color: $white !important;
-      color: $mainTextColour;
-
-      .form-group {
-        background-color: $white !important;
-      }
-      @media (min-width: 1200px) {
-        max-height: 100%;
-        overflow: visible;
-      }
-    }
-  }
-}
-
 .trust {
   .inner {
     display: block;
@@ -1534,7 +502,6 @@ footer {
 }
 
 .product-hero {
-
   p {
     margin-bottom: 20px;
 
@@ -1545,15 +512,14 @@ footer {
 }
 
 .product-about {
-
-  @media(min-width:1199px){
+  @media (min-width: 1199px) {
     margin-bottom: 60px;
   }
 
   h2 {
     padding: 0px 30px;
 
-    @media(min-width:1199px){
+    @media (min-width: 1199px) {
       text-align: center;
       margin-bottom: 60px;
     }
@@ -1566,29 +532,29 @@ footer {
     .card {
       box-shadow: none;
 
-      @media(min-width:1199px){
+      @media (min-width: 1199px) {
         flex: 0 1 420px;
       }
 
       h3 {
-        @media(min-width:1199px){
-          text-align:center;
+        @media (min-width: 1199px) {
+          text-align: center;
         }
       }
     }
 
-    @media(min-width:1199px){
-      display:flex;
-      flex-flow:row nowrap;
+    @media (min-width: 1199px) {
+      display: flex;
+      flex-flow: row nowrap;
       justify-content: space-evenly;
-      padding-bottom:0;
+      padding-bottom: 0;
     }
   }
 }
 
 .policy-info {
-  .btn-default{
-    @media(min-width:1199px){
+  .btn-default {
+    @media (min-width: 1199px) {
       color: $vividCyan;
       border-color: $vividCyan;
     }
@@ -1601,4 +567,39 @@ footer {
 
 .hero {
   margin-bottom: 30px;
+}
+
+/**
+ *  @desc serach
+ */
+
+.search-options {
+  .inner {
+  }
+
+  .form-group {
+    padding: 20px 10px;
+    background-color: green;
+  }
+}
+
+.search-label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+.search-options-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  a {
+    color: $mainTextColour;
+
+    &.active {
+      color: $darkCyan;
+    }
+  }
 }
