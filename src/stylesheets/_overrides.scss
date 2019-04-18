@@ -106,57 +106,55 @@
   border: 1px solid $darkGrey;
 }
 
-
-#productOptions{
-
+#product-options {
   .container-fluid {
     .container {
       padding-left: 0;
       padding-right: 0;
 
-      @media(min-width:749px){
+      @media (min-width: 749px) {
         padding-left: 15px;
         padding-right: 15px;
       }
 
-      @media(min-width:1199px){
+      @media (min-width: 1199px) {
         padding-left: 0;
         padding-right: 0;
-        width:100%;
-        margin-bottom:20px;
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
   }
 
   .cover-options {
     .inner {
-      @media(min-width:1199px){
-        display:flex;
-        flex-flow:row nowrap;
-        align-items:flex-start;
+      @media (min-width: 1199px) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
       }
 
-      .info-box-container, .info-box-container .info-box {
-        @media(min-width:1199px){
-          margin-top:0
+      .info-box-container,
+      .info-box-container .info-box {
+        @media (min-width: 1199px) {
+          margin-top: 0;
         }
       }
 
-      .product-options-days-cover{
-        max-width:280px;
-        width:100%;
+      .product-options-days-cover {
+        max-width: 280px;
+        width: 100%;
       }
     }
 
     .cover-options-container {
-
-      @media(min-width:1199px){
+      @media (min-width: 1199px) {
         margin-right: 25px;
       }
     }
 
     .card-cover-option {
-      padding:35px 45px 25px;
+      padding: 35px 45px 25px;
 
       &:hover {
         border: 3px solid #01dbab;
@@ -164,11 +162,11 @@
       }
 
       .card-icons {
-        display:none;
+        display: none;
 
         img {
-          width:30px;
-          height:30px;
+          width: 30px;
+          height: 30px;
         }
       }
 
@@ -176,34 +174,33 @@
         padding: 32px 42px 22px !important;
 
         .card-icons {
-          display:block;
+          display: block;
         }
       }
 
       .inner {
-        display:flex;
+        display: flex;
         justify-content: space-between;
       }
     }
-
   }
 
-  .product-hero{
-    display:block;
+  .product-hero {
+    display: block;
     margin: 30px auto 0;
 
-    @media(min-width:1199px){
-      background-color:$darkCyan;
+    @media (min-width: 1199px) {
+      background-color: $darkCyan;
       margin: 0 -15px;
     }
 
     .inner {
       margin: 0 auto;
-      min-width:100%;
-      width:100%;
+      min-width: 100%;
+      width: 100%;
 
-      @media(min-width:1199px){
-        padding:70px;
+      @media (min-width: 1199px) {
+        padding: 70px;
         // display:flex;
         // flex-flow:row nowrap;
         // align-items:flex-start;
@@ -211,20 +208,22 @@
     }
 
     h1 {
-      margin-bottom:20px;
+      margin-bottom: 20px;
     }
 
-    h1, p {
-      text-align:left;
+    h1,
+    p {
+      text-align: left;
 
-      @media(min-width:1199px){
-        text-align:center;
-        color:$white;
+      @media (min-width: 1199px) {
+        text-align: center;
+        color: $white;
       }
     }
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     margin-bottom: 40px;
   }
 
@@ -232,19 +231,17 @@
     margin-bottom: 25px;
   }
 
-
   .info-box-container {
     width: 435px;
     min-width: 360px;
     margin: 55px auto 40px;
   }
-
 }
 
 .docs {
-  display:flex;
+  display: flex;
   justify-content: center;
-  flex-flow:row wrap;
+  flex-flow: row wrap;
 }
 
 .docpdf {
@@ -258,7 +255,7 @@
   align-items: center;
 
   &:before {
-    content: "";
+    content: '';
     background: url(/images/pdf-icon.jpg) no-repeat center center;
     position: absolute;
     top: 1em;
@@ -270,7 +267,7 @@
   }
 
   .doc-name {
-    text-align:center;
+    text-align: center;
   }
 
   .docsize {
@@ -282,3 +279,39 @@
   }
 }
 
+.blog-header {
+  display: block;
+  margin: 30px auto 0;
+
+  @media (min-width: 1199px) {
+    background-color: $darkCyan;
+    margin: 0 -15px;
+  }
+
+  .inner {
+    margin: 0 auto;
+    min-width: 100%;
+    width: 100%;
+
+    @media (min-width: 1199px) {
+      padding: 70px;
+      // display:flex;
+      // flex-flow:row nowrap;
+      // align-items:flex-start;
+    }
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h1,
+  p {
+    text-align: left;
+
+    @media (min-width: 1199px) {
+      text-align: center;
+      color: $white;
+    }
+  }
+}

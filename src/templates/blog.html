@@ -1,0 +1,93 @@
+{% block headerContent %} {% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'product-options') }}
+{% endblock %}
+
+<div class="container-fluid">
+  {% include "./partials/nav.njk" %}
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <section class="blog-header row">
+      <div class="inner">
+        <h1 class="has-sub-title">Insurance 4 Car Hire Excess Blog</h1>
+        <p class="sub-title">
+          We've put together some handy guides to help you stay safe on the
+          roads, get the most out of your insurance and most importantly enjoy
+          your time travelling.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container grid">
+  <section class="search-options">
+    <div class="inner">
+      <div class="form-group">
+        <label for="search" class="search-label">
+          <input id="search" type="text" />
+        </label>
+      </div>
+
+      <div class="search-options-menu">
+        <a class="active" href="">Insurance</a>
+        <a href="">Driving</a>
+        <a href="">Car Hire</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-hero">
+    <h3>
+      What is a Collision Damage Waiver (CDW) & Supplemental Liability Insurance
+      (SLI) Rental Cars?
+    </h3>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta labore
+      animi impedit quae nostrum eum? Tempora, nihil. Suscipit, blanditiis
+      maiores facere ex perferendis perspiciatis sapiente aperiam? Voluptatem
+      temporibus eos blanditiis!
+    </p>
+
+    <p><a href="">View Article >></a></p>
+  </section>
+
+  <section class="top-articles">
+    <h3>Top Articles</h3>
+    <div class="inner">
+      {% include "./partials/top-articles.njk" %}
+    </div>
+  </section>
+
+  <section class="all-articles">
+    <h3>All Articles</h3>
+    <div class="inner">
+      {% include "./partials/text-articles.njk" %}
+    </div>
+  </section>
+
+  <section class="trust row">
+    {% include "./partials/trust-box.njk" %}
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.reviews-->
+  <footer class="row">
+    {% include './partials/links.njk' %}
+  </footer>
+
+  {% include './partials/help-icon.njk' %}
+</div>
+<!--//.container-->
+
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}

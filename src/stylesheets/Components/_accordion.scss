@@ -1,0 +1,121 @@
+/* -------------------------------------------------------------------------
+ Accordion
+---------------------------------------------------------------------------- */
+/**
+ * Accordion styles.
+ */
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordion {
+  .accordion-btn {
+    background-color: $veryDarkCyan;
+    color: $white;
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    border-top: 1px solid $white;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      margin-top: -2.1px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-top-color: #18d9ac;
+    }
+  }
+  .active:after {
+    content: '';
+    border-top-color: transparent;
+    margin-top: -12px;
+    border-bottom-color: #18d9ac;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  accordion-btn:hover {
+    background-color: #ccc;
+  }
+  /* Style the accordion panel. Note: hidden by default */
+  .accordion-panel {
+    padding: 0;
+    background-color: $veryDarkCyan;
+    max-height: 0;
+    //display: none;
+    overflow: hidden;
+    color: $white;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+.accordion {
+  &.card-products {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-bottom: 60px;
+
+    @media (min-width: 1200px) {
+      flex-flow: row wrap;
+    }
+
+    .col-lg-4 {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .card-product {
+    width: 100%;
+    padding-top: 0;
+
+    @media (min-width: 1200px) {
+      max-width: 311px;
+      display: block;
+      // width: 33.33333333%;
+    }
+    .accordion-btn {
+      text-align: left;
+      background-color: $white;
+      color: $mainTextColour;
+
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      &:after {
+        display: inline-block;
+
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 0;
+    }
+
+    .accordion-panel {
+      background-color: $white !important;
+      color: $mainTextColour;
+
+      .form-group {
+        background-color: $white !important;
+      }
+      @media (min-width: 1200px) {
+        max-height: 100%;
+        overflow: visible;
+      }
+    }
+  }
+}
