@@ -69,7 +69,7 @@ function start() {
     });
   }
 
-  $('.product-options-days-cover').keyup(function(evt) {
+  $('.product-options-days-cover').change(function(evt) {
     let parentClass = $(this)
       .parent()
       .parent()
@@ -85,7 +85,7 @@ function start() {
     });
 
     $('.' + parentClass[2] + ' .inner .card-price .amount').text(
-      parseFloat(coverOptionPrice[0].cost * evt.currentTarget.value) == 0
+      parseFloat(coverOptionPrice[0].cost * evt.currentTarget.value) <= 0
         ? coverOptionPrice[0].cost
         : parseFloat(
             coverOptionPrice[0].cost * evt.currentTarget.value
