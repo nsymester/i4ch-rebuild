@@ -46,6 +46,17 @@ function start() {
     let policySummary = $(this).data('policy');
     $('.' + policySummary).css('display', 'block');
   });
+
+  $('.tab-car .btn').click(function(evt) {
+    evt.preventDefault();
+    return false;
+  });
+
+  $('.tab-car .icon-radio input[type="radio"]').click(function(evt) {
+    $('.tab-car .btn').removeClass('btn-cta--disabled');
+    $('.tab-car .btn').addClass('btn-cta');
+    $('.tab-car .btn').unbind();
+  });
 }
 
 function ready(fn) {
