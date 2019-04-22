@@ -33,36 +33,41 @@ footer {
   }
 }
 
-.social-icons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  align-items: center;
+footer {
+  display: block;
 
-  ul {
-    list-style: none;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    align-items: stretch;
+
+    .footer-list {
+      text-align: left;
+      margin-right: 20px;
+      position: relative;
+      flex: 1 1 150px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        z-index: 100;
+        top: 0;
+        width: 3px;
+        height: 85%; /* or 100px */
+        background: $darkCyan;
+      }
+    }
   }
-}
 
-.icon {
-  display: inline-block;
-  text-indent: 100%;
-  color: transparent;
-  text-align: center;
-}
+  .social-icons {
+    align-content: flex-end;
+    align-self: flex-start;
 
-.facebook {
-  background: url(../images/facebook-icon.png) no-repeat center center;
-  width: 15px;
-  height: 30px;
-}
-.twitter {
-  background: url(../images/twitter-icon.png) no-repeat center center;
-  width: 28px;
-  height: 23px;
-}
-.instagram {
-  background: url(../images/instagram-icon.png) no-repeat center center;
-  width: 30px;
-  height: 30px;
+    a {
+      margin-left: 50px;
+    }
+  }
 }

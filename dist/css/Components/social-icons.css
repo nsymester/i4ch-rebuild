@@ -1,0 +1,95 @@
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .social-icons ul {
+    list-style: none; }
+
+.icon {
+  display: inline-block;
+  text-indent: 100%;
+  color: transparent;
+  text-align: center; }
+
+.facebook {
+  background: url(../images/facebook-icon.png) no-repeat center center;
+  width: 15px;
+  height: 30px; }
+
+.twitter {
+  background: url(../images/twitter-icon.png) no-repeat center center;
+  width: 28px;
+  height: 23px; }
+
+.instagram {
+  background: url(../images/instagram-icon.png) no-repeat center center;
+  width: 30px;
+  height: 30px; }
+
+.social-icons--mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 20px; }
+  @media (min-width: 1199px) {
+    .social-icons--mobile {
+      display: none; } }
+  .social-icons--mobile a {
+    margin-bottom: 20px; }
+
+.social-icons--desktop {
+  display: none; }
+  @media (min-width: 1199px) {
+    .social-icons--desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  .social-icons--desktop a {
+    margin-left: 20px; }
+
+.facebook-black {
+  background: url(../images/facebook-icon-black.png) no-repeat center center;
+  width: 13px;
+  height: 22px; }
+
+.twitter-black {
+  background: url(../images/twitter-icon-black.png) no-repeat center center;
+  width: 22px;
+  height: 17px; }
+
+.instagram-black {
+  background: url(../images/instagram-icon-black.png) no-repeat center center;
+  width: 22px;
+  height: 22px; }
+
+/*# sourceMappingURL=../maps/Components/social-icons.css.map */

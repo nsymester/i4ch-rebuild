@@ -147,7 +147,8 @@ footer {
   }
 }
 
-.product-hero {
+.product-hero,
+.blog-hero {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -159,29 +160,36 @@ footer {
   }
 
   .inner {
-    flex:1;
+    flex: 1;
   }
 
   .inner:first-child {
     flex: 0;
-    max-width:670px;
-    width:100%;
+    max-width: 670px;
+    width: 100%;
 
     @media (min-width: 1199px) {
       flex: 1 1 100%;
     }
   }
 
-  .inner:last-child{
+  .inner:last-child {
     margin: 30px 10px;
 
     @media (min-width: 1199px) {
-      margin-left:80px;
-      margin-right:0;
+      margin-left: 80px;
+      margin-right: 0;
     }
   }
 }
 
-.cover-options{
+.cover-options {
   margin-bottom: 80px;
+}
+
+.faq-answers {
+  margin: 0px -15px 60px;
+  border: 1px solid $midGrey;
+  padding: 15px;
+  border-radius: 0 5px 5px;
 }

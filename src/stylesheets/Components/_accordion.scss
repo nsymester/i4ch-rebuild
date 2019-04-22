@@ -6,6 +6,10 @@
  */
 /* Style the buttons that are used to open and close the accordion panel */
 
+/**
+ * @group standard
+ */
+
 .accordion {
   .accordion-btn {
     background-color: $veryDarkCyan;
@@ -40,6 +44,10 @@
     border-bottom-color: #18d9ac;
   }
 
+  .accordion-btn {
+    // margin-bottom: 0;
+    margin-bottom: 15px;
+  }
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   accordion-btn:hover {
     background-color: #ccc;
@@ -56,6 +64,9 @@
   }
 }
 
+/**
+ * @ group card products
+ */
 .accordion {
   &.card-products {
     display: flex;
@@ -115,6 +126,54 @@
       @media (min-width: 1200px) {
         max-height: 100%;
         overflow: visible;
+      }
+    }
+  }
+}
+
+/**
+ * @ group faqs
+ */
+.faq-answers {
+  .accordion {
+    .accordion-btn {
+      text-align: left;
+      background-color: $superLightGrey;
+      color: $mainTextColour;
+      padding-left: 10px;
+      margin-bottom: 10px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 15px;
+        right: 10px;
+        bottom: 0;
+        border: 0;
+        background-image: url(/images/plus-bullet.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+    .active:after {
+      content: '';
+      background-image: url(/images/minus-bullet.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      top: 25px;
+      border: 0;
+    }
+
+    .accordion-panel {
+      background-color: $white !important;
+      color: $mainTextColour;
+      // margin-bottom: 18px !important;
+
+      .inner {
+        padding: 18px 10px 22px;
+        background-color: $superLightGrey;
       }
     }
   }

@@ -463,45 +463,6 @@ section h2 {
   }
 }
 
-footer {
-  display: block;
-
-  @media (min-width: 1200px) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    justify-content: space-around;
-    align-items: stretch;
-
-    .footer-list {
-      text-align: left;
-      margin-right: 20px;
-      position: relative;
-      flex: 1 1 150px;
-
-      &:after {
-        content: '';
-        position: absolute;
-        right: 0px;
-        z-index: 100;
-        top: 0;
-        width: 3px;
-        height: 85%; /* or 100px */
-        background: $darkCyan;
-      }
-    }
-  }
-
-  .social-icons {
-    align-content: flex-end;
-    align-self: flex-start;
-
-    a {
-      margin-left: 50px;
-    }
-  }
-}
-
 .product-hero {
   p {
     margin-bottom: 20px;
@@ -575,12 +536,33 @@ footer {
  */
 
 .search-options {
+  margin-bottom: 30px;
+
+  @media (min-width: 1199px) {
+    margin-bottom: 0;
+  }
+
   .inner {
+    @media (min-width: 1199px) {
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+      height: 50px;
+    }
   }
 
   .form-group {
-    padding: 20px 10px;
-    background-color: green;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    background-color: $lightGreen;
+    display: block;
+
+    @media (min-width: 1199px) {
+      display: flex;
+      background-color: $white;
+      padding-top: 0;
+    }
   }
 }
 
@@ -589,6 +571,27 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-around;
   margin-bottom: 0;
+
+  input {
+    width: 100%;
+    margin: 0 30px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid $darkGrey;
+    height: 35px;
+    padding-left: 20px;
+    color: $mainTextColour;
+    background-image: url(/images/search-icon-black.png);
+    background-position: calc(100% - 10px) calc(100% - 5px);
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    outline: 0;
+
+    @media (min-width: 1199px) {
+      width: 340px;
+      height: 40px;
+    }
+  }
 }
 
 .search-options-menu {
@@ -601,6 +604,25 @@ footer {
 
     &.active {
       color: $darkCyan;
+    }
+  }
+
+  a + a:before {
+    content: '|';
+    color: $darkCyan;
+    margin-right: 5rem;
+
+    @media (min-width: 575px) {
+      margin-right: 7.5rem;
+    }
+
+    @media (min-width: 767px) {
+      margin-right: 10rem;
+    }
+
+    @media (min-width: 1199px) {
+      margin-right: 3rem;
+      margin-left: 3rem;
     }
   }
 }

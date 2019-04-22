@@ -92,6 +92,78 @@ function start() {
           ).toFixed(2)
     );
   });
+
+  $('#faqTabs a').click(function(e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
+
+  // load faqs
+  // only load if on faqs page
+  if ($('#faqs').length > 0) {
+    let faqCategories = ['ve'];
+    // cache DOM
+    let vehicleHire = $('#vehicleHire');
+    let coverage = $('#coverage');
+    let current = null;
+
+    $.ajax({
+      type: 'GET',
+      url: '/api/faqs.json',
+      success: function(faqs) {
+        console.log('success:', faqs);
+        $.each(faqs, function(index, faq) {
+          switch (index) {
+            case 'vehicle-hire':
+              current = vehicleHire;
+              break;
+            case 'coverage':
+              current = coverage;
+              break;
+
+            default:
+              break;
+          }
+          $.each(faq, function(fIndex, qa) {
+            $('.inner .accordion', current).append(
+              `<button class="accordion-btn h4">${qa.question}</button>
+               <div class="accordion-panel">
+                 <div class="inner">
+                 ${qa.answer}
+                 </div>
+               </div>
+              `
+            );
+          });
+        });
+      },
+      error: function(xhr, status, error) {
+        console.log('error: ', error);
+      }
+    }); // $ajax
+
+    $('.faq-answers .inner .accordion').delegate(
+      '.accordion-btn',
+      'click',
+      function(evt) {
+        /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+        evt.currentTarget.classList.toggle('active');
+
+        /* Toggle between hiding and showing the active panel */
+        let panel = evt.currentTarget.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.style.marginTop = '0';
+          panel.style.marginBottom = '0';
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.style.marginTop = '-11px';
+          panel.style.marginBottom = '18px';
+        }
+      }
+    );
+  }
 }
 
 function ready(fn) {

@@ -1,0 +1,158 @@
+{% block headerContent %} {% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'faqs') }}
+{% endblock %}
+
+<div class="container-fluid">
+  {% include "./partials/nav.njk" %}
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <section class="blog-header faq-header row">
+      <div class="inner">
+        <h1 class="has-sub-title">
+          Car Hire Excess Insurance Frequently Asked Questions
+        </h1>
+        <p class="sub-title">
+          We've collated frequently asked questions about our car hire excess
+          insurance policies.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container grid">
+  <section class="search-options search-options--alt">
+    <div class="inner">
+      <div class="form-group">
+        <h4>We are here to help you</h4>
+        <label for="search" class="search-label">
+          <input id="search" type="text" placeholder="Type keyword here" />
+        </label>
+      </div>
+
+      <div class="faqs-tabs">
+        <ul class="nav nav-tabs" id="faqTabs" role="tablist">
+          <li class="active">
+            <a href="#vehicleHire" data-toggle="tab"
+              ><img src="/images/faqs/vehicle-hire.png" alt="" /><span
+                >Car & Van Hire Excess Insurance</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#coverage" data-toggle="tab"
+              ><img src="/images/faqs/coverage.png" alt="" /><span
+                >I4CH Coverage</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#policyTypes" data-toggle="tab"
+              ><img src="/images/faqs/policy-types.png" alt="" /><span
+                >Policy Types</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#myPolicy" data-toggle="tab"
+              ><img src="/images/faqs/my-policy.png" alt="" /><span
+                >My Policy</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#other" data-toggle="tab"
+              ><img src="/images/faqs/other.png" alt="" /><span>Other</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-answers">
+    <div class="inner">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="vehicleHire">
+          <h3>
+            Vehicle Hire Excess Insurance
+          </h3>
+          <div class="inner">
+            <div class="accordion"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="coverage">
+          <h3>
+            I4CH Coverage
+          </h3>
+          <div class="inner">
+            <div class="accordion"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="policyTypes">
+          <h3>
+            Policy Types
+          </h3>
+          <div class="inner">
+            <div class="accordion"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="myPolicy">
+          <h3>
+            My Policy
+          </h3>
+          <div class="inner">
+            <div class="accordion"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="other">
+          <h3>
+            Other
+          </h3>
+          <div class="inner">
+            <div class="accordion"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comparison row">
+    <div class="inner">
+      <img
+        class="scale-icon img-responsive"
+        src="./images/scale-icon.png"
+        alt="Comparison image"
+      />
+      <p>
+        Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
+        assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="trust row">
+    {% include "./partials/trust-box.njk" %}
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.reviews-->
+  <footer class="row">
+    {% include './partials/links.njk' %}
+  </footer>
+
+  {% include './partials/help-icon.njk' %}
+</div>
+<!--//.container-->
+
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}
