@@ -136,6 +136,12 @@
  */
 .faq-answers {
   .accordion {
+    margin-top: 20px;
+
+    @media (min-width: 1199px) {
+      margin-top: 0;
+    }
+
     .accordion-btn {
       text-align: left;
       background-color: $superLightGrey;
@@ -155,6 +161,17 @@
         background-image: url(/images/plus-bullet.png);
         background-repeat: no-repeat;
         background-position: center center;
+
+        @media (min-width: 1199px) {
+          background-image: url(/images/plus-bullet@1.5X.png);
+          top: 30px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      @media (min-width: 1199px) {
+        padding: 30px 40px;
       }
     }
     .active:after {
@@ -164,6 +181,13 @@
       background-position: center center;
       top: 25px;
       border: 0;
+
+      @media (min-width: 1199px) {
+        background-image: url(/images/minus-bullet@1.5X.png);
+        top: 40px;
+        width: 40px;
+        height: 40px;
+      }
     }
 
     .accordion-panel {
@@ -174,6 +198,10 @@
       .inner {
         padding: 18px 10px 22px;
         background-color: $superLightGrey;
+
+        @media (min-width: 1199px) {
+          padding: 0 40px 22px;
+        }
       }
     }
   }

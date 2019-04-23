@@ -188,8 +188,12 @@ footer {
 }
 
 .faq-answers {
-  margin: 0px -15px 60px;
-  border: 1px solid $midGrey;
+  margin: 0px -5px 60px -15px;
+  border: 0;
   padding: 15px;
-  border-radius: 0 5px 5px;
+
+  @media (min-width: 1199px) {
+    border: 1px solid $midGrey;
+    border-radius: 0 5px 5px;
+  }
 }
