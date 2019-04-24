@@ -106,7 +106,7 @@
   border: 1px solid $darkGrey;
 }
 
-#productOptions, #blog {
+#productOptions, #blog, #blogPage {
   .container-fluid {
     .container {
       padding-left: 0;
@@ -336,10 +336,20 @@
 .drive {
   .accordion-btn {
     padding: 0;
+    margin-bottom: 10px;
+
+    @media(min-width:1199px){
+      margin-bottom: 15px;
+    }
   }
 
   .accordion-panel {
-    padding-top: 18px !important;
+    padding-bottom:0 !important;
+
+    @media(min-width:1199px){
+      padding-bottom:5px !important;
+      padding-top: 18px !important;
+    }
   }
 }
 
