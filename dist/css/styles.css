@@ -2588,9 +2588,6 @@ section h2 {
   display: block !important; }
   @media (min-width: 1199px) {
     .article-header {
-      background: url(/images/mountain-road.jpg) no-repeat;
-      background-size: cover;
-      background-position: center;
       max-height: 800px;
       height: 100%; } }
   .article-header h1 {
@@ -2617,7 +2614,8 @@ section h2 {
       margin-top: 30px;
       padding: 20px;
       background-color: #f8f8fa;
-      width: 250px; } }
+      width: 250px;
+      border-radius: 5px; } }
   @media (min-width: 1199px) {
     .article-info .read-time, .article-info .article-tags {
       display: -webkit-box;
@@ -2636,10 +2634,12 @@ section h2 {
     height: 20px;
     margin-right: 10px; }
 
-@media (min-width: 1199px) {
-  .article-content {
-    margin-top: 20px;
-    padding-right: 30px; } }
+.article-content {
+  margin-bottom: 50px; }
+  @media (min-width: 1199px) {
+    .article-content {
+      margin-top: 20px;
+      padding-right: 30px; } }
 
 /* @group overrides */
 .clearfix {
