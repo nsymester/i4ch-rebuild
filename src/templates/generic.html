@@ -1,0 +1,104 @@
+{% block headerContent %} {% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'faqs') }}
+{% endblock %}
+
+<div class="container-fluid">
+  {% include "./partials/nav.njk" %}
+</div>
+<div class="container-fluid">
+  <!-- <div class="container"> -->
+  <section class="blog-header generic-heaader row">
+    <div class="inner">
+      <h1 class="has-sub-title">
+        About Insurance 4 Car Hire
+      </h1>
+      <p class="sub-title">
+        Founded in 2002, we’re the UK’s longest-running online provider of car
+        hire excess insurance. We offer straightforward and low-cost
+        alternatives to the expensive car hire excess insurance policies offered
+        by car hire companies.
+      </p>
+    </div>
+  </section>
+  <!-- </div> -->
+</div>
+
+<div class="container grid">
+  <section class="generic row">
+    <div class="inner col-m-12">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis eveniet
+        fugiat minima delectus dolores, voluptatibus quod consectetur sequi
+        itaque deleniti inventore id! Aspernatur ut labore eaque cupiditate quas
+        officia voluptatem!
+      </p>
+      <p>
+        Corporis, nesciunt enim. Necessitatibus nihil numquam ratione quos natus
+        illo mollitia, cum, fugit alias, reprehenderit dolore. Mollitia
+        recusandae, voluptas minus corporis totam accusamus, excepturi dicta
+        nostrum rem iste beatae doloribus.
+      </p>
+      <p>
+        <img
+          src="https://via.placeholder.com/150"
+          alt=""
+          class="img-responsive"
+        />
+        Asperiores earum voluptates facere rerum dolorum quod consequatur
+        officiis, commodi illum? Vero, necessitatibus itaque accusamus officia
+        vitae iusto repellendus cum, hic laborum deserunt alias assumenda
+        ratione vel placeat velit reiciendis.
+      </p>
+      <p>
+        Alias, architecto? Totam voluptatem molestias, dicta delectus beatae
+        modi quod magni suscipit! Consequuntur, eos soluta animi impedit
+        voluptatum voluptate corporis laborum nobis dolorem eius, earum, quos
+        aspernatur consectetur ut illum!
+      </p>
+      <p>
+        Dolorum vitae animi facilis laudantium iure inventore fuga praesentium
+        hic illo eos quaerat voluptate corporis numquam ex expedita,
+        voluptatibus ea eius. Quasi voluptatum eius ipsam culpa. Maiores nemo
+        iusto optio!
+      </p>
+    </div>
+  </section>
+
+  <section class="more-info row">
+    <div class="inner">
+      <img
+        class="scale-icon img-responsive"
+        src="./images/scale-icon.png"
+        alt="More info image"
+      />
+      <p>
+        Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
+        assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="trust row">
+    {% include "./partials/trust-box.njk" %}
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.reviews-->
+  <footer class="row">
+    {% include './partials/links.njk' %}
+  </footer>
+
+  {% include './partials/help-icon.njk' %}
+</div>
+<!--//.container-->
+
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}

@@ -164,6 +164,16 @@ function start() {
       }
     );
   }
+
+  // on scroll
+  var target = $('.article-main').offset().top - 180;
+  $(document).scroll(function() {
+    if ($(window).scrollTop() >= target) {
+      $('.share-buttons').show();
+    } else {
+      $('.share-buttons').hide();
+    }
+  });
 }
 
 function ready(fn) {

@@ -197,3 +197,23 @@ footer {
     border-radius: 0 5px 5px;
   }
 }
+
+.generic {
+  margin-bottom: 80px;
+  margin-top:0;
+  padding:15px;
+
+  @media(min-width:1199px){
+    margin-top:30px;
+  }
+}
+
+section.article-header{
+  @media(min-width:1199px){
+    background-color: $white;
+
+    h1 {
+      color: $mainTextColour;
+    }
+  }
+}
