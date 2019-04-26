@@ -52,6 +52,19 @@
   background-color: $midGrey;
 }
 
+.bg-light-green{
+  background-color: transparent;
+
+  @media(min-width:1199px){
+    background-color: $lightGreen;
+  }
+}
+
+.bg-dark-cyan {
+  background-color: $veryDarkCyan;
+}
+
+
 // grid
 
 .grid .row {
@@ -279,10 +292,10 @@
   }
 }
 
-.blog-header {
+.blog-header, .contact-us-header {
   display: flex;
   flex-flow: row nowrap;
-  margin: 30px auto 50px;
+  margin: 30px auto 30px;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -316,6 +329,12 @@
       text-align: center;
       color: $white;
     }
+  }
+}
+
+.contact-us-header {
+  @media (min-width: 1199px) {
+    margin-bottom:40px;
   }
 }
 

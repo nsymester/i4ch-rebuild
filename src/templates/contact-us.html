@@ -1,0 +1,247 @@
+{% block headerContent %} {% import './macros/header.njk' as header %}
+{{ header.config('/css/styles.css', 'contactUs') }}
+{% endblock %}
+
+<div class="container-fluid">
+  {% include "./partials/nav.njk" %}
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <section class="contact-us-header row">
+      <div class="inner">
+        <h1 class="has-sub-title">Contact us</h1>
+        <p class="sub-title">
+          Got a question for us? No problem – we’d love to hear from you.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container">
+  <section class="contact-us-hero">
+    <div class="inner">
+      <p>
+        How can we help? Get in touch using any of the methods below and our
+        staff will be happy to help get you on your way to hiring that car with
+        confidence and enjoying your trip away.
+      </p>
+    </div>
+  </section>
+
+  <section class="help-options row">
+    <div class="inner">
+      <div class="card help-options-card bg-dark-cyan">
+        <div class="header">
+          <h3 class="title">FAQ</h3>
+          <span class="help-icon">
+            <picture>
+              <source
+                media="(min-width: 1199px)"
+                srcset="/images/contact-us/faqs-lg.png"
+              />
+              <img
+                src="/images/contact-us/faqs.png"
+                alt="Mail icon"
+                style="width:auto;"
+              />
+            </picture>
+          </span>
+        </div>
+        <div class="body">
+          <p>Our FAQs are also full of handy information which may help.</p>
+          <a href="#">Go to FAQs >></a>
+        </div>
+      </div>
+      <!--//.card-->
+
+      <div class="card help-options-card bg-dark-cyan">
+        <div class="header">
+          <h3 class="title">Chat</h3>
+          <span class="help-icon"></span>
+            <picture>
+              <source
+                media="(min-width: 1199px)"
+                srcset="/images/contact-us/chat-lg.png"
+              />
+              <img
+                src="/images/contact-us/chat.png"
+                alt="Mail icon"
+                style="width:auto;"
+              />
+            </picture
+          ></span>
+        </div>
+        <div class="body">
+          <p>Magna ac placerat vestibulum lectus mauris.</p>
+          <a href="#">Let's Talk >></a>
+        </div>
+      </div>
+      <!--//.card-->
+
+      <div class="card help-options-card bg-dark-cyan">
+        <div class="header">
+          <h3 class="title">Need to make a claim?</h3>
+          <span class="help-icon">
+            <picture>
+                <source
+                  media="(min-width: 1199px)"
+                  srcset="/images/contact-us/claim-icon-lg.png"
+                />
+                <img
+                  src="/images/contact-us/claim-icon.png"
+                  alt="Mail icon"
+                  style="width:auto;"
+                />
+            </picture>
+          </span>
+        </div>
+        <div class="body">
+          <p>Visit our insurance4carhire claims page.</p>
+          <a href="#">Go to Claims >></a>
+        </div>
+      </div>
+      <!--//.card-->
+    </div>
+  </section>
+
+  <section class="contact-form row">
+    <div class="inner">
+      <h3>Contact</h3>
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" class="form-control" id="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" class="form-control" id="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea
+            class="message"
+            name="message"
+            id="message"
+            cols="30"
+            rows="8"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-cta pull-right">Submit</button>
+      </form>
+    </div>
+    <!--//.inner-->
+
+    <div class="contact-types">
+      <h3>You may wish to phone or write to us</h3>
+      <div class="contact-type">
+        <picture class="email-icon">
+          <source
+            media="(min-width: 1199px)"
+            srcset="/images/contact-us/email.png"
+          />
+          <img
+            src="/images/contact-us/email-lg.png"
+            alt="Email icon"
+            style="width:auto;"
+          />
+        </picture>
+
+        <!-- <img class="email-icon" src="/images/contact-us/email.png" alt="" /> -->
+        <div>
+          <h4>Email</h4>
+          <p>info@insurance4carhire.com</p>
+        </div>
+      </div>
+
+      <div class="contact-type">
+        <picture class="mail-icon">
+          <source
+            media="(min-width: 1199px)"
+            srcset="/images/contact-us/mail-icon.png"
+          />
+          <img
+            src="/images/contact-us/mail-icon-lg.png"
+            alt="Mail icon"
+            style="width:auto;"
+          />
+        </picture>
+        <div>
+          <h4>Address</h4>
+          <p>
+            insurance4carhire<br />
+            Ellenborough House<br />
+            Wellington Street<br />
+            Cheltenham<br />
+            GL50 1XZ
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-type">
+        <picture class="phone-icon">
+          <source
+            media="(min-width: 1199px)"
+            srcset="/images/contact-us/phone-icon.png"
+          />
+          <img
+            src="/images/contact-us/phone-icon-lg.png"
+            alt="Phone icon"
+            style="width:auto;"
+          />
+        </picture>
+        <div>
+          <h4>General phone enquiry</h4>
+          <p><strong>UK residents</strong></p>
+          <a class="h4" href="tel:033448921770">03344 892 1770</a>
+          <p>
+            Monday to Friday 9am to 5pm except for Bank Holidays during which we
+            are closed.
+          </p>
+
+          <p><strong>International</strong></p>
+          <a class="h4" href="tel:+4401242538475">+44 (0)1242 538 475</a>
+
+          <p><strong>International freephone</strong></p>
+          <a class="h4" href="tel:033448921770">03344 892 1770</a>
+          <p>
+            Monday to Friday 9am to 5pm except for Bank Holidays during which we
+            are closed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust row">
+    {% include "./partials/trust-box.njk" %}
+
+    <button class="back-to-top js-back-to-top">
+      <img
+        src="./images/return-to-top-arrow.png"
+        alt="Return to top arrow"
+        width="42"
+        height="43"
+      />
+    </button>
+  </section>
+  <!--//.reviews-->
+  <footer class="row">
+    {% include './partials/links.njk' %}
+  </footer>
+
+  {% include './partials/help-icon.njk' %}
+</div>
+<!--//.container-->
+
+{% block corejavascript %} {% include './partials/core-javascript.njk' %}
+{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+endblock %}

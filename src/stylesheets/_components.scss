@@ -528,102 +528,6 @@ section h2 {
   margin-bottom: 30px;
 }
 
-/**
- *  @desc serach
- */
-
-.search-options {
-  margin-bottom: 30px;
-
-  @media (min-width: 1199px) {
-    margin-bottom: 0;
-  }
-
-  .inner {
-    @media (min-width: 1199px) {
-      display: flex;
-      flex-flow: row-reverse nowrap;
-      justify-content: space-between;
-      align-items: baseline;
-      height: 50px;
-    }
-  }
-
-  .form-group {
-    padding: 15px 10px;
-    margin-bottom: 20px;
-    background-color: $lightGreen;
-    display: block;
-
-    @media (min-width: 1199px) {
-      display: flex;
-      background-color: $white;
-      padding-top: 0;
-    }
-  }
-}
-
-.search-label {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  margin-bottom: 0;
-
-  input {
-    width: 100%;
-    margin: 0 30px;
-    display: block;
-    border-radius: 5px;
-    border: 1px solid $darkGrey;
-    height: 35px;
-    padding-left: 20px;
-    color: $mainTextColour;
-    background-image: url(/images/search-icon-black.png);
-    background-position: calc(100% - 10px) calc(100% - 5px);
-    background-repeat: no-repeat;
-    transition: width 0.4s ease-in-out;
-    outline: 0;
-
-    @media (min-width: 1199px) {
-      width: 340px;
-      height: 40px;
-    }
-  }
-}
-
-.search-options-menu {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-
-  a {
-    color: $mainTextColour;
-
-    &.active {
-      color: $darkCyan;
-    }
-  }
-
-  a + a:before {
-    content: '|';
-    color: $darkCyan;
-    margin-right: 5rem;
-
-    @media (min-width: 575px) {
-      margin-right: 7.5rem;
-    }
-
-    @media (min-width: 767px) {
-      margin-right: 10rem;
-    }
-
-    @media (min-width: 1199px) {
-      margin-right: 3rem;
-      margin-left: 3rem;
-    }
-  }
-}
-
 .sub-title {
   max-width: 100%;
   width: 100%;
@@ -633,77 +537,6 @@ section h2 {
     max-width: 542px;
   }
 }
-
-.share-buttons {
-  top: 0;
-  position: relative;
-  margin: 1em;
-  padding-bottom: 1em;
-
-  @media(min-width: 1199px) {
-    position: fixed;
-    top: 200px;
-    right: 0;
-    height: 100%;
-    display: none;
-  }
-}
-
-.share-buttons .sharing-buttons{
-  transform: none;
-  text-align: center;
-
-  @media (min-width: 1199px){
-    text-align: initial;
-    transition: background-color 0.5s;
-  }
-
-   a {
-    display: inline-block;
-    overflow: hidden;
-    width: 2em;
-    height: 2em;
-    margin: 0 0 0.5em;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 60% auto;
-    text-indent: -9999px;
-    font-size: 130%;
-    border-radius: 2px;
-
-    @media (min-width: 1199px){
-      display: block;
-      border-radius: 4px 0 0 4px;
-    }
-  }
-}
-
-
-.share-buttons .sharing-buttons a.fb {
-  background-image: url(/images/svg/logo-facebook.svg);
-  background-color: #3b5998;
-}
-
-.share-buttons .sharing-buttons a.tw {
-  background-image: url(/images/svg/logo-twitter.svg);
-  background-color: #2ba9e1;
-}
-
-.share-buttons .sharing-buttons a.gp {
-  background-image: url(/images/svg/logo-google-plus.svg);
-  background-color: #dd4b39;
-}
-
-.share-buttons .sharing-buttons a.pin {
-  background-image: url(/images/svg/logo-pinterest.svg);
-  background-color: #cb2027;
-}
-
-.share-buttons .sharing-buttons a.li {
-  background-image: url(/images/svg/logo-linkedin.svg);
-  background-color: #007bb6;
-}
-
 
 #blogItems{
   .container-fluid {
@@ -771,14 +604,6 @@ section h2 {
   }
 }
 
-.bg-light-green{
-  background-color: transparent;
-
-  @media(min-width:1199px){
-    background-color: $lightGreen;
-  }
-}
-
 .article-info{
   margin-bottom:10px;
 
@@ -814,4 +639,187 @@ section h2 {
     margin-top:20px;
     padding-right:30px;
   }
+}
+
+.help-options{
+  margin-bottom:50px;
+
+  .inner{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
+
+    @media(min-width:1199px){
+      flex-flow:row nowrap;
+      justify-content: space-between;
+      align-items:stretch;
+    }
+  }
+
+}
+
+
+.help-options-card{
+  max-width:95%;
+  width:100%;
+  padding-bottom:40px;
+  flex:1;
+  margin-bottom:-1px;
+
+  @media(min-width:1199px){
+    max-width:306px;
+  }
+
+  h3, p, a{
+    color:white;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight:bold;
+  }
+
+  .header{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+
+    @media(min-width:1199px){
+      flex-flow:column-reverse nowrap;
+      align-items: center;
+      margin-bottom:30px;
+
+      .help-icon{
+        margin-bottom:20px;
+      }
+    }
+
+  }
+
+  .body {
+    @media(min-width:1199px){
+      p, a {
+        display:block;
+        text-align:center;
+      }
+
+      p {
+        margin-bottom:30px;
+      }
+    }
+  }
+
+  @media(max-width:1200px){
+    box-shadow:none;
+    border:0;
+  }
+
+  &:nth-child(1){
+    @media(max-width:1200px){
+      // padding-bottom:0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius:0;
+    }
+  }
+
+  &:nth-child(2){
+    @media(max-width:1200px){
+      padding-top:0;
+      padding-bottom:0;
+      border-radius: 0;
+    }
+  }
+
+  &:nth-child(3){
+    @media(max-width:1200px){
+      border-top-left-radius: 0;
+      border-top-right-radius:0;
+    }
+  }
+}
+
+.contact-form {
+  margin-bottom: 30px;
+
+  .message {
+    display:block;
+    width: 100%;
+    margin-bottom:20px;
+
+  }
+
+  @media(min-width:1199px){
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-start;
+  }
+
+  .inner{
+      margin-bottom:30px;
+      border-bottom:1px solid $midGrey;
+      padding:20px;
+
+    @media(min-width:1199px){
+      background-color: $superLightGrey;
+      padding:30px;
+      width:50%;
+      border-radius:5px;
+      border-bottom:0;
+
+      .btn-cta{
+        height: 50px;
+        width:192px;
+      }
+    }
+  }
+}
+
+.contact-types {
+  padding:20px;
+
+  h3 {
+    margin-bottom:45px;
+  }
+
+  @media(min-width:1199px){
+    padding:0 30px 30px;
+    width:49%;
+  }
+}
+
+.contact-type {
+  display:flex;
+  flex-flow: row nowrap;
+  margin-bottom:40px;
+
+  .mail-icon, .email-icon, .phone-icon {
+    width:50px;
+    height:50px;
+    margin-right:20px;
+  }
+
+  .mail-icon{
+    height:31px;
+  }
+}
+
+
+#contactUs {
+  .container-fluid{
+    .container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.contact-us-hero{
+  margin-bottom:30px;
+
+  @media(min-width:1199px){
+    padding:0 100px;
+    text-align:center;
+  }
+
 }
