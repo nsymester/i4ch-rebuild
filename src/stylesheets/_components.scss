@@ -802,6 +802,32 @@ section h2 {
   .mail-icon{
     height:31px;
   }
+
+  .address{
+    p {
+      line-height:1.5em;
+    }
+  }
+
+  .phone-contact{
+    margin-bottom:30px;
+  }
+
+  .phone-number{
+    font-family: Oswald;
+    font-size: 3.5rem;
+    font-weight:bold;
+    text-align: left;
+    margin-bottom:20px;
+    display:block;
+
+    @media(min-width:1199px){
+      font-size: 1.5rem;
+      font-family: Lato;
+      margin-bottom:10px;
+      font-weight:600;
+    }
+  }
 }
 
 
