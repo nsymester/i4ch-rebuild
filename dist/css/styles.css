@@ -1207,8 +1207,8 @@ a.btn {
       color: white;
       background-color: #e33101; }
     .btn-cta:hover {
-      background-color: #fff;
-      color: #e33101; }
+      background-color: #ef998a;
+      color: white; }
     .btn-cta:active:hover {
       outline: 0; }
   .btn-cta--disabled {
