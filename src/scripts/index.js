@@ -105,6 +105,9 @@ function start() {
     // cache DOM
     let vehicleHire = $('#vehicleHire');
     let coverage = $('#coverage');
+    let policyTypes = $('#policyTypes');
+    let myPolicy = $('#myPolicy');
+    let other = $('#other');
     let current = null;
 
     $.ajax({
@@ -119,6 +122,15 @@ function start() {
               break;
             case 'coverage':
               current = coverage;
+              break;
+            case 'policy-types':
+              current = policyTypes;
+              break;
+            case 'my-policy':
+              current = myPolicy;
+              break;
+            case 'other':
+              current = other;
               break;
 
             default:

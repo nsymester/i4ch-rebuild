@@ -766,6 +766,15 @@ footer {
           align-items: center;
   height: 100%; }
 
+.navbar-collapse {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0; }
+  @media (min-width: 1199px) {
+    .navbar-collapse {
+      width: auto; } }
+
 .navbar-nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -826,7 +835,7 @@ footer {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1199px) {
   .navbar {
     padding-bottom: 0; }
     .navbar .container-fluid,
@@ -854,6 +863,10 @@ footer {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: 0; }
+    .navbar-nav ul li + li:before {
+      display: none; }
+    .navbar-nav ul li:before {
+      display: none; }
   .navbar-nav li {
     margin: 0 0 0 20px;
     -webkit-box-flex: 1;
@@ -897,7 +910,11 @@ footer {
   z-index: 1;
   position: relative; }
 
-@media (max-width: 960px) {
+.navbar-nav {
+  float: none !important;
+  margin-top: 0px; }
+
+@media (max-width: 1199px) {
   .navbar-header {
     float: none; }
   .navbar-left,
@@ -3115,17 +3132,19 @@ section h2 {
   padding: 20px 20px;
   margin-bottom: 50px; }
 
-.drive .accordion-btn {
+.drive .accordion .card-product .accordion-btn {
   padding: 0;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-top: 10px; }
   @media (min-width: 1199px) {
-    .drive .accordion-btn {
+    .drive .accordion .card-product .accordion-btn {
+      margin-top: 15px;
       margin-bottom: 15px; } }
 
-.drive .accordion-panel {
+.drive .accordion .card-product .accordion-panel {
   padding-bottom: 0 !important; }
   @media (min-width: 1199px) {
-    .drive .accordion-panel {
+    .drive .accordion .card-product .accordion-panel {
       padding-bottom: 5px !important;
       padding-top: 18px !important; } }
 
@@ -3246,5 +3265,34 @@ section h2 {
   @media (min-width: 1199px) {
     .faq-answers .inner .tab-pane h3 {
       display: none; } }
+
+.dropdown > a.dropdown-toggle {
+  width: 100%; }
+
+.dropdown.open > a, .dropdown.open > a:hover {
+  background-color: #01dbab;
+  border-color: #01dbab; }
+
+.dropdown-menu {
+  position: static;
+  float: none;
+  background-color: #023742;
+  border-radius: 0;
+  border: 0; }
+  @media (min-width: 1199px) {
+    .dropdown-menu {
+      position: absolute;
+      top: 28px;
+      left: 5px;
+      width: 95%;
+      border: 1px solid #023742;
+      padding-bottom: 0;
+      padding-top: 0; } }
+  .dropdown-menu li {
+    margin: 0 auto;
+    width: 100%; }
+    .dropdown-menu li a {
+      width: 100%;
+      display: block; }
 
 /*# sourceMappingURL=maps/styles.css.map */

@@ -1,57 +1,137 @@
 {
   "vehicle-hire": [
     {
-      "id":"1",
+      "id": "1",
       "question": "What is an excess/deductible?",
       "answer": "<p> The excess, known as a deductible in some countries, is the amount you are liable to pay to the car rental company should you have an accident or return the car damaged. When you hire a car, even if your rental agreement includes insurance, there will almost certainly be an excess to pay. Buying excess insurance from us means that if you are asked to pay an excess by your car hire company, we'll reimburse you provided it’s covered by the policy. Full details of what is and isn’t covered can be found in the policy wording. </p> <p> Many of our customers ask us to clarify what exactly am excess/deductible is. It is a fixed amount that the insured is liable to pay in the event of a claim. For example, let’s say your car gets damaged which costs £2,000 for repair, and you have a deductible of £500. You would be liable for the first £500 of the claim, and the car rental companies insurance would cover the remaining £1,500. </p> <p> An excess/deductible for your rental car can vary and will be dependent on the vehicle you’re hiring. Deductibles can typically range from £500 up to £1,500*, even for a small prang. If you decline the car rental company’s excess insurance, you may be required to leave a deposit on your Credit Card equal to the amount of excess you’ll be liable for. </p> <p> In the event of damage or theft, the excess/deductible will be charged to that card. If you hold an insurance4carhire policy, you’ll be able to claim this back. Just be sure to check our terms and conditions to see whether it’s covered. </p> <p> You can read more about excesses/deductibles in our guide: What is Car Hire Excess Insurance? *Based on findings for quotes with Budget, Avis and Hertz in August 2015 </p>"
     },
     {
-      "id":"2",
+      "id": "2",
       "question": "Must I take out excess insurance?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam porro vero veritatis? Velit quam animi fugiat incidunt quaerat est molestias placeat debitis maiores nesciunt illo, exercitationem id illum, natus ullam."
+      "answer": "<p>No, excess is a voluntary insurance. You have three options:</p><ol><li><strong>Choose not to purchase</strong>. If you do subsequently damage the vehicle or if it is stolen, you will be liable for the excess charge.</li><li><strong>You can purchase it from the car rental company<strong>, at the counter when you collect the car, but the costs can be quite high. It can cost you between £9 and £20 a day and covers the excess on theft and damage to the vehicle. It generally excludes: damage to the undercarriage, windows, roof and tyres, the parts of the car which are most likely to get damaged should you have accident.</li><li><strong>You can purchase a policy from insurance4carhire</strong>. Our wide range of policies are cheaper than over the counter car hire company excess cover. Plus, in addition to the car hire excess, our policies cover damage to the roof, windows, tyres and undercarriage, something most car hire companies don’t cover.</li></ol>"
     },
     {
-      "id":"3",
+      "id": "3",
       "question": "What is excess reimbursement insurance and how does it work?",
-      "answer": "Dolore minima exercitationem quo voluptatibus consequatur soluta aperiam incidunt quas reprehenderit quia velit ducimus, aliquid eveniet nam rem iusto excepturi voluptate necessitatibus quisquam culpa veniam ratione corrupti error laborum? Dolore."
+      "answer": "<p>Many people are often confused as to what excess reimbursement insurance actually is. Does it cover the full insurance of the vehicle for example? Or is it covering Collision Damage Waiver?</p><p>Excess insurance is designed to reimburse excess charges imposed by the car rental company, following damage or theft of the vehicle. Say your excess for your car rental were 700 EUR; your vehicle got damaged and the cost of repair were 1,000 EUR. In this instance, you would pay your excess of 700 EUR to the car rental company and the car rental company’s insurance would cover the rest. You’d then need to collate documentation to support and submit your claim.</p><p>You may find that car rental companies do not provide cover for damage to the windows, headlights, roof, tyres and undercarriage. This means that you may be left liable for the full cost of these. But don’t worry, your insurance4carhire policy will cover you for them. Just be aware that we don't provide cover for any accidental damage you may have to the interior of the vehicle.</p>"
     },
     {
-      "id":"4",
+      "id": "4",
       "question": "What is van hire excess insurance?",
-      "answer": "Porro incidunt magni facilis quia aliquam. Excepturi nemo quasi nam quis, dicta maxime, reiciendis ipsum nobis, maiores dolorem dignissimos explicabo at placeat sint laudantium corporis doloribus architecto fuga! Officia, modi?"
+      "answer": "<p>When you hire a van, your van rental company will include insurance cover for the duration of the rental period. However, this cover will typically include a large excess should an accident occur. For vans, this excess limit can be thousands of pounds. For this reason, you will usually be offered excess cover when you arrive at the rental desk to pick up your van. Our daily van hire excess policy can be purchased at a competitive price, all online, and up to a year in advance, so that you may be reimbursed your excess should your rental van be damaged or stolen during the rental period. For daily commercial vehicle hire excess insurance, visit our van hire excess insurance page.</p>"
     },
     {
-      "id":"5",
-      "question": "How much is the excess?",
-      "answer": "Id ducimus a inventore quidem, impedit debitis doloribus voluptatum perferendis? Maiores hic placeat aspernatur corrupti perferendis, nisi blanditiis? Consectetur praesentium voluptatem quaerat ducimus, quo asperiores inventore exercitationem? Eius, odit perspiciatis!"
+      "id": "5",
+      "question": "How much is the excess on a hire car?",
+      "answer": "<p>The excess varies depending on the car rental company, the type of vehicle you are hiring and the destination you are travelling to. insurance4carhire can reimburse you up to the value of £6,500.</p>"
     }
   ],
-  "coverage" : [
+  "coverage": [
     {
-      "id":"6",
-      "question": "What is covered?",
+      "id": "6",
+      "question": "What is bla?",
       "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
     },
     {
-      "id":"7",
+      "id": "7",
       "question": "Officiis deserunt excepturi",
       "answer": "Repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
     },
     {
-      "id":"8",
+      "id": "8",
       "question": "Repellat quam quidem accusantium ",
       "answer": "Officiis deserunt excepturi, dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
     },
     {
-      "id":"9",
+      "id": "9",
       "question": "Praesentium non reiciendis iure obcaecati atque quos?",
       "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
     },
     {
-      "id":"10",
+      "id": "10",
       "question": "Sequi fugiat delectus ab, sed laborum.",
       "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
     }
+  ],
+  "policy-types": [
+    {
+      "id": "6",
+      "question": "What is covered?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "7",
+      "question": "Officiis deserunt excepturi",
+      "answer": "Repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "8",
+      "question": "Repellat quam quidem accusantium ",
+      "answer": "Officiis deserunt excepturi, dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "9",
+      "question": "Praesentium non reiciendis iure obcaecati atque quos?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "10",
+      "question": "Sequi fugiat delectus ab, sed laborum.",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    }
+  ],
+  "my-policy": [
+    {
+      "id": "6",
+      "question": "What is covered?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "7",
+      "question": "Officiis deserunt excepturi",
+      "answer": "Repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "8",
+      "question": "Repellat quam quidem accusantium ",
+      "answer": "Officiis deserunt excepturi, dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "9",
+      "question": "Praesentium non reiciendis iure obcaecati atque quos?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "10",
+      "question": "Sequi fugiat delectus ab, sed laborum.",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    }
+  ],
+  "other": [
+    {
+      "id": "6",
+      "question": "What is covered?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "7",
+      "question": "Officiis deserunt excepturi",
+      "answer": "Repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "8",
+      "question": "Repellat quam quidem accusantium ",
+      "answer": "Officiis deserunt excepturi, dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "9",
+      "question": "Praesentium non reiciendis iure obcaecati atque quos?",
+      "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    },
+    {
+      "id": "10",
+      "question": "Sequi fugiat delectus ab, sed laborum.",
+      "answer": "<p>Officiis deserunt excepturi,</p> repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
+    }
   ]
-
 }
