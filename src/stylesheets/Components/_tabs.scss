@@ -185,7 +185,7 @@ label.form-control-label {
     background-color: rgb(255, 255, 255);
     transition: all 250ms ease;
     will-change: transition;
-    display: block;
+    display: flex;
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -199,22 +199,26 @@ label.form-control-label {
     // single line of text
     &--single-line {
       span {
-        display: block;
+        display: flex;
         font-size: 15px;
         font-weight: 500;
-        line-height: 48px;
-        text-transform: uppercase;
+        line-height: initial;
+        margin:auto;
+        flex-flow: column nowrap;
+        // text-transform: uppercase;
       }
     }
 
     // double line of text
     &--double-line {
       span {
-        display: block;
+        display: flex;
         font-size: 0.8rem;
         font-weight: 600;
-        line-height: 1rem;
+        line-height: initial;
         padding-top: 0.1rem;
+        margin:auto;
+        flex-flow: column nowrap;
       }
     }
 

@@ -514,6 +514,47 @@ label {
   content: url(../images/cross.png);
   top: 5px; }
 
+/* Begin required CSS. */
+.line-clamp {
+  width: inherit;
+  display: block;
+  position: relative;
+  line-height: 1.2;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  padding: 0 !important; }
+
+.line-clamp:after {
+  content: '...';
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  width: 23%;
+  display: block;
+  position: absolute;
+  height: calc(1em * 1.2);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(75%, white));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white 75%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0), white 75%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 75%); }
+
+.line-clamp-1 {
+  height: calc(1em * 1.2 * 1); }
+
+.line-clamp-2 {
+  height: calc(1em * 1.2 * 2); }
+
+.line-clamp-3 {
+  height: calc(1em * 1.2 * 3); }
+
+.line-clamp-4 {
+  height: calc(1em * 1.2 * 4); }
+
+.line-clamp-5 {
+  height: calc(1em * 1.2 * 5); }
+
+/* End required CSS. */
 /* @group objects */
 /**
   * @desc layout and positioning styles,
@@ -908,7 +949,9 @@ footer {
 .navbar-collapse {
   display: block;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  margin-left: -15px !important;
+  margin-right: -15px !important; }
 
 .navbar-nav {
   float: none !important;
@@ -931,7 +974,7 @@ footer {
     border-width: 0 0 1px; }
   .navbar-nav {
     float: none !important;
-    margin-top: 7.5px; }
+    margin-top: 0; }
   .navbar-nav > li {
     float: none; }
   .navbar-nav > li > a {
@@ -1096,7 +1139,9 @@ label.form-control-label {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
     will-change: transition;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     text-align: center;
     cursor: pointer;
     position: relative;
@@ -1107,17 +1152,30 @@ label.form-control-label {
           -ms-transform: translateY(10px);
               transform: translateY(10px); }
     .radio-button-box__label--single-line span {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       font-size: 15px;
       font-weight: 500;
-      line-height: 48px;
-      text-transform: uppercase; }
+      line-height: initial;
+      margin: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; }
     .radio-button-box__label--double-line span {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       font-size: 0.8rem;
       font-weight: 600;
-      line-height: 1rem;
-      padding-top: 0.1rem; }
+      line-height: initial;
+      padding-top: 0.1rem;
+      margin: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; }
     .radio-button-box__label--icon span {
       position: relative;
       -webkit-transform: translate(0, 30px);
@@ -3284,7 +3342,6 @@ section h2 {
       position: absolute;
       top: 28px;
       left: 5px;
-      width: 95%;
       border: 1px solid #023742;
       padding-bottom: 0;
       padding-top: 0; } }
