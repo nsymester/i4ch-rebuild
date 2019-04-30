@@ -101,43 +101,29 @@ function start() {
   // load faqs
   // only load if on faqs page
   if ($('#faqs').length > 0) {
-    let faqCategories = ['ve'];
-    // cache DOM
-    let vehicleHire = $('#vehicleHire');
-    let coverage = $('#coverage');
-    let policyTypes = $('#policyTypes');
-    let myPolicy = $('#myPolicy');
-    let other = $('#other');
-    let current = null;
-
     $.ajax({
       type: 'GET',
       url: '/api/faqs.json',
       success: function(faqs) {
         console.log('success:', faqs);
-        $.each(faqs, function(index, faq) {
-          switch (index) {
-            case 'vehicle-hire':
-              current = vehicleHire;
-              break;
-            case 'coverage':
-              current = coverage;
-              break;
-            case 'policy-types':
-              current = policyTypes;
-              break;
-            case 'my-policy':
-              current = myPolicy;
-              break;
-            case 'other':
-              current = other;
-              break;
 
-            default:
-              break;
-          }
-          $.each(faq, function(fIndex, qa) {
-            $('.inner .accordion', current).append(
+        // get the heads
+        $.each(faqs, function(index, faq) {
+          console.log('faq: ', faq.id);
+
+          // add title for desktop
+          $(`a[href='#${faq.id}']`)
+            .find('span')
+            .text(faq.title);
+
+          // add title for mobile
+          $(`#${faq.id}`)
+            .find('h3')
+            .text(faq.shortTitle);
+
+          // get the body
+          $.each(faq.qas, function(fIndex, qa) {
+            $('.inner .accordion', `#${faq.id}`).append(
               `<button class="accordion-btn h4">${qa.question}</button>
                <div class="accordion-panel">
                  <div class="inner">

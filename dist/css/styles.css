@@ -1891,7 +1891,7 @@ footer {
           height: 40px; } }
     @media (min-width: 1199px) {
       .faq-answers .accordion .accordion-btn {
-        padding: 30px 40px; } }
+        padding: 30px 50px 30px 40px; } }
   .faq-answers .accordion .active:after {
     content: '';
     background-image: url(/images/minus-bullet.png);
