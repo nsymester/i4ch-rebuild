@@ -105,12 +105,8 @@ function start() {
       type: 'GET',
       url: '/api/faqs.json',
       success: function(faqs) {
-        console.log('success:', faqs);
-
         // get the heads
         $.each(faqs, function(index, faq) {
-          console.log('faq: ', faq.id);
-
           // add title for desktop
           $(`a[href='#${faq.id}']`)
             .find('span')
