@@ -514,47 +514,37 @@ label {
   content: url(../images/cross.png);
   top: 5px; }
 
-/* Begin required CSS. */
+/* Start with fallback for browsers that don't support -webkit-line-clamp */
 .line-clamp {
-  width: inherit;
-  display: block;
   position: relative;
-  line-height: 1.2;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  padding: 0 !important; }
+  height: 3.6em;
+  overflow: hidden; }
 
 .line-clamp:after {
-  content: '...';
+  content: "";
   text-align: right;
+  position: absolute;
   bottom: 0;
   right: 0;
-  width: 23%;
-  display: block;
-  position: absolute;
-  height: calc(1em * 1.2);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(75%, white));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white 75%);
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0), white 75%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 75%); }
+  width: 50%;
+  height: 1.2em;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(80%, white));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), white 80%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0), white 80%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 80%); }
 
-.line-clamp-1 {
-  height: calc(1em * 1.2 * 1); }
+/* Now add in code for the browsers that support -webkit-line-clamp and overwrite the non-supportive stuff */
+@supports (-webkit-line-clamp: 3) {
+  .line-clamp {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+  .line-clamp:after {
+    display: none; } }
 
-.line-clamp-2 {
-  height: calc(1em * 1.2 * 2); }
-
-.line-clamp-3 {
-  height: calc(1em * 1.2 * 3); }
-
-.line-clamp-4 {
-  height: calc(1em * 1.2 * 4); }
-
-.line-clamp-5 {
-  height: calc(1em * 1.2 * 5); }
-
-/* End required CSS. */
 /* @group objects */
 /**
   * @desc layout and positioning styles,
