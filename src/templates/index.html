@@ -9,124 +9,112 @@
   </section>
 </div>
 
-<div class="container">
-  <!--//.hero-->
-  <section class="reviews row">
-    {% include "./partials/reviews.njk" %}
-  </section>
+<section class="reviews row">
+  {% include "./partials/reviews.njk" %}
+</section>
 
-  <section class="excess row">
-    <div>
-      <img
-        class="img-responsive excess-image-top "
-        src="./images/excess-insurance.jpg"
-      />
-    </div>
-    <div class="inner">
-      <h2>What is Excess Insurance?</h2>
+<section class="excess">
+  <div class="excess-image-top">
+    <img class="img-responsive" src="./images/excess-insurance.jpg" />
+  </div>
+  <div class="excess-content">
+    <h2>What is Excess Insurance?</h2>
 
-      <p>
-        Car hire companies often charge an excess for damage caused to the car
-        whilst you're behind the wheel even if it's not your fault. This can be
-        upwards of £1000, meaning that if you're involved in an accident, you'll
-        have to pay a contribution to cover the damage.
-      </p>
-      <p>
-        With an annual car hire insurance policy from insurance4carhire, you're
-        able to reclaim the excess you’d have to pay in the unfortunate event of
-        an accident or your car being stolen.
-      </p>
+    <p>
+      Car hire companies often charge an excess for damage caused to the car
+      whilst you're behind the wheel even if it's not your fault. This can be
+      upwards of £1000, meaning that if you're involved in an accident, you'll
+      have to pay a contribution to cover the damage.
+    </p>
+    <p>
+      With an annual car hire insurance policy from insurance4carhire, you're
+      able to reclaim the excess you’d have to pay in the unfortunate event of
+      an accident or your car being stolen.
+    </p>
 
-      <iframe
-        class="video"
-        width="100%"
-        height="250"
-        src="https://www.youtube.com/embed/wjGjQSrJyvI"
-      ></iframe>
-    </div>
+    <iframe
+      class="video"
+      width="100%"
+      height="250"
+      src="https://www.youtube.com/embed/wjGjQSrJyvI"
+    ></iframe>
+  </div>
 
-    <img
-      class="img-responsive excess-image-bottom"
-      src="./images/excess-insurance-m.jpg"
-    />
-  </section>
-</div>
+  <div class="excess-image-bottom">
+    <img class="img-responsive" src="./images/excess-insurance-m.jpg" />
+  </div>
+</section>
 <!--//.container-fluid-->
 
-<div class="container grid">
-  <section class="cover row">
-    <div class="inner">
-      <h2>What do we cover?</h2>
+<section class="cover">
+  <div class="cover-content">
+    <h2>What do we cover?</h2>
 
-      <ul class="std-list">
-        <li>Drivers between the ages of 18 and 85</li>
-        <li>
-          Drivers who are residents of*:<br />France, Germany, Ireland, Italy,
-          Netherlands, Spain, Sweden, UK
-        </li>
-        <li>Trips up to 60 days in-a-row</li>
-        <li>
-          As well as excess cover, we also offer Collision Damage Waiver (CDW)
-          and Supplemental Liability Insurance (SLI). Altough many car rental
-          companies automatically include these covers in their car rental
-          insurance, some don’t - so it’s important to chek the terms of your
-          car rental agreement.
-        </li>
-      </ul>
-    </div>
+    <ul class="std-list">
+      <li>Drivers between the ages of 18 and 85</li>
+      <li>
+        Drivers who are residents of*:<br />France, Germany, Ireland, Italy,
+        Netherlands, Spain, Sweden, UK
+      </li>
+      <li>Trips up to 60 days in-a-row</li>
+      <li>
+        As well as excess cover, we also offer Collision Damage Waiver (CDW) and
+        Supplemental Liability Insurance (SLI). Altough many car rental
+        companies automatically include these covers in their car rental
+        insurance, some don’t - so it’s important to chek the terms of your car
+        rental agreement.
+      </li>
+    </ul>
+  </div>
 
-    <div class="">
-      <img
-        class="img-responsive cover-image"
-        src="./images/cover-image.jpg"
-        alt="Samller Section Image size"
-      />
-    </div>
-  </section>
+  <div class="cover-image">
+    <img
+      class="img-responsive cover-image"
+      src="./images/cover-image.jpg"
+      alt="Samller Section Image size"
+    />
+  </div>
+</section>
 
-  <section class="drive row">
-    <div class="inner">
-      {% include "./partials/where-can-i-drive.njk" %}
-    </div>
-  </section>
+<section class="drive row">
+  {% include "./partials/where-can-i-drive.njk" %}
+</section>
 
-  <section class="more-info row">
-    <div class="inner">
-      <img
-        class="scale-icon img-responsive"
-        src="./images/scale-icon.png"
-        alt="More info image"
-      />
-      <p>
-        Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
-        assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
-      </p>
-    </div>
-  </section>
+<section class="more-info">
+  <img
+    class="scale-icon img-responsive"
+    src="/images/scale-icon.png"
+    alt="More info image"
+  />
+  <p class="more-info-text">
+    Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
+    assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
+  </p>
+</section>
 
-  <section class="articles row">
-    <h2 class="text-center">Releated Articles</h2>
-    <div class="inner">
-      {% include "./partials/articles.njk" %}
-    </div>
+<section class="articles">
+  <h2 class="text-center">Releated Articles</h2>
+  {% include "./partials/articles.njk" %}
 
-    <a class="btn btn-default btn-articles" href="other.html">
-      <span>More Articles</span>
-    </a>
-  </section>
+  <a class="btn btn-default btn-articles" href="other.html">
+    <span>More Articles</span>
+  </a>
+</section>
 
-  <section class="trust row">
-    {% include "./partials/trust-box.njk" %}
+<section class="trust row">
+  {% include "./partials/trust-box.njk" %}
 
-    <button class="back-to-top js-back-to-top">
-      <img
-        src="./images/return-to-top-arrow.png"
-        alt="Return to top arrow"
-        width="42"
-        height="43"
-      />
-    </button>
-  </section>
+  <button class="back-to-top js-back-to-top">
+    <img
+      src="./images/return-to-top-arrow.png"
+      alt="Return to top arrow"
+      width="42"
+      height="43"
+    />
+  </button>
+</section>
+
+<div class="container">
   <!--//.reviews-->
   <footer class="row">
     {% include './partials/links.njk' %}

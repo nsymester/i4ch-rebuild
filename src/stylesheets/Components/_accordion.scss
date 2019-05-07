@@ -68,27 +68,11 @@
  * @ group card products
  */
 .accordion {
-  &.card-products {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    margin-bottom: 60px;
-
-    @media (min-width: 1200px) {
-      flex-flow: row wrap;
-    }
-
-    .col-lg-4 {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  .card-product {
+  &.card-product {
     width: 100%;
     padding-top: 0;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 991px) {
       max-width: 311px;
       display: block;
       // width: 33.33333333%;
@@ -98,7 +82,7 @@
       background-color: $white;
       color: $mainTextColour;
 
-      @media (min-width: 1200px) {
+      @media (min-width: 991px) {
         margin-bottom: 0;
         text-align: center;
       }
@@ -106,7 +90,7 @@
       &:after {
         display: inline-block;
 
-        @media (min-width: 1200px) {
+        @media (min-width: 991px) {
           display: none;
         }
       }
@@ -123,7 +107,7 @@
       .form-group {
         background-color: $white !important;
       }
-      @media (min-width: 1200px) {
+      @media (min-width: 991px) {
         max-height: 100%;
         overflow: visible;
       }

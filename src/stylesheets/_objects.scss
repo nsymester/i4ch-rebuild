@@ -18,90 +18,11 @@
 // }
 
 /* -------------------------------------------------------------------------
- Custom Select
+ Section layout styles
 ---------------------------------------------------------------------------- */
 /**
- * Custom Select styles.
+ * Homepage
  */
-.custom-select {
-  $select-padding: 5px;
-  $select-padding-l: $select-padding * 2;
-  $select-border: 1px solid;
-  $select-border-color: $lightText;
-  $select-border-radius: 0;
-  $select-text-color: gray;
-
-  $caret-size: 7px;
-  $caret-color: $lightGreen;
-
-  position: relative;
-  display: inline-block;
-  width: 100%;
-
-  &:before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    margin-top: $caret-size * -0.3;
-    right: $select-padding-l;
-    width: 0;
-    height: 0;
-    border: $caret-size solid transparent;
-    border-top-color: $caret-color;
-  }
-
-  select {
-    width: inherit;
-    height: 42px;
-    font-size: 16px;
-
-    color: $select-text-color;
-    display: inline-block;
-    position: relative;
-    box-shadow: none;
-    appearance: none;
-    padding: $select-padding ($caret-size * 3 + $select-padding-l)
-      $select-padding $select-padding-l;
-    border: $select-border;
-    border-color: $select-border-color;
-    border-radius: $select-border-radius;
-    background: transparent;
-
-    &:focus {
-      outline: transparent;
-    }
-
-    &:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #000;
-    }
-  }
-}
-
-/* -------------------------------------------------------------------------
- Section
----------------------------------------------------------------------------- */
-/**
- * Section layout styles.
- */
-section,
-footer {
-  // margin-bottom: 50px;
-}
-
-.articles {
-  // margin-bottom: 80px;
-  margin-bottom: 0;
-}
-
-.trust {
-  margin-bottom: 0;
-}
-
-footer {
-  padding: 50px 40px;
-}
 
 .hero {
   display: flex;
@@ -118,32 +39,110 @@ footer {
 }
 
 .excess {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'ec ec ec ec ec ec ec ec ec ec ec ec'
+    'eib eib eib eib eib eib eib eib eib eib eib eib';
   justify-content: center;
+  align-items: center;
   padding: 30px 0 0 0;
 
-  @media (min-width: 1199px) {
-    justify-content: space-around;
+  @media (min-width: 991px) {
+    grid-template-columns: repeat(12, minmax(auto, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 'ei ei ei ei ei ei ec ec ec ec ec ec';
+    align-items: flex-start;
+    justify-content: center;
   }
 
-  div:first-child {
-    flex: 0;
+  .excess-image-top {
+    grid-area: ei;
+    margin: 0 auto;
+  }
 
-    @media (min-width: 1199px) {
-      flex: 1;
-    }
+  .excess-content {
+    grid-area: ec;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .excess-image-bottom {
+    grid-area: eib;
+    margin: 0 auto;
   }
 }
 
 .cover {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'cc cc cc cc cc cc cc cc cc cc cc cc';
 
-  @media (min-width: 1199px) {
-    justify-content: flex-end;
+  @media (min-width: 991px) {
+    grid-template-columns: repeat(12, minmax(auto, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 'cc cc cc cc cc cc ci ci ci ci ci ci';
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .cover-content {
+    grid-area: cc;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .cover-image {
+    grid-area: ci;
+    margin: 0 auto;
+  }
+}
+
+.drive {
+  .card-products {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'cp1 cp1 cp1 cp1 cp1 cp1 cp1 cp1 cp1 cp1 cp1 cp1'
+      'cp2 cp2 cp2 cp2 cp2 cp2 cp2 cp2 cp2 cp2 cp2 cp2'
+      'cp3 cp3 cp3 cp3 cp3 cp3 cp3 cp3 cp3 cp3 cp3 cp3';
+    padding: 30px;
+
+    @media (min-width: 991px) {
+      grid-template-columns: repeat(12, auto);
+      grid-template-rows: auto;
+      grid-template-areas: 'cp1 cp1 cp1 cp1 cp2 cp2 cp2 cp2 cp3 cp3 cp3 cp3';
+      padding: 0;
+      justify-content: space-around;
+      // align-items: center;
+    }
+
+    .card-product {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .card-product:nth-child(1) {
+      grid-area: cp1;
+      background: blue;
+    }
+
+    .card-product:nth-child(2) {
+      grid-area: cp2;
+      background: blue;
+    }
+
+    .card-product:nth-child(3) {
+      grid-area: cp3;
+      background: blue;
+    }
   }
 }
 
@@ -200,21 +199,37 @@ footer {
 
 .generic {
   margin-bottom: 80px;
-  margin-top:0;
-  padding:15px;
+  margin-top: 0;
+  padding: 15px;
 
-  @media(min-width:1199px){
-    margin-top:30px;
+  @media (min-width: 1199px) {
+    margin-top: 30px;
   }
 }
 
-section.article-header{
-
-  @media(min-width:1199px){
+section.article-header {
+  @media (min-width: 1199px) {
     background-color: $white;
 
     h1 {
       color: $mainTextColour;
     }
   }
+}
+
+.articles {
+  // margin-bottom: 80px;
+  margin-bottom: 0;
+}
+
+/**
+ * Common sections
+ */
+
+.trust {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 50px 40px;
 }

@@ -8,7 +8,7 @@ section.articles,
     max-width: 535px;
     width: 100%;
 
-    @media (min-width: 1199px) {
+    @media (min-width: 991px) {
       text-align: center;
     }
   }
@@ -21,7 +21,7 @@ section.articles,
     width: 100%;
     margin: auto;
 
-    @media (min-width: 1199px) {
+    @media (min-width: 991px) {
       flex-flow: row wrap;
       justify-content: space-between;
       width: 100%;
@@ -35,7 +35,7 @@ section.articles,
     margin: 40px auto;
     display: block;
 
-    @media (min-width: 1199px) {
+    @media (min-width: 991px) {
       width: 300px;
       display: flex;
       justify-content: center;
@@ -48,7 +48,7 @@ section.articles,
     .card-article {
       width: 100%;
 
-      @media (min-width: 1199px) {
+      @media (min-width: 991px) {
         width: 100%;
         flex: 0 1 305px;
       }

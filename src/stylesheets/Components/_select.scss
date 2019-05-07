@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------------------
+ Custom Select
+---------------------------------------------------------------------------- */
+/**
+ * Custom Select styles.
+ */
+.custom-select {
+  $select-padding: 5px;
+  $select-padding-l: $select-padding * 2;
+  $select-border: 1px solid;
+  $select-border-color: $lightText;
+  $select-border-radius: 0;
+  $select-text-color: gray;
+
+  $caret-size: 7px;
+  $caret-color: $lightGreen;
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: $caret-size * -0.3;
+    right: $select-padding-l;
+    width: 0;
+    height: 0;
+    border: $caret-size solid transparent;
+    border-top-color: $caret-color;
+  }
+
+  select {
+    width: inherit;
+    height: 42px;
+    font-size: 16px;
+
+    color: $select-text-color;
+    display: inline-block;
+    position: relative;
+    box-shadow: none;
+    appearance: none;
+    padding: $select-padding ($caret-size * 3 + $select-padding-l)
+      $select-padding $select-padding-l;
+    border: $select-border;
+    border-color: $select-border-color;
+    border-radius: $select-border-radius;
+    background: transparent;
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+  }
+}
