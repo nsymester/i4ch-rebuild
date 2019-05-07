@@ -145,6 +145,7 @@ gulp.task('pages', function() {
     server: {
       baseDir: './dist'
     },
+    port: 5000,
     browser: browser,
     directory: false
   });
