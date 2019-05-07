@@ -155,7 +155,9 @@ gulp.task('pages', function() {
  * @desc css task - compile sass to css, compress and add prefixes
  */
 gulp.task('css', function() {
-  var postCssOpts = [$.autoprefixer({ browsers: ['last 4 versions', '> 2%'] })];
+  var postCssOpts = [
+    $.autoprefixer({ browsers: ['> 0.5%', 'last 4 versions'] })
+  ];
 
   if (!devBuild) {
     $.log.info('css build ', devBuild);

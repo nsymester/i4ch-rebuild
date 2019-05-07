@@ -1,5 +1,56 @@
-section.articles,
-.top-articles {
+
+ /**
+ * @group Generic Articles
+ */
+.articles {
+  max-width: 535px;
+  width: 100%;
+  margin: auto;
+
+  .card-article {
+    width: 100%;
+
+    @media (min-width: 991px) {
+      width: 100%;
+      flex: 0 1 305px;
+    }
+  }
+
+  @media (min-width: 991px) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.btn-articles{
+  max-width: 535px;
+  margin: 0 auto;
+  width:100%;
+  display:block;
+}
+
+/**
+ * @group Related articles
+ */
+.related-articles {
+  h2 {
+    text-align: left;
+    margin: 0 auto 40px;
+    width: 100%;
+    padding-left: 50px;
+
+    @media (min-width: 991px) {
+      text-align: center;
+    }
+  }
+ }
+
+/**
+ * @desc Top Articles
+ */
+ .top-articles {
   padding: 20px 20px;
 
   h2 {
@@ -43,18 +94,6 @@ section.articles,
   }
 }
 
-.articles {
-  .inner {
-    .card-article {
-      width: 100%;
-
-      @media (min-width: 991px) {
-        width: 100%;
-        flex: 0 1 305px;
-      }
-    }
-  }
-}
 
 .top-articles {
   .inner {
@@ -85,6 +124,9 @@ section.articles,
   }
 }
 
+/**
+ * @desc All Articles
+ */
 .all-articles {
   .inner {
     .card-article {
@@ -95,6 +137,9 @@ section.articles,
   }
 }
 
+/**
+ * @desc Product Articles
+ */
 #product {
   .articles {
     h2 {

@@ -76,7 +76,7 @@
   </div>
 </section>
 
-<section class="drive row">
+<section class="drive">
   {% include "./partials/where-can-i-drive.njk" %}
 </section>
 
@@ -92,7 +92,7 @@
   </p>
 </section>
 
-<section class="articles">
+<section class="related-articles">
   <h2 class="text-center">Releated Articles</h2>
   {% include "./partials/articles.njk" %}
 
@@ -101,9 +101,10 @@
   </a>
 </section>
 
-<section class="trust row">
-  {% include "./partials/trust-box.njk" %}
-
+<section class="trust">
+  <div class="trust-content">
+    {% include "./partials/trust-box.njk" %}
+  </div>
   <button class="back-to-top js-back-to-top">
     <img
       src="./images/return-to-top-arrow.png"
@@ -113,17 +114,12 @@
     />
   </button>
 </section>
+<!--//.trut-->
 
-<div class="container">
-  <!--//.reviews-->
-  <footer class="row">
-    {% include './partials/links.njk' %}
-  </footer>
+<footer>
+  {% include './partials/footer-links.njk' %}
+</footer>
 
-  {% include './partials/help-icon.njk' %}
-</div>
-<!--//.container-->
-
-{% block corejavascript %} {% include './partials/core-javascript.njk' %}
-{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
-endblock %}
+{% include './partials/help-icon.njk' %} {% block corejavascript %} {% include
+'./partials/core-javascript.njk' %} {%endblock %} {% block footer %} {% include
+'./partials/footer.njk' %} {% endblock %}

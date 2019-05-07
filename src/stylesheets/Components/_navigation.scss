@@ -16,7 +16,7 @@
  * Menu styles.
  */
 .navbar {
-  position: relative;
+  /*position: relative;*/
   height: 55px;
   margin-bottom: 0;
   border: 1px solid transparent;
@@ -83,8 +83,8 @@
       &:hover,
       &:focus,
       &:active:hover {
-        color: white;
-        background-color: #01dbab;
+        color: $vividCyan;
+        background-color: $veryDarkCyan;
         outline: 0;
       }
     }
@@ -178,7 +178,7 @@
       display: none;
     }
 
-    & + li:before {
+    /*& + li:before {
       content: '|';
       color: $white;
       padding-right: 19px;
@@ -191,7 +191,7 @@
       &:before {
         display: none;
       }
-    }
+    }*/
 
     .person-icon {
       width: 18px;

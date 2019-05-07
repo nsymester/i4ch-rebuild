@@ -28,6 +28,7 @@
 /* @group components */
 
 @import 'Components/navigation';
+@import 'Components/dropdown';
 @import 'Components/tabs';
 @import 'Components/buttons';
 @import 'Components/country-scroller';
@@ -39,6 +40,7 @@
 @import 'Components/search';
 @import 'Components/select';
 @import 'components';
+
 /* @group overrides */
 
 @import 'overrides';

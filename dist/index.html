@@ -323,11 +323,11 @@
   </div>
 </section>
 
-<section class="drive row">
+<section class="drive">
   <h2>Where can I drive?</h2>
 
 <div class="drive-bg">
-  <div class="card-products">
+  <div class="card-products clearfix">
       <div class="accordion card card-product">
         <button class="accordion-btn h3">Car Europe</button>
         <div class="accordion-panel">
@@ -452,62 +452,64 @@
   </p>
 </section>
 
-<section class="articles">
+<section class="related-articles">
   <h2 class="text-center">Releated Articles</h2>
+    <div class="articles">
     <div class="card card-article">
-    <img
-      class="card-img-top img-responsive"
-      data-src="article-img-sample-1.jpg"
-      alt="286%x180"
-      src="./images/article-img-sample-1.jpg"
-      data-holder-rendered="true"
-    />
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-text line-clamp">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a href="#" class="">View article</a>
+      <img
+        class="card-img-top img-responsive"
+        data-src="article-img-sample-1.jpg"
+        alt="286%x180"
+        src="./images/article-img-sample-1.jpg"
+        data-holder-rendered="true"
+      />
+      <h3 class="card-title">Card title</h3>
+      <div class="card-body">
+        <p class="card-text line-clamp">
+          Some quick example text to build on the card title and make up the bulk
+          of the card's content.
+        </p>
+        <a href="#" class="">View article</a>
+      </div>
     </div>
-  </div>
-  <!--//.card-->
+    <!--//.card-->
 
-  <div class="card card-article">
-    <img
-      class="card-img-top img-responsive"
-      data-src="./images/article-img-sample-2.jpg"
-      alt="286%x180"
-      src="./images/article-img-sample-2.jpg"
-      data-holder-rendered="true"
-    />
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-text line-clamp">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <a href="#" class="">View article</a>
+    <div class="card card-article">
+      <img
+        class="card-img-top img-responsive"
+        data-src="./images/article-img-sample-2.jpg"
+        alt="286%x180"
+        src="./images/article-img-sample-2.jpg"
+        data-holder-rendered="true"
+      />
+      <h3 class="card-title">Card title</h3>
+      <div class="card-body">
+        <p class="card-text line-clamp">
+          Some quick example text to build on the card title and make up the bulk
+          of the card's content.
+        </p>
+        <a href="#" class="">View article</a>
+      </div>
     </div>
-  </div>
-  <!--//.card-->
+    <!--//.card-->
 
-  <div class="card card-article bdr-dark-grey">
-    <img
-      class="card-img-top img-responsive"
-      data-src="./images/article-img-sample-3.jpg"
-      alt="286%x180"
-      src="./images/article-img-sample-3.jpg"
-      data-holder-rendered="true"
-    />
-    <h3 class="card-title">Card title</h3>
-    <div class="card-body">
-      <p class="card-text line-clamp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus atque asperiores laudantium nesciunt facilis. Libero eius vitae porro incidunt laboriosam quisquam dolorum, iste deserunt culpa voluptas molestiae neque, facere quia?</p>
-      <a href="#" class="">View article</a>
-      <span class="card-published">2 hrs ago</span>
+    <div class="card card-article bdr-dark-grey">
+      <img
+        class="card-img-top img-responsive"
+        data-src="./images/article-img-sample-3.jpg"
+        alt="286%x180"
+        src="./images/article-img-sample-3.jpg"
+        data-holder-rendered="true"
+      />
+      <h3 class="card-title">Card title</h3>
+      <div class="card-body">
+        <p class="card-text line-clamp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus atque asperiores laudantium nesciunt facilis. Libero eius vitae porro incidunt laboriosam quisquam dolorum, iste deserunt culpa voluptas molestiae neque, facere quia?</p>
+        <a href="#" class="">View article</a>
+        <span class="card-published">2 hrs ago</span>
+      </div>
     </div>
-  </div>
-  <!--//.card-->
+    <!--//.card-->
+  </div><!--.articles-->
 
 
 
@@ -516,9 +518,9 @@
   </a>
 </section>
 
-<section class="trust row">
-  <div class="inner">
-  <div class="card card-info">
+<section class="trust">
+  <div class="trust-content">
+      <div class="card card-info">
     <img
       class="card-img-top"
       alt="91x91"
@@ -586,9 +588,8 @@
     </div>
   </div>
   <!--//.card-->
-</div>
 
-
+  </div>
   <button class="back-to-top js-back-to-top">
     <img
       src="./images/return-to-top-arrow.png"
@@ -598,11 +599,10 @@
     />
   </button>
 </section>
+<!--//.trut-->
 
-<div class="container">
-  <!--//.reviews-->
-  <footer class="row">
-    <ul class="footer-list">
+<footer>
+  <ul class="footer-list">
   <li><a href="">About Us</a></li>
   <li><a href="">Who are we?</a></li>
   <li><a href="">What do we do?</a></li>
@@ -630,15 +630,11 @@
   <a href=""><i class="instagram icon">Instagram</i></a>
 </div>
 
-  </footer>
+</footer>
 
-     <button class="help-tip">
+   <button class="help-tip">
     <span>Help</span>
-  </button>
-</div>
-<!--//.container-->
-
- <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </button>  <!-- Include all compiled plugins (below), or include individual files as needed -->
 
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -647,6 +643,5 @@
 
 
 <script src="//api.feefo.com/api/javascript/insurance4carhire" aync></script>
-
-  </body>
+   </body>
 </html> 

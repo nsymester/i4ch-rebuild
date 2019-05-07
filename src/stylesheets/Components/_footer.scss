@@ -34,15 +34,7 @@ footer {
 }
 
 footer {
-  display: block;
-
   @media (min-width: 1200px) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    justify-content: space-around;
-    align-items: stretch;
-
     .footer-list {
       text-align: left;
       margin-right: 20px;
@@ -55,9 +47,9 @@ footer {
         right: 0px;
         z-index: 100;
         top: 0;
-        width: 3px;
+        width: 1px;
         height: 85%; /* or 100px */
-        background: $darkCyan;
+        background: $vividCyan;
       }
     }
   }
@@ -68,6 +60,10 @@ footer {
 
     a {
       margin-left: 50px;
+
+      &:first-child {
+        margin-left:0;
+      }
     }
   }
 }

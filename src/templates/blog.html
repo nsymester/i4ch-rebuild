@@ -1,5 +1,4 @@
-{% block headerContent %}
-{% import './macros/header.njk' as header %}
+{% block headerContent %} {% import './macros/header.njk' as header %}
 {{ header.config('/css/styles.css', 'blog') }}
 {% endblock %}
 
@@ -100,7 +99,7 @@
   </section>
   <!--//.reviews-->
   <footer class="row">
-    {% include './partials/links.njk' %}
+    {% include './partials/footer-links.njk' %}
   </footer>
 
   {% include './partials/help-icon.njk' %}
