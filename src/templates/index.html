@@ -2,12 +2,12 @@
 {{ header.config('/css/styles.css', 'home') }}
 {% endblock %}
 
-<div class="container-fluid">
-  {% include "./partials/nav.njk" %}
-  <section class="hero row">
-    {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
-  </section>
-</div>
+<!-- <div class="container-fluid"> -->
+{% include "./partials/nav.njk" %}
+<section class="hero">
+  {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
+</section>
+<!-- </div> -->
 
 <section class="reviews row">
   {% include "./partials/reviews.njk" %}

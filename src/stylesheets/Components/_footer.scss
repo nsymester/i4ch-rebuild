@@ -39,7 +39,7 @@ footer {
       text-align: left;
       margin-right: 20px;
       position: relative;
-      flex: 1 1 150px;
+      flex: 1 1 auto;
 
       &:after {
         content: '';
@@ -62,7 +62,7 @@ footer {
       margin-left: 50px;
 
       &:first-child {
-        margin-left:0;
+        margin-left: 0;
       }
     }
   }
