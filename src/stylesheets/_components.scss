@@ -353,7 +353,7 @@ section h2 {
 
 .cover {
   &-image {
-    display:block;
+    display: block;
     // width: 100%;
     // max-width: 535px;
 
@@ -371,7 +371,6 @@ section h2 {
   // max-width: 535px;
   width: 100%;
   padding: 0 20px;
-  margin: 0 auto;
 
   @media (min-width: 991px) {
     max-width: 100%;
@@ -413,13 +412,12 @@ section h2 {
   // max-width: 535px;
   width: 100%;
   padding: 30px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 
   @media (min-width: 1199px) {
     max-width: 100%;
   }
 }
-
 
 /**
  * @group product-hero

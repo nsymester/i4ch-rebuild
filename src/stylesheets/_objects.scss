@@ -164,6 +164,8 @@
 }
 
 .drive {
+  margin: 0 auto 60px;
+
   .card-products {
     /* IE11 hack */
     display: -ms-flexbox;
@@ -408,8 +410,7 @@ footer {
     'fl2 fl2 fl2 fl2 fl2 fl2 fl2 fl2 fl2 fl2 fl2 fl2'
     'fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3'
     'fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4'
-    'si si si si si si si si si si si si'
-    'fi fi fi fi fi fi fi fi fi fi fi fi';
+    'si si si si si si si si si si si si';
   justify-content: center;
   // margin-bottom: 80px;
   margin-bottom: 0;
@@ -417,10 +418,8 @@ footer {
 
   @media (min-width: 1199px) {
     grid-template-columns: repeat(12, auto);
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    'fl1 fl1 fl2 fl2 fl3 fl3 fl4 fl4 si si si si'
-    'fi fi fi fi fi fi fi fi fi fi fi fi';
+    grid-template-rows: auto;
+    grid-template-areas: 'fl1 fl1 fl2 fl2 fl3 fl3 fl4 fl4 si si si si';
   }
 
   .footer-list {
@@ -451,9 +450,5 @@ footer {
   .social-icons {
     grid-area: si;
     padding: 15px 30px;
-  }
-
-  .footer-info {
-    grid-area: fi;
   }
 }
