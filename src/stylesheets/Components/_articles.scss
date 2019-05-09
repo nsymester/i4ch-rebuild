@@ -4,7 +4,7 @@
 .articles {
   max-width: 535px;
   width: 100%;
-  margin: auto auto 40px;
+  margin: auto auto 0;
 
   .card-article {
     width: 100%;
@@ -12,6 +12,7 @@
     @media (min-width: 991px) {
       width: 100%;
       flex: 0 1 305px;
+      margin: auto auto 40px;
     }
   }
 
@@ -34,7 +35,8 @@
  * @group Related articles
  */
 .related-articles {
-  margin-bottom: 60px;
+  margin-bottom: 0;
+
   h2 {
     text-align: left;
     margin: 0 auto 40px;
@@ -45,6 +47,10 @@
       text-align: center;
       padding-left:0;
     }
+  }
+
+  .btn-articles {
+    margin: 0 auto 60px;
   }
 }
 
