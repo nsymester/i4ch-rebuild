@@ -352,6 +352,12 @@ section h2 {
 }
 
 .cover {
+  margin-bottom: 30px;
+
+  @media (min-width: 991px) {
+    margin-bottom: 60px;
+  }
+
   &-image {
     display: block;
     // width: 100%;
@@ -364,6 +370,10 @@ section h2 {
 
   h2 {
     margin-top: 50px;
+
+    @media (max-width: 991px) {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -371,6 +381,7 @@ section h2 {
   // max-width: 535px;
   width: 100%;
   padding: 0 20px;
+  // margin: 0 auto;
 
   @media (min-width: 991px) {
     max-width: 100%;
