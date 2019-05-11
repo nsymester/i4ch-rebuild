@@ -118,6 +118,7 @@ label {
  */
 
 .std-list,
+.ordered-list,
 .tick-list,
 .cross-list {
   padding-left: 0;
@@ -132,13 +133,39 @@ label {
       position: relative;
       top: 0px;
       left: -5px;
-      padding: 0;
-      margin-left: -10px;
+      padding: 0 15px 0 0;
     }
   }
 
   &--alt {
     padding-left: 20px;
+  }
+}
+
+.ordered-list {
+  list-style: none;
+  counter-reset: li;
+  li {
+    &::before {
+      content: counter(li);
+      counter-increment: li;
+      color: $vividCyan;
+      display: inline-block;
+      padding-right: 15px;
+    }
+  }
+}
+
+.number-in-circle {
+  padding: 0;
+  margin-bottom: 4em;
+  li {
+    &:before {
+      background: $vividCyan;
+      color: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+    }
   }
 }
 
@@ -182,6 +209,72 @@ label {
   }
 }
 
+/* info steps */
+.steps-list {
+  padding-left: 25px;
+  list-style: none;
+  counter-reset: li;
+
+  /* the stem */
+  li {
+    border: none;
+    border-left: 3px solid $darkCyan;
+    box-sizing: border-box;
+    border-radius: 0;
+    content: '';
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    padding-top: 0px;
+    line-height: 24px;
+  }
+
+  // active step
+  li.active {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  /* remove stem from the end */
+  li:last-child {
+    border-left: 3px solid transparent;
+    padding-bottom: 0;
+  }
+
+  /* the circle */
+  li::before {
+    border-radius: 50%;
+    background-color: $vividCyan;
+    color: black;
+    content: counter(li);
+    counter-increment: li;
+    color: $white;
+    border: 3px solid $darkCyan;
+    display: block;
+    float: left;
+    height: 30px;
+    margin-left: -37px;
+    text-align: center;
+    width: 30px;
+  }
+
+  .info-step-block {
+    display: flex;
+
+    :first-child {
+      font-weight: bold;
+      font-size: 24px;
+      font-family: Oswald;
+    }
+  }
+
+  p {
+    display: inline-block;
+    margin-top: 0px;
+    padding-left: 10px;
+    color: $veryDarkCyan;
+  }
+}
 
 /* Start with fallback for browsers that don't support -webkit-line-clamp */
 .line-clamp {
@@ -191,24 +284,28 @@ label {
 }
 
 .line-clamp:after {
-  content: "";
+  content: '';
   text-align: right;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 50%;
   height: 1.2em;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 80%
+  );
 }
 
 /* Now add in code for the browsers that support -webkit-line-clamp and overwrite the non-supportive stuff */
 @supports (-webkit-line-clamp: 3) {
   .line-clamp {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .line-clamp:after {

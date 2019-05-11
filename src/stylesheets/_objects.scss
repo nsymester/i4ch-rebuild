@@ -118,7 +118,6 @@
     @media (min-width: 991px) {
       -ms-flex: 1;
       margin: 20px auto 0;
-
     }
   }
 }
@@ -211,7 +210,6 @@
       @media (min-width: 991px) {
         margin: 0 auto;
       }
-
     }
 
     .card-product:nth-child(1) {
@@ -435,8 +433,8 @@ footer .container {
     grid-template-columns: repeat(12, auto);
     grid-template-rows: auto auto;
     grid-template-areas:
-    'fl1 fl1 fl2 fl2 fl3 fl3 fl4 fl4 si si si si'
-    'fi fi fi fi fi fi fi fi fi fi fi fi';
+      'fl1 fl1 fl2 fl2 fl3 fl3 fl4 fl4 si si si si'
+      'fi fi fi fi fi fi fi fi fi fi fi fi';
   }
 
   .footer-list {

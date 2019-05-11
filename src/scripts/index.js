@@ -4,6 +4,7 @@ import { Accordion } from './components/Accordion';
 import { CountrySelector } from './components/CountrySelector';
 import { VehicleSelector } from './components/VehicleSelector';
 import { ToggleNavigation, DropdownMenu } from './components/Navigation';
+import { ScrollTo } from './components/ScrollTo';
 
 console.log(`${Goodbye()} ${World} Index file`);
 
@@ -15,6 +16,7 @@ function start() {
   ScrollToTop();
   Accordion();
   WindowWidth();
+  ScrollTo();
 
   //Docs
   $('.revealdocs').click(function(e) {

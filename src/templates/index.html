@@ -5,7 +5,9 @@
 <!-- <div class="container-fluid"> -->
 {% include "./partials/nav.njk" %}
 <section class="hero">
-  {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
+  <div class="container">
+    {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
+  </div>
 </section>
 <!-- </div> -->
 
@@ -13,7 +15,7 @@
   {% include "./partials/reviews.njk" %}
 </section>
 
-<section class="excess">
+<section id="excess" class="excess">
   <div class="excess-image-top">
     <img class="img-responsive" src="./images/excess-insurance.jpg" />
   </div>
