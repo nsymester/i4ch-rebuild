@@ -113,7 +113,13 @@
  */
 
 .trust {
-  background-color: $superLightGrey;
+    background-color: $superLightGrey;
+
+    .card-info {
+        &:first-child {
+            padding-top: 15px;
+        }
+    }
 }
 
 .card-info {

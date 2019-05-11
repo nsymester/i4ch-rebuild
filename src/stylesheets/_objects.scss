@@ -102,13 +102,21 @@
     -ms-flex: 0 1 350px;
     @media (min-width: 991px) {
       -ms-flex: 1;
+
+      p {
+        line-height: 25px
+      }
+
+      ol {
+        line-height: 25px
+      }
     }
 
     grid-area: ec;
     display: flex;
     flex-flow: column wrap;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 25px 0 60px;
   }
 
   .excess-image-bottom {
@@ -118,6 +126,7 @@
     @media (min-width: 991px) {
       -ms-flex: 1;
       margin: 20px auto 0;
+
     }
   }
 }
@@ -210,6 +219,7 @@
       @media (min-width: 991px) {
         margin: 0 auto;
       }
+
     }
 
     .card-product:nth-child(1) {
@@ -277,14 +287,24 @@
   }
 }
 
-.generic {
-  margin-bottom: 80px;
-  margin-top: 0;
-  padding: 15px;
+.faq-answers-product {
+    display: none;
+    margin: 0 0 60px 0;
 
-  @media (min-width: 1199px) {
-    margin-top: 30px;
-  }
+    h3 {
+        border-bottom: 1px solid $midGrey;
+        padding-bottom: 20px;
+    }
+}
+
+.generic {
+    margin-bottom: 80px;
+    margin-top: 0;
+    padding: 15px;
+
+    @media (min-width: 1199px) {
+        margin-top: 30px;
+    }
 }
 
 section.article-header {

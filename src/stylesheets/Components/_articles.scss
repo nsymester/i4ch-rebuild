@@ -154,3 +154,24 @@
     }
   }
 }
+
+
+.article-content {
+    max-width: 600px;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 20px;
+        color: $darkCyan;
+    }
+}
+
+.article-categories {
+    a {
+        color: $veryDarkCyan;
+    }
+}

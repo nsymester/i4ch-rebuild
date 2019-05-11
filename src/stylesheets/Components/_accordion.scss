@@ -111,6 +111,14 @@
         max-height: 100%;
         overflow: visible;
       }
+
+      .btn-price {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        display: flex;
+        flex-flow: row wrap;
+        height: auto;
+      }
     }
   }
 }
