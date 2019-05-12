@@ -107,11 +107,11 @@
       -ms-flex: 1;
 
       p {
-        line-height: 25px
+        line-height: 25px;
       }
 
       ol {
-        line-height: 25px
+        line-height: 25px;
       }
     }
 
@@ -129,7 +129,6 @@
     @media (min-width: 991px) {
       -ms-flex: 1;
       margin: 20px auto 0;
-
     }
   }
 }
@@ -222,7 +221,6 @@
       @media (min-width: 991px) {
         margin: 0 auto;
       }
-
     }
 
     .card-product:nth-child(1) {
@@ -291,23 +289,23 @@
 }
 
 .faq-answers-product {
-    display: none;
-    margin: 0 0 60px 0;
+  display: none;
+  margin: 0 0 60px 0;
 
-    h3 {
-        border-bottom: 1px solid $midGrey;
-        padding-bottom: 20px;
-    }
+  h3 {
+    border-bottom: 1px solid $midGrey;
+    padding-bottom: 20px;
+  }
 }
 
 .generic {
-    margin-bottom: 80px;
-    margin-top: 0;
-    padding: 15px;
+  margin-bottom: 80px;
+  margin-top: 0;
+  padding: 15px;
 
-    @media (min-width: 1199px) {
-        margin-top: 30px;
-    }
+  @media (min-width: 1199px) {
+    margin-top: 30px;
+  }
 }
 
 section.article-header {

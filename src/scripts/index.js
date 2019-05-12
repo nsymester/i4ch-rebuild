@@ -5,6 +5,7 @@ import { CountrySelector } from './components/CountrySelector';
 import { VehicleSelector } from './components/VehicleSelector';
 import { ToggleNavigation, DropdownMenu } from './components/Navigation';
 import { ScrollTo } from './components/ScrollTo';
+import { AutoComplete } from './components/AutoComplete';
 
 console.log(`${Goodbye()} ${World} Index file`);
 
@@ -17,6 +18,7 @@ function start() {
   Accordion();
   WindowWidth();
   ScrollTo();
+  AutoComplete(document.getElementById('myInput'), countriesCovered);
 
   //Docs
   $('.revealdocs').click(function(e) {
@@ -74,7 +76,7 @@ function start() {
   let coverOptionCount = 0;
   let currentPrice = 0;
 
-  $('.product-options-days-cover').change(function (evt) {
+  $('.product-options-days-cover').change(function(evt) {
     coverOptionCount++;
 
     let parentClass = $(this)
@@ -92,13 +94,12 @@ function start() {
     });
 
     if (coverOptionPrice.length > 0) {
-
-      $("." + parentClass[2] + " .inner .card-price .amount").text(
+      $('.' + parentClass[2] + ' .inner .card-price .amount').text(
         parseFloat(coverOptionPrice[0].cost * evt.currentTarget.value) <= 0
           ? coverOptionPrice[0].cost
           : parseFloat(
-            coverOptionPrice[0].cost * evt.currentTarget.value
-          ).toFixed(2)
+              coverOptionPrice[0].cost * evt.currentTarget.value
+            ).toFixed(2)
       );
     } else {
       // reset number to 1
@@ -172,22 +173,22 @@ function start() {
     );
   }
 
-
   // only load if on product faqs page
-  if ($(".product-faqs").length > 0) {
-
-    let file = $(".product-faqs").data("faqs").replace("&-","");
+  if ($('.product-faqs').length > 0) {
+    let file = $('.product-faqs')
+      .data('faqs')
+      .replace('&-', '');
 
     console.log(`/api/${file}-faqs.json`);
 
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url: `/api/${file}-faqs.json`,
-      success: function (faqs) {
+      success: function(faqs) {
         // get the body
-        $.each(faqs, function (fIndex, faq) {
+        $.each(faqs, function(fIndex, faq) {
           console.log(`#${faq.id}`);
-          $(".inner .accordion").append(
+          $('.inner .accordion').append(
             `<button class="accordion-btn h4">${faq.question}</button>
               <div class="accordion-panel">
                 <div class="inner">
@@ -201,42 +202,42 @@ function start() {
         // show content
         $('.faq-answers-product').show();
       },
-      error: function (xhr, status, error) {
-        console.log("error: ", error);
+      error: function(xhr, status, error) {
+        console.log('error: ', error);
       }
     }); // $ajax
 
-    $(".faq-answers .inner .accordion").delegate(
-      ".accordion-btn",
-      "click",
-      function (evt) {
+    $('.faq-answers .inner .accordion').delegate(
+      '.accordion-btn',
+      'click',
+      function(evt) {
         /* Toggle between adding and removing the "active" class,
           to highlight the button that controls the panel */
-        evt.currentTarget.classList.toggle("active");
+        evt.currentTarget.classList.toggle('active');
 
         /* Toggle between hiding and showing the active panel */
         let panel = evt.currentTarget.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
-          panel.style.marginTop = "0";
-          panel.style.marginBottom = "0";
+          panel.style.marginTop = '0';
+          panel.style.marginBottom = '0';
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-          panel.style.marginTop = "-11px";
-          panel.style.marginBottom = "18px";
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.style.marginTop = '-11px';
+          panel.style.marginBottom = '18px';
         }
       }
     );
   }
 
   // on scroll
-  if ($(".article-main").length > 0) {
-    let target = $(".article-main").offset().top - 180;
+  if ($('.article-main').length > 0) {
+    let target = $('.article-main').offset().top - 180;
     $(document).scroll(function() {
       if ($(window).scrollTop() >= target) {
-        $(".share-buttons").show();
+        $('.share-buttons').show();
       } else {
-        $(".share-buttons").hide();
+        $('.share-buttons').hide();
       }
     });
   }
@@ -247,7 +248,7 @@ function start() {
   };
 
   // Get the header
-  let navBar = document.querySelector(".navbar");
+  let navBar = document.querySelector('.navbar');
 
   // Get the offset position of the navbar
   let sticky = navBar.offsetTop;
@@ -256,9 +257,9 @@ function start() {
   function myFunction() {
     let sticky = navBar.offsetTop;
     if (window.pageYOffset > sticky) {
-      navBar.classList.add("navbar-fixed-top");
+      navBar.classList.add('navbar-fixed-top');
     } else {
-      navBar.classList.remove("navbar-fixed-top");
+      navBar.classList.remove('navbar-fixed-top');
     }
   }
 }

@@ -347,23 +347,237 @@
           </p>
 
           <div class="form-group">
-            <div class="country-scroller">
-              <button class="country-scroller__up"></button>
-              <ul class="country-scroller__items">
-                <li class="country-scroller__item">Afghanistan</li>
-                <li class="country-scroller__item">Albania</li>
-                <li class="country-scroller__item">Algeria</li>
-                <li class="country-scroller__item">Andorra</li>
-                <li class="country-scroller__item">Angola</li>
-                <li class="country-scroller__item">Antigua and Barbuda</li>
-                <li class="country-scroller__item">Argentina</li>
-                <li class="country-scroller__item">Armenia</li>
-                <li class="country-scroller__item">Austria</li>
-                <li class="country-scroller__item">Azerbaijan</li>
-              </ul>
-              <button class="country-scroller__down"></button>
+            
+            <script>
+            // load countries from umbraco
+            var countriesCovered = [
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'Andorra',
+    'Angola',
+    'Anguilla',
+    'Antigua &amp; Barbuda',
+    'Argentina',
+    'Armenia',
+    'Aruba',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+    'Bahamas',
+    'Bahrain',
+    'Bangladesh',
+    'Barbados',
+    'Belarus',
+    'Belgium',
+    'Belize',
+    'Benin',
+    'Bermuda',
+    'Bhutan',
+    'Bolivia',
+    'Bosnia &amp; Herzegovina',
+    'Botswana',
+    'Brazil',
+    'British Virgin Islands',
+    'Brunei',
+    'Bulgaria',
+    'Burkina Faso',
+    'Burundi',
+    'Cambodia',
+    'Cameroon',
+    'Canada',
+    'Cape Verde',
+    'Cayman Islands',
+    'Central Arfrican Republic',
+    'Chad',
+    'Chile',
+    'China',
+    'Colombia',
+    'Congo',
+    'Cook Islands',
+    'Costa Rica',
+    'Cote D Ivoire',
+    'Croatia',
+    'Cuba',
+    'Curacao',
+    'Cyprus',
+    'Czech Republic',
+    'Denmark',
+    'Djibouti',
+    'Dominica',
+    'Dominican Republic',
+    'Ecuador',
+    'Egypt',
+    'El Salvador',
+    'Equatorial Guinea',
+    'Eritrea',
+    'Estonia',
+    'Ethiopia',
+    'Falkland Islands',
+    'Faroe Islands',
+    'Fiji',
+    'Finland',
+    'France',
+    'French Polynesia',
+    'French West Indies',
+    'Gabon',
+    'Gambia',
+    'Georgia',
+    'Germany',
+    'Ghana',
+    'Gibraltar',
+    'Greece',
+    'Greenland',
+    'Grenada',
+    'Guam',
+    'Guatemala',
+    'Guernsey',
+    'Guinea',
+    'Guinea Bissau',
+    'Guyana',
+    'Haiti',
+    'Honduras',
+    'Hong Kong',
+    'Hungary',
+    'Iceland',
+    'India',
+    'Indonesia',
+    'Iran',
+    'Iraq',
+    'Ireland',
+    'Isle of Man',
+    'Israel',
+    'Italy',
+    'Jamaica',
+    'Japan',
+    'Jersey',
+    'Jordan',
+    'Kazakhstan',
+    'Kenya',
+    'Kiribati',
+    'Kosovo',
+    'Kuwait',
+    'Kyrgyzstan',
+    'Laos',
+    'Latvia',
+    'Lebanon',
+    'Lesotho',
+    'Liberia',
+    'Libya',
+    'Liechtenstein',
+    'Lithuania',
+    'Luxembourg',
+    'Macau',
+    'Macedonia',
+    'Madagascar',
+    'Malawi',
+    'Malaysia',
+    'Maldives',
+    'Mali',
+    'Malta',
+    'Marshall Islands',
+    'Mauritania',
+    'Mauritius',
+    'Mexico',
+    'Micronesia',
+    'Moldova',
+    'Monaco',
+    'Mongolia',
+    'Montenegro',
+    'Montserrat',
+    'Morocco',
+    'Mozambique',
+    'Myanmar',
+    'Namibia',
+    'Nauro',
+    'Nepal',
+    'Netherlands',
+    'Netherlands Antilles',
+    'New Caledonia',
+    'New Zealand',
+    'Nicaragua',
+    'Niger',
+    'Nigeria',
+    'North Korea',
+    'Norway',
+    'Oman',
+    'Pakistan',
+    'Palau',
+    'Palestine',
+    'Panama',
+    'Papua New Guinea',
+    'Paraguay',
+    'Peru',
+    'Philippines',
+    'Poland',
+    'Portugal',
+    'Puerto Rico',
+    'Qatar',
+    'Reunion',
+    'Romania',
+    'Russia',
+    'Rwanda',
+    'Saint Pierre &amp; Miquelon',
+    'Samoa',
+    'San Marino',
+    'Sao Tome and Principe',
+    'Saudi Arabia',
+    'Senegal',
+    'Serbia',
+    'Seychelles',
+    'Sierra Leone',
+    'Singapore',
+    'Slovakia',
+    'Slovenia',
+    'Solomon Islands',
+    'Somalia',
+    'South Africa',
+    'South Korea',
+    'South Sudan',
+    'Spain',
+    'Sri Lanka',
+    'St Kitts &amp; Nevis',
+    'St Lucia',
+    'St Vincent',
+    'Sudan',
+    'Suriname',
+    'Swaziland',
+    'Sweden',
+    'Switzerland',
+    'Syria',
+    'Taiwan',
+    'Tajikistan',
+    'Tanzania',
+    'Thailand',
+    "Timor L'Este",
+    'Togo',
+    'Tonga',
+    'Trinidad &amp; Tobago',
+    'Tunisia',
+    'Turkey',
+    'Turkmenistan',
+    'Turks &amp; Caicos',
+    'Tuvalu',
+    'Uganda',
+    'Ukraine',
+    'United Arab Emirates',
+    'United Kingdom',
+    'United States of America',
+    'Uruguay',
+    'Uzbekistan',
+    'Vanuatu',
+    'Vatican City',
+    'Venezuela',
+    'Vietnam',
+    'Virgin Islands (US)',
+    'Yemen',
+    'Zambia',
+    'Zimbabwe'
+  ];
+            </script>
+            <div class="autocomplete" style="width:100%;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Country" />
             </div>
-            <!--//.country-scroller-->
           </div>
           <!--//.form-group-->
         </div>
@@ -601,43 +815,45 @@
 <!--//.trut-->
 
 <footer>
+  <div class="container">
   <ul class="footer-list">
-  <li><a href="">About Us</a></li>
-  <li><a href="">Who are we?</a></li>
-  <li><a href="">What do we do?</a></li>
-  <li><a href="/product-options.html">Product Comparison</a></li>
-</ul>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Who are we?</a></li>
+    <li><a href="">What do we do?</a></li>
+    <li><a href="/product-options.html">Product Comparison</a></li>
+  </ul>
 
-<ul class="footer-list">
-  <li><a href="">Regulatory Information</a></li>
-  <li><a href="">Fair Processing Notice</a></li>
-  <li><a href="">Modern Slavery Act Statement</a></li>
-  <li><a href="">Other Regulations</a></li>
-</ul>
+  <ul class="footer-list">
+    <li><a href="">Regulatory Information</a></li>
+    <li><a href="">Fair Processing Notice</a></li>
+    <li><a href="">Modern Slavery Act Statement</a></li>
+    <li><a href="">Other Regulations</a></li>
+  </ul>
 
-<ul class="footer-list">
-  <li><a href="/faqs.html">FAQs</a></li>
-</ul>
+  <ul class="footer-list">
+    <li><a href="/faqs.html">FAQs</a></li>
+  </ul>
 
-<ul class="footer-list">
-  <li><a href="">Contact Us</a></li>
-</ul>
+  <ul class="footer-list">
+    <li><a href="">Contact Us</a></li>
+  </ul>
 
-<div class="social-icons">
-  <a href=""><i class="facebook icon">Facebook</i></a>
-  <a href=""><i class="twitter icon">Twitter</i></a>
-  <a href=""><i class="instagram icon">Instagram</i></a>
-</div>
+  <div class="social-icons">
+    <a href=""><i class="facebook icon">Facebook</i></a>
+    <a href=""><i class="twitter icon">Twitter</i></a>
+    <a href=""><i class="instagram icon">Instagram</i></a>
+  </div>
 
-<div class="footer-info">
-  <p>
-    Insurance 4 Car Hire is a trading name of Towergate Underwriting Group Limited.
-    Towergate Underwriting Group Limited Registered Office: Towergate House, Eclipse Park, Sittingbourne Road,
-    Maidstone, Kent, ME14 3EN. Registered in England No. 4043759. Authorised and regulated by the Financial Conduct
-    Authority.
-  </p>
-  <p>&copy; insurance4carhire.com</p>
+  <div class="footer-info">
+    <p>
+      Insurance 4 Car Hire is a trading name of Towergate Underwriting Group Limited.
+      Towergate Underwriting Group Limited Registered Office: Towergate House, Eclipse Park, Sittingbourne Road,
+      Maidstone, Kent, ME14 3EN. Registered in England No. 4043759. Authorised and regulated by the Financial Conduct
+      Authority.
+    </p>
+    <p>&copy; insurance4carhire.com</p>
 
+  </div>
 </div>
 </footer>
 
