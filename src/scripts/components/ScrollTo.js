@@ -8,6 +8,7 @@ function ScrollTo() {
     .not('[href="#"]')
     .not('[href="#0"]');
 
+  let heightCompensation = 60;
   // Bind Events
   anchors.click(anchorsHandler);
 
@@ -20,7 +21,7 @@ function ScrollTo() {
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
-      var target = $(this.hash);
+      let target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       // Does a scroll target exist?
       if (target.length) {
@@ -28,20 +29,20 @@ function ScrollTo() {
         event.preventDefault();
         $('html, body').animate(
           {
-            scrollTop: target.offset().top - 20
+            scrollTop: target.offset().top - heightCompensation
           },
           1000,
           function() {
             // Callback after animation
             // Must change focus!
-            var $target = $(target);
-            //$target.focus();
-            // if ($target.is(":focus")) { // Checking if the target was focused
-            //   return false;
-            // } else {
-            //   $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            //   $target.focus(); // Set focus again
-            //};
+            let $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+               return false;
+            } else {
+               $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+               $target.focus(); // Set focus again
+            };
           }
         );
       }

@@ -2,35 +2,37 @@
  *  @desc serach
  */
 
- .search-options {
-  margin-bottom: 30px;
-
-  @media (min-width: 1199px) {
-    margin-bottom: 0;
-  }
-
-  .inner {
-    @media (min-width: 1199px) {
-      display: flex;
-      flex-flow: row-reverse nowrap;
-      justify-content: space-between;
-      align-items: baseline;
-      height: 50px;
-    }
-  }
-
-  .form-group {
-    padding: 15px 10px;
-    margin-bottom: 20px;
-    background-color: $lightGreen;
-    display: block;
+.search-options {
+    margin-bottom: 30px;
+    margin-top: 35px;
 
     @media (min-width: 1199px) {
-      display: flex;
-      background-color: $white;
-      padding-top: 0;
+        margin-bottom: 0;
+        margin-top: 35px;
     }
-  }
+
+    .inner {
+        @media (min-width: 1199px) {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            height: 50px;
+        }
+    }
+
+    .form-group {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+        background-color: $lightGreen;
+        display: block;
+
+        @media (min-width: 1199px) {
+            display: flex;
+            background-color: $white;
+            padding-top: 0;
+        }
+    }
 }
 
 .search-label {

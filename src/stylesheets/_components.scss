@@ -261,9 +261,13 @@
 }
 
 .scale-icon {
-  width: 72px;
-  height: 72px;
-  margin-right: 15px;
+  //width: 72px;
+  //height: 72px;
+  //margin-right: 15px;
+  width:125px;
+  height:100%;
+  padding:0;
+
 }
 
 .video {
@@ -426,7 +430,7 @@ section h2 {
   justify-content: center;
   // max-width: 535px;
   width: 100%;
-  padding: 30px;
+  padding: 5px;
   margin: 0 auto 40px;
 
   @media (min-width: 1199px) {
@@ -461,6 +465,11 @@ section h2 {
       margin-bottom: 60px;
     }
   }
+
+  h3 {
+    margin-bottom:15px;
+  }
+
   .inner {
     padding: 20px 20px 30px;
     background: linear-gradient(0, $white 7%, rgba(0, 0, 0, 0) 7%),
@@ -567,7 +576,7 @@ section h2 {
     @media (min-width: 1199px) {
       color: white !important;
       // text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;
-      text-shadow: 2px 2px $mainTextColour;
+      text-shadow: none;
     }
   }
 
@@ -626,7 +635,7 @@ section h2 {
 
     @media (min-width: 1199px) {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: stretch;
     }
   }

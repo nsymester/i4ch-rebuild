@@ -14,7 +14,7 @@ body {
   font-size: 18px;
 
   @media (min-width: 1199px) {
-    line-height: 20px;
+    line-height: 25px;
     font-size: $base-fontSize;
   }
 }
@@ -125,7 +125,7 @@ label {
 
   li {
     list-style: none;
-    margin: 0 0 30px 15px;
+    margin: 0 0 15px 15px;
 
     &:before {
       content: '\25CF';
@@ -145,13 +145,18 @@ label {
 .ordered-list {
   list-style: none;
   counter-reset: li;
+  padding-left: 15px;  
+  
   li {
     &::before {
       content: counter(li);
       counter-increment: li;
       color: $vividCyan;
       display: inline-block;
-      padding-right: 15px;
+      padding-right: 3px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: -15px;
     }
   }
 }

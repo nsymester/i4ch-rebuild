@@ -5,46 +5,46 @@
  * Tab Navigation styles for home page.
  */
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
-  max-width: 435px;
-  width: 100%;
-  display: flex;
-
-  .nav-link {
-    margin-bottom: -1px;
-    height: 57px;
+    border-bottom: 1px solid #dee2e6;
+    max-width: 435px;
     width: 100%;
-    max-width: 190px;
-    text-align: center;
-  }
+    display: flex;
 
-  .nav-link {
-    border: 1px solid #eee;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-    background-image: linear-gradient(#fff, #eee);
-    color: #495057;
-  }
+    .nav-link {
+        margin-bottom: -1px;
+        height: 75px;
+        width: 100%;
+        max-width: 130px;
+        text-align: center;
+    }
 
-  .nav-link:hover,
-  .nav-link:focus {
-    border-color: #e9ecef #e9ecef #dee2e6;
-    outline: 0;
-  }
+    .nav-link {
+        border: 1px solid #eee;
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+        background-image: linear-gradient(#fff, #eee);
+        color: #495057;
+    }
 
-  .nav-link.active,
-  .nav-link.show {
-    color: #495057;
-    background-color: #fff;
-    border-color: #dee2e6 #dee2e6 #fff;
-    background-image: none;
-  }
+    .nav-link:hover,
+    .nav-link:focus {
+        border-color: #e9ecef #e9ecef #dee2e6;
+        outline: 0;
+    }
 
-  button:not(.active):hover {
-    color: #000 !important;
-    background-color: #ccc !important;
-    background-image: none;
-  }
+    .nav-link.active,
+    .nav-link.show {
+        color: #495057;
+        background-color: #fff;
+        border-color: #dee2e6 #dee2e6 #fff;
+        background-image: none;
+    }
+
+    button:not(.active):hover {
+        color: #000 !important;
+        background-color: #ccc !important;
+        background-image: none;
+    }
 }
 
 /* -------------------------------------------------------------------------
@@ -54,23 +54,25 @@
  * Tab Navigation Icons styles for home page.
  */
 .nav-badge {
-  background-repeat: no-repeat;
-  height: 100%;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 15px;
+    background-repeat: no-repeat;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0;
 
-  &--car {
-    background-image: url(../images/car-icon.png);
-    width: 55px;
-    margin-top: 10px;
-  }
+    &--car {
+        background-image: url(../images/car-icon.png);
+        width: 55px;
+        margin-top: 10px;
+        height: 25px;
+    }
 
-  &--van {
-    background-image: url(../images/van-icon.png);
-    width: 34px;
-    height: 26px;
-  }
+    &--van {
+        background-image: url(../images/van-icon.png);
+        width: 34px;
+        height: 31px;
+        margin-top: 4px;
+    }
 }
 
 /* -------------------------------------------------------------------------
@@ -81,38 +83,39 @@
  */
 
 .tab-container {
-  min-width: 360px;
-  width: 435px;
-  margin: 30px 10px;
+    min-width: 360px;
+    width: 435px;
+    margin: 30px 10px;
 
-  @media (min-width: 1199px) {
-    margin: 60px 10px;
-  }
-
-  .inner {
-    border: 1px solid transparent;
-    border-color: #fff #dee2e6 #dee2e6 #dee2e6;
-    border-radius: 0.25rem;
-    border-top-left-radius: 0;
-    padding: 2rem 2rem 1.5rem 2rem;
-    background-color: $white;
-    max-width: 435px;
-    width: 100%;
-    /* h-offset v-offset blur spread color */
-    box-shadow: 2px 2px 15px 1px #e3e3e3;
-
-    h2 {
-      margin-bottom: 40px; // 60px;
+    @media (min-width: 1199px) {
+        margin: 60px 10px;
     }
 
-    .tab-van {
-      display: none;
+    .inner {
+        border: 1px solid transparent;
+        border-color: #fff #dee2e6 #dee2e6 #dee2e6;
+        border-radius: 0.25rem;
+        border-top-left-radius: 0;
+        padding: 2rem 2rem 1.5rem 2rem;
+        background-color: $white;
+        max-width: 435px;
+        width: 100%;
+        /* h-offset v-offset blur spread color */
+        /*box-shadow: 2px 2px 15px 1px #e3e3e3;*/
+        box-shadow: none;
 
-      .form-group:nth-child(3) {
-        margin-bottom: 50px;
-      }
+        h2 {
+            margin-bottom: 40px; // 60px;
+        }
+
+        .tab-van {
+            display: none;
+
+            .form-group:nth-child(3) {
+                margin-bottom: 50px;
+            }
+        }
     }
-  }
 }
 
 /* -------------------------------------------------------------------------
@@ -153,9 +156,10 @@ label.form-control-label {
   width: 100%;
   height: 48px;
   padding-left: 0;
+  margin-right:20px;
 
   @media screen and (min-width: 768px) {
-    max-width: 150px;
+    max-width: 190px;
   }
 
   &:last-child {
