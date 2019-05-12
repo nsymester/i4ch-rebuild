@@ -64,6 +64,9 @@
 }
 
 .excess {
+  &:focus {
+    outline: 0;
+  }
   /* IE11 hack */
   display: block;
 
