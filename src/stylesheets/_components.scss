@@ -176,11 +176,15 @@
     }
   }
 
-  .btn-cta {
-    height: 60px;
-    margin-bottom: 0;
-    border-radius: 2px;
-  }
+    .btn-cta {
+        height: 60px;
+        margin-bottom: 0;
+        border-radius: 2px;
+    }
+
+    .info-box a.btn {
+        padding: 12px 0;
+    }
 }
 
 .back-to-top {
