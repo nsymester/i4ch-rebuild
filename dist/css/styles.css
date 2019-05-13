@@ -1027,9 +1027,6 @@ footer .container {
   border: 1px solid transparent;
   background-color: #023742;
   border-radius: 0; }
-  .navbar .container-fluid,
-  .navbar .container {
-    height: 100%; }
 
 .navbar-brand {
   display: inline-block;
@@ -1054,7 +1051,8 @@ footer .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
 
 .navbar-collapse {
   width: 100%;
@@ -1128,19 +1126,16 @@ footer .container {
 @media screen and (min-width: 1199px) {
   .navbar {
     padding-bottom: 0;
-    padding-right: 15px; }
-    .navbar .container-fluid,
-    .navbar .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      height: 100%; }
+    padding-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1203,9 +1198,7 @@ footer .container {
 .navbar-collapse {
   display: block;
   z-index: 1;
-  position: relative;
-  margin-left: -15px !important;
-  margin-right: -15px !important; }
+  position: relative; }
 
 .navbar-nav {
   float: none !important;
@@ -1236,6 +1229,61 @@ footer .container {
     padding-bottom: 10px; }
   .collapse.in {
     display: block !important; } }
+
+/* top nav */
+@media all and (max-width: 47.94em) {
+  .navbar-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1em;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); } }
+
+.navbar {
+  background: #1182ac; }
+
+div.currency {
+  position: absolute;
+  width: 30%;
+  top: 1.8em;
+  margin: -4.7em 0 0 0;
+  text-align: left; }
+
+@media all and (max-width: 64em) {
+  div.currency {
+    width: 33%; } }
+
+@media all and (max-width: 47.94em) {
+  div.currency {
+    position: relative;
+    display: block;
+    width: 100%;
+    top: 0;
+    margin: 0.5em 0 0 0;
+    padding: 0 0 0.2em 0;
+    display: none; } }
+
+a.currencyMobile {
+  display: none; }
+
+@media all and (max-width: 47.94em) {
+  a.currencyMobile {
+    display: block;
+    right: 1.5em;
+    top: 0.25em;
+    position: absolute;
+    font-size: 2.5em;
+    cursor: pointer;
+    padding: 0 0.5em;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin-right: 0.2em; } }
+
+@media all and (max-width: 20em) {
+  a.currencyMobile {
+    font-size: 2.1em; } }
+
+a.currencyMobile:hover {
+  text-decoration: none; }
 
 .dropdown {
   cursor: pointer; }
@@ -1840,17 +1888,39 @@ a.btn {
 
 .card-cover-option .card-title {
   text-align: left;
-  margin-bottom: 20px; }
+  margin-bottom: 10px !important; }
 
 .card-cover-option .card-price {
   color: #01866b;
   font-family: Oswald;
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 31px; }
+  margin-bottom: 10px;
+  text-align: right;
+  width: 250px; }
+
+.card-cover-option .card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .card-cover-option.active {
   border: 3px solid #01dbab; }
+
+.card-cover-option .warning-text,
+.card-cover-option .warning {
+  color: #b7b7b7; }
+
+.card-cover-option .warning-text {
+  display: none;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: Lato;
+  width: 250px;
+  text-align: right; }
 
 /* -------------------------------------------------------------------------
  Card Info
@@ -3773,35 +3843,12 @@ section h2 {
   left: 0;
   top: 0;
   z-index: 1030; }
+  @media (min-width: 991px) {
+    .navbar-fixed-top .navbar-collapse {
+      padding-right: 8rem; } }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .navbar-fixed-top + .content {
   padding-top: 102px; }
-
-.currency {
-  width: auto;
-  right: 15px;
-  top: -2.5em;
-  margin: 0 0 0 0; }
-  .currency > p:first-child {
-    display: none; }
-  .currency ul {
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 0; }
-    .currency ul li {
-      display: inline-block;
-      margin-right: 10px; }
-      .currency ul li a {
-        color: #fff;
-        border: 0;
-        outline: 0;
-        margin-top: 0;
-        height: 100%;
-        text-align: center; }
-        .currency ul li a .selCurrency {
-          outline-width: 2px;
-          outline-style: solid;
-          outline-color: #95daf4; }
 
 /*# sourceMappingURL=maps/styles.css.map */

@@ -47,7 +47,7 @@
  */
 .card-article {
   border-radius: 0;
-  padding:1px;
+  padding: 1px;
   box-shadow: none;
 
   .card-title {
@@ -90,7 +90,7 @@
 .card-cover-option {
   .card-title {
     text-align: left;
-    margin-bottom: 20px; // 30px;
+    margin-bottom: 10px !important; // 30px;
   }
 
   .card-price {
@@ -98,11 +98,32 @@
     font-family: Oswald;
     font-size: 26px;
     font-weight: bold;
-    margin-bottom: 31px;
+    margin-bottom: 10px;
+    text-align: right;
+    width: 250px;
+  }
+
+  .card-text {
+    display: flex;
+    justify-content: space-between;
   }
 
   &.active {
     border: 3px solid $vividCyan;
+  }
+
+  .warning-text,
+  .warning {
+    color: $darkGrey;
+  }
+
+  .warning-text {
+    display: none;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: Lato;
+    width: 250px;
+    text-align: right;
   }
 }
 /* -------------------------------------------------------------------------
@@ -113,13 +134,13 @@
  */
 
 .trust {
-    background-color: $superLightGrey;
+  background-color: $superLightGrey;
 
-    .card-info {
-        &:first-child {
-            padding-top: 15px;
-        }
+  .card-info {
+    &:first-child {
+      padding-top: 15px;
     }
+  }
 }
 
 .card-info {
@@ -143,7 +164,6 @@
     margin-top: 0;
     text-align: center;
   }
-
 
   &:first-child {
     padding-top: 30px;
