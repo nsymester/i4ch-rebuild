@@ -37,17 +37,30 @@ function ScrollTo() {
             // Must change focus!
             let $target = $(target);
             $target.focus();
-            if ($target.is(":focus")) { // Checking if the target was focused
-               return false;
+            if ($target.is(':focus')) {
+              // Checking if the target was focused
+              return false;
             } else {
-               $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-               $target.focus(); // Set focus again
-            };
+              $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            }
           }
         );
       }
     }
   }
+}
+
+// on scroll
+if ($('.article-main').length > 0) {
+  let target = $('.article-main').offset().top - 180;
+  $(document).scroll(function() {
+    if ($(window).scrollTop() >= target) {
+      $('.share-buttons').show();
+    } else {
+      $('.share-buttons').hide();
+    }
+  });
 }
 
 export { ScrollTo };

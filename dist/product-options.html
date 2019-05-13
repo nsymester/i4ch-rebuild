@@ -40,7 +40,7 @@
 
 <div class="container-fluid">
    <nav class="navbar navbar-fixed-top">
-    <div class="container-fluid">
+    
       <div class="navbar-header">
         <button
           type="button"
@@ -101,7 +101,7 @@
         </ul>
       </div>
       <!--//.nav-collapse -->
-    </div>
+    
     <!--//.container-fluid -->
   </nav>
   <!--//.navbar -->
@@ -125,6 +125,7 @@
     <div class="inner">
       
 <div class="cover-options-container">
+  <span style="display:none;" class="initial-single-trip-price">&pound;.00</span>
   <div class="card card-cover-option cover-option-1 active" data-policy="policy-summary-1">
     <div class="inner">
       <h4 class="card-title">Single-Trip Worldwide</h4>
@@ -135,7 +136,7 @@
         Some quick example text to build on the card.
       </p>
       <div class="form-group">
-        <input type="number" value="1" class="form-control product-options-days-cover" id="daysCover" name="daysCover" />
+        <input type="number" value="1" min="1" class="form-control product-options-days-cover" id="daysCover" name="daysCover" />
       </div>
       <p class="card-text">
         Some quick example text to build on the card title and make up the bulk
