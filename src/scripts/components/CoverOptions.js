@@ -22,7 +22,7 @@ function CoverOptions() {
   let totalSinglePrice = 0;
   let finalPrice = 0;
 
-  if (currencySymbol == '£') {
+  if (currencySymbol == '\u00A3') {
     priceLimit = 119;
   } else {
     priceLimit = 142;
