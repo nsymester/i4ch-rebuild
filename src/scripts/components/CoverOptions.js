@@ -15,15 +15,23 @@ function CoverOptions() {
     initialSingleTripPrice.text().replace(/\D*/, '')
   ).toFixed(2);
 
+  const currencySymbol = initialCoverPrice.text().substring(0, 1);
   let inputValue = '';
-  const priceLimit = 119;
+  let priceLimit;
   let totalInitialPrice = 0;
   let totalSinglePrice = 0;
   let finalPrice = 0;
 
+  if (currencySymbol == '£') {
+    priceLimit = 119;
+  } else {
+    priceLimit = 142;
+  }
+
   console.clear();
-  console.log(`cover price ${d_initialCoverPrice}`);
-  console.log(`cover price ${d_initialSingleTripPrice}`);
+  console.log(`cover price: ${d_initialCoverPrice}`);
+  console.log(`Single Trip price: ${d_initialSingleTripPrice}`);
+  console.log(`currencySymbol: ${currencySymbol}`);
 
   $('.product-options-days-cover').change(function(evt) {
     // get value
@@ -46,13 +54,15 @@ function CoverOptions() {
     finalPrice = parseFloat(totalInitialPrice + totalSinglePrice).toFixed(2);
 
     if (finalPrice > priceLimit) {
-      initialCoverPrice.text(parseFloat(priceLimit).toFixed(2));
+      initialCoverPrice.text(
+        currencySymbol + parseFloat(priceLimit).toFixed(2)
+      );
       // change color of price
       coverOptionPrice.addClass('warning');
       // show warning text
       warningText.show();
     } else {
-      initialCoverPrice.text(finalPrice);
+      initialCoverPrice.text(currencySymbol + finalPrice);
       warningText.hide();
       coverOptionPrice.removeClass('warning');
     }
