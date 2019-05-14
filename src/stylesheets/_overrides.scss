@@ -340,12 +340,12 @@
   }
 }
 
-.blog-header {
+/*.blog-header {
     h1{
         position: relative;
         top: 20px;
     }
-}
+}*/
 
 .contact-us-header {
   @media (min-width: 1199px) {
@@ -459,4 +459,8 @@
             }
         }
     }
+}
+
+.autocomplete {
+    border: 1px solid $midGrey;
 }

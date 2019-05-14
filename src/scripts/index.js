@@ -17,13 +17,14 @@ import { RevealDocs } from './components/RevealDocs';
 import { CoverOptions } from './components/CoverOptions';
 import { Ready } from './components/Utils';
 import { PolicySummary } from './components/PolicySummary';
+import { log } from 'util';
 
 console.log(`${Goodbye()} ${World} Index file`);
 
 let countriesCovered = null;
 
 function start() {
-  CountrySelector();
+  // CountrySelector();
   VehicleSelector();
   ToggleNavigation();
   DropdownMenu();
@@ -32,9 +33,11 @@ function start() {
   Accordion();
   WindowWidth();
   ScrollTo();
-  if (countriesCovered != null) {
-    AutoComplete(document.getElementById('myInput'), countriesCovered);
-  }
+
+  //console.log(`countriesCovered: ${countriesCovered}`);
+  //if (countriesCovered != null) {
+  //  AutoComplete(document.getElementById('myInput'), countriesCovered);
+  //}
   LoadFAQs();
   // RevealDocs();
   CoverOptions();

@@ -28,10 +28,10 @@ function CoverOptions() {
     priceLimit = 142;
   }
 
-  console.clear();
-  console.log(`cover price: ${d_initialCoverPrice}`);
-  console.log(`Single Trip price: ${d_initialSingleTripPrice}`);
-  console.log(`currencySymbol: ${currencySymbol}`);
+  //console.clear();
+  //console.log(`cover price: ${d_initialCoverPrice}`);
+  //console.log(`Single Trip price: ${d_initialSingleTripPrice}`);
+  //console.log(`currencySymbol: ${currencySymbol}`);
 
   $('.product-options-days-cover').change(function(evt) {
     // get value
@@ -67,7 +67,7 @@ function CoverOptions() {
       coverOptionPrice.removeClass('warning');
     }
 
-    console.log(`${inputValue} = ${finalPrice}`);
+    //console.log(`${inputValue} = ${finalPrice}`);
   });
 }
 
