@@ -162,7 +162,7 @@
 
       .policy-summary {
         a.btn {
-            margin-bottom: 20px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -341,10 +341,10 @@
 }
 
 .blog-header {
-    h1{
-        position: relative;
-        top: 20px;
-    }
+  h1 {
+    position: relative;
+    top: 20px;
+  }
 }
 
 .contact-us-header {
@@ -414,49 +414,53 @@
   left: 0;
   top: 0;
   z-index: 1030;
-}
 
+  // .navbar-collapse {
+  //   @media (min-width: 991px) {
+  //     padding-right: 8rem;
+  //   }
+  // }
+}
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .navbar-fixed-top + .content {
   padding-top: 102px;
 }
 
+// .currency {
+//   width: auto;
+//   right: 15px;
+//   top: 1em;
+//   margin: 0 0 0 0;
 
-.currency {
-    width: auto;
-    right: 15px;
-    top: -2.5em;
-    margin: 0 0 0 0;
+//   & > p:first-child {
+//     display: none;
+//   }
 
-    & > p:first-child {
-        display: none;
-    }
+//   ul {
+//     display: inline-block;
+//     vertical-align: top;
+//     margin-bottom: 0;
 
-    ul {
-        display: inline-block;
-        vertical-align: top;
-        margin-bottom:0;
+//     li {
+//       display: inline-block;
+//       margin-right: 10px;
 
-        li {
-            display: inline-block;
-            margin-right:10px;
+//       a {
+//         color: #fff;
+//         border: 0;
+//         outline: 0;
+//         //font-size: 1rem;
+//         margin-top: 0;
+//         height: 100%;
+//         text-align: center;
 
-            a {
-                color: #fff;
-                border: 0;
-                outline: 0;
-                //font-size: 1rem;
-                margin-top: 0;
-                height: 100%;
-                text-align: center;
-
-                .selCurrency {
-                    outline-width: 2px;
-                    outline-style: solid;
-                    outline-color: #95daf4;
-                }
-            }
-        }
-    }
-}
+//         .selCurrency {
+//           outline-width: 2px;
+//           outline-style: solid;
+//           outline-color: #95daf4;
+//         }
+//       }
+//     }
+//   }
+// }

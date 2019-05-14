@@ -1,15 +1,37 @@
 function ToggleNavigation() {
   // cache DOM
-  let mainNav = document.getElementById('js-menu');
-  let navBarToggle = document.getElementById('js-navbar-toggle');
+  const currency = $('.currency');
+  const mainNav = document.getElementById('js-menu');
+  const navBarToggle = document.getElementById('js-navbar-toggle');
+  const currencyNav = document.getElementById('js-currency-toggle');
+  const currencyMenuToggle = document.getElementById('js-navbar-toggle');
 
   // bind events
   navBarToggle.addEventListener('click', toggleMenu);
+  currencyMenuToggle.addEventListener('click', toggleCurrencyMenu);
 
   // event handlers
   function toggleMenu() {
     mainNav.classList.toggle('active');
   }
+
+  function toggleCurrencyMenu() {
+    currencyNav.classList.toggle('active');
+  }
+
+  if ($(window).width() > '1199') {
+    currency.show();
+  } else {
+    currency.hide();
+  }
+
+  $(window).resize(function() {
+    if ($(window).width() > '1199') {
+      currency.show();
+    } else {
+      currency.hide();
+    }
+  });
 }
 
 function DropdownMenu() {
@@ -83,7 +105,7 @@ function SelectTrip() {
 
 // show mobile currency
 function RevealCurrency() {
-  $('.currencyMobile').on('click', function() {
+  $('.currency-mobile').on('click', function() {
     console.log('Currency');
 
     $('.currency').slideToggle();

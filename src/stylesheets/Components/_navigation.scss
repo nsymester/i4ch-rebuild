@@ -17,16 +17,16 @@
  */
 .navbar {
   /*position: relative;*/
-  height: 55px;
+  height: 10%;
   margin-bottom: 0;
   border: 1px solid transparent;
   background-color: $veryDarkCyan;
   border-radius: 0;
 
-  .container-fluid,
-  .container {
-    height: 100%;
-  }
+  // .container-fluid,
+  // .container {
+  //   height: 100%;
+  // }
 }
 
 .navbar-brand {
@@ -46,16 +46,16 @@
   justify-content: start;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
-.navbar-collapse{
+.navbar-collapse {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-
-  @media(min-width:1199px){
+  @media (min-width: 1199px) {
     width: auto;
   }
 }
@@ -145,13 +145,10 @@
     // align-items: center;
     padding-right: 15px;
 
-    .container-fluid,
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 100%;
   }
   .navbar-nav {
     display: flex;
@@ -161,11 +158,11 @@
     margin-top: 0;
 
     ul li {
-      + li:before{
-        display:none;;
+      + li:before {
+        display: none;
       }
       &:before {
-        display:none;;
+        display: none;
       }
     }
   }
@@ -227,8 +224,17 @@
   z-index: 1;
   position: relative;
 
-  margin-left: -15px !important;
-  margin-right: -15px !important;
+  // margin-left: -15px !important;
+  // margin-right: -15px !important;
+}
+
+.navbar-collapse {
+  position: relative;
+  right: 0;
+
+  @media (min-width: 1199px) {
+    right: 3em;
+  }
 }
 
 .navbar-nav {
@@ -253,6 +259,13 @@
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
+
+    .navbar-collapse,
+    .currency {
+      background-color: $veryDarkCyan;
+      border-color: $veryDarkCyan;
+      outline: 0;
+    }
   }
   // .navbar-collapse.collapse {
   //   display: none !important;
@@ -271,5 +284,94 @@
   }
   .collapse.in {
     display: block !important;
+  }
+}
+
+// mobile button
+.currency-mobile {
+  display: block;
+  position: absolute;
+  right: 3em;
+  top: 0.4em;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0 0.5em;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  margin-right: 0.2em;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media (min-width: 1199px) {
+    display: none;
+  }
+}
+
+.navbar {
+  height: 10%;
+}
+
+.navbar-brand {
+  max-width: 19em;
+  margin: 0.9em 0 0.7em;
+}
+
+.currency {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto 0;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 1em;
+
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  p,
+  li {
+    font-weight: bold;
+    margin: 10px 1.5em 10px 10px;
+    list-style-type: none;
+    line-height: 24px;
+    color: $vividCyan;
+    margin-top: 0.5em;
+
+    a {
+      color: white;
+    }
+  }
+
+  p:first-child {
+    @media (min-width: 1199px) {
+      display: none;
+    }
+  }
+
+  li {
+    @media (min-width: 1199px) {
+      margin-right: 0.5em;
+    }
+  }
+
+  @media (min-width: 1199px) {
+    display: block;
+    padding: 0;
+    width: auto;
+    position: absolute;
+    left: 44em;
+    top: -1.15em;
+    margin: 0 0 0 0;
+    text-align: left;
   }
 }

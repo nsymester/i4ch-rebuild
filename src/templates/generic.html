@@ -2,9 +2,7 @@
 {{ header.config('/css/styles.css', 'faqs') }}
 {% endblock %}
 
-<div class="container-fluid">
-  {% include "./partials/nav.njk" %}
-</div>
+{% include "./partials/navigation.njk" %}
 <div class="container-fluid">
   <!-- <div class="container"> -->
   <section class="blog-header generic-heaader row">
@@ -39,11 +37,7 @@
         nostrum rem iste beatae doloribus.
       </p>
       <p>
-        <img
-          src="https://via.placeholder.com/150"
-          alt=""
-          class="img-responsive"
-        />
+        <img src="https://via.placeholder.com/150" alt="" class="img-responsive" />
         Asperiores earum voluptates facere rerum dolorum quod consequatur
         officiis, commodi illum? Vero, necessitatibus itaque accusamus officia
         vitae iusto repellendus cum, hic laborum deserunt alias assumenda
@@ -66,11 +60,7 @@
 
   <section class="more-info row">
     <div class="inner">
-      <img
-        class="scale-icon img-responsive"
-        src="./images/scale-icon.png"
-        alt="More info image"
-      />
+      <img class="scale-icon img-responsive" src="./images/scale-icon.png" alt="More info image" />
       <p>
         Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
         assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
@@ -82,12 +72,7 @@
     {% include "./partials/trust-box.njk" %}
 
     <button class="back-to-top js-back-to-top">
-      <img
-        src="./images/return-to-top-arrow.png"
-        alt="Return to top arrow"
-        width="42"
-        height="43"
-      />
+      <img src="./images/return-to-top-arrow.png" alt="Return to top arrow" width="42" height="43" />
     </button>
   </section>
   <!--//.reviews-->

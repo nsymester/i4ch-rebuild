@@ -1022,7 +1022,7 @@ footer .container {
  */
 .navbar {
   /*position: relative;*/
-  height: 55px;
+  height: 10%;
   margin-bottom: 0;
   border: 1px solid transparent;
   background-color: #023742;
@@ -1200,6 +1200,13 @@ footer .container {
   z-index: 1;
   position: relative; }
 
+.navbar-collapse {
+  position: relative;
+  right: 0; }
+  @media (min-width: 1199px) {
+    .navbar-collapse {
+      right: 3em; } }
+
 .navbar-nav {
   float: none !important;
   margin-top: 0px; }
@@ -1219,6 +1226,11 @@ footer .container {
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px; }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-top .currency {
+      background-color: #023742;
+      border-color: #023742;
+      outline: 0; }
   .navbar-nav {
     float: none !important;
     margin-top: 0; }
@@ -1230,60 +1242,82 @@ footer .container {
   .collapse.in {
     display: block !important; } }
 
-/* top nav */
-@media all and (max-width: 47.94em) {
-  .navbar-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1em;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); } }
+.currency-mobile {
+  display: block;
+  position: absolute;
+  right: 3em;
+  top: 0.4em;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 0 0.5em;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  margin-right: 0.2em; }
+  .currency-mobile:focus {
+    outline: 0; }
+  @media (min-width: 1199px) {
+    .currency-mobile {
+      display: none; } }
 
 .navbar {
-  background: #1182ac; }
+  height: 10%; }
 
-div.currency {
-  position: absolute;
-  width: 30%;
-  top: 1.8em;
-  margin: -4.7em 0 0 0;
-  text-align: left; }
+.navbar-brand {
+  max-width: 19em;
+  margin: 0.9em 0 0.7em; }
 
-@media all and (max-width: 64em) {
-  div.currency {
-    width: 33%; } }
-
-@media all and (max-width: 47.94em) {
-  div.currency {
-    position: relative;
-    display: block;
-    width: 100%;
-    top: 0;
-    margin: 0.5em 0 0 0;
-    padding: 0 0 0.2em 0;
-    display: none; } }
-
-a.currencyMobile {
-  display: none; }
-
-@media all and (max-width: 47.94em) {
-  a.currencyMobile {
-    display: block;
-    right: 1.5em;
-    top: 0.25em;
-    position: absolute;
-    font-size: 2.5em;
-    cursor: pointer;
-    padding: 0 0.5em;
-    border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    margin-right: 0.2em; } }
-
-@media all and (max-width: 20em) {
-  a.currencyMobile {
-    font-size: 2.1em; } }
-
-a.currencyMobile:hover {
-  text-decoration: none; }
+.currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: auto 0;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 1em; }
+  .currency ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .currency p,
+  .currency li {
+    font-weight: bold;
+    margin: 10px 1.5em 10px 10px;
+    list-style-type: none;
+    line-height: 24px;
+    color: #01dbab;
+    margin-top: 0.5em; }
+    .currency p a,
+    .currency li a {
+      color: white; }
+  @media (min-width: 1199px) {
+    .currency p:first-child {
+      display: none; } }
+  @media (min-width: 1199px) {
+    .currency li {
+      margin-right: 0.5em; } }
+  @media (min-width: 1199px) {
+    .currency {
+      display: block;
+      padding: 0;
+      width: auto;
+      position: absolute;
+      left: 44em;
+      top: -1.15em;
+      margin: 0 0 0 0;
+      text-align: left; } }
 
 .dropdown {
   cursor: pointer; }
@@ -3843,9 +3877,6 @@ section h2 {
   left: 0;
   top: 0;
   z-index: 1030; }
-  @media (min-width: 991px) {
-    .navbar-fixed-top .navbar-collapse {
-      padding-right: 8rem; } }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .navbar-fixed-top + .content {

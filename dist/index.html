@@ -42,29 +42,30 @@
 <nav class="navbar ">
   
   <div class="navbar-header">
+    <a class="navbar-brand" href="/">
+        <img class="logo" src="/images/logo.png" class="img-fluid logo" alt="Insurance 4 Car Hire">
+    </a>
+
+    <button class="currency-mobile" type="button" id="js-currency-toggle" >£</button>
     <button type="button" class="navbar-toggle" id="js-navbar-toggle" aria-expanded="false" aria-controls="navbar">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">
-
-        <img class="logo" src="/images/logo.png" class="img-fluid logo" alt="Insurance 4 Car Hire">
-
-    </a>
-
-    <a class="currencyMobile" id="js-currency-toggle" >£</a>
-    <div class="currency">
-      <p>Currency:</p>
-      <ul>
-        <li><a href="?curID=1" title="GBP" class="currencyuk selCurrency">£</a></li>
-        <li><a href="?curID=2" title="EUR" class="currencyeuro">€</a></li>
-        <li><a href="?curID=3" title="USD" class="currencyusa">$</a></li>
-      </ul>
-    </div>
   </div>
   <!--//.navbar-header-->
+
+  <div id="navbar-currency" class="navbar-collapse collapse">
+      <div class="currency">
+        <p>Currency:</p>
+        <ul>
+          <li><a href="?curID=1" title="GBP" class="currencyuk selCurrency">£</a></li>
+          <li><a href="?curID=2" title="EUR" class="currencyeuro">€</a></li>
+          
+        </ul>
+    </div><!--//.currency-->
+  </div>
 
   <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav" id="js-menu">

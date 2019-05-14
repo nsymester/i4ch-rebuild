@@ -199,11 +199,11 @@ gulp.task('css', function() {
  * @desc bundles js into multiple files and watches for changes
  */
 gulp.task('js', function() {
-  let files = ['./src/scripts/index.js', './src/scripts/application.js'];
+  let files = ['./src/scripts/index.js', './src/scripts/product.js'];
 
   // start fresh
   $.del.sync([
-    '/dist/scripts/application.bundle.js',
+    '/dist/scripts/product.bundle.js',
     '/dist/scripts/index.bundle.js'
   ]);
 
