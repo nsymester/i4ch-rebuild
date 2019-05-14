@@ -3,7 +3,7 @@
 {% endblock %}
 
 <div class="container-fluid">
-  {% include "./partials/nav.njk" %}
+  {% include "./partials/navigation.njk" %}
 </div>
 <div class="container-fluid">
   <div class="container">
@@ -36,15 +36,8 @@
           <h3 class="title">FAQ</h3>
           <span class="help-icon">
             <picture>
-              <source
-                media="(min-width: 1199px)"
-                srcset="/images/contact-us/faqs-lg.png"
-              />
-              <img
-                src="/images/contact-us/faqs.png"
-                alt="Mail icon"
-                style="width:auto;"
-              />
+              <source media="(min-width: 1199px)" srcset="/images/contact-us/faqs-lg.png" />
+              <img src="/images/contact-us/faqs.png" alt="Mail icon" style="width:auto;" />
             </picture>
           </span>
         </div>
@@ -60,16 +53,9 @@
           <h3 class="title">Chat</h3>
           <span class="help-icon">
             <picture>
-              <source
-                media="(min-width: 1199px)"
-                srcset="/images/contact-us/chat-lg.png"
-              />
-              <img
-                src="/images/contact-us/chat.png"
-                alt="Mail icon"
-                style="width:auto;"
-              /> </picture
-          ></span>
+              <source media="(min-width: 1199px)" srcset="/images/contact-us/chat-lg.png" />
+              <img src="/images/contact-us/chat.png" alt="Mail icon" style="width:auto;" /> </picture>
+          </span>
         </div>
         <div class="body">
           <p>Magna ac placerat vestibulum lectus mauris.</p>
@@ -83,15 +69,8 @@
           <h3 class="title">Need to make a claim?</h3>
           <span class="help-icon">
             <picture>
-              <source
-                media="(min-width: 1199px)"
-                srcset="/images/contact-us/claim-icon-lg.png"
-              />
-              <img
-                src="/images/contact-us/claim-icon.png"
-                alt="Mail icon"
-                style="width:auto;"
-              />
+              <source media="(min-width: 1199px)" srcset="/images/contact-us/claim-icon-lg.png" />
+              <img src="/images/contact-us/claim-icon.png" alt="Mail icon" style="width:auto;" />
             </picture>
           </span>
         </div>
@@ -125,13 +104,7 @@
 
         <div class="form-group">
           <label for="message">Message:</label>
-          <textarea
-            class="message"
-            name="message"
-            id="message"
-            cols="30"
-            rows="8"
-          ></textarea>
+          <textarea class="message" name="message" id="message" cols="30" rows="8"></textarea>
         </div>
 
         <button type="submit" class="btn btn-cta pull-right">Submit</button>
@@ -143,15 +116,8 @@
       <h3>You may wish to phone or write to us</h3>
       <div class="contact-type">
         <picture class="email-icon">
-          <source
-            media="(min-width: 1199px)"
-            srcset="/images/contact-us/email.png"
-          />
-          <img
-            src="/images/contact-us/email-lg.png"
-            alt="Email icon"
-            style="width:auto;"
-          />
+          <source media="(min-width: 1199px)" srcset="/images/contact-us/email.png" />
+          <img src="/images/contact-us/email-lg.png" alt="Email icon" style="width:auto;" />
         </picture>
 
         <!-- <img class="email-icon" src="/images/contact-us/email.png" alt="" /> -->
@@ -163,15 +129,8 @@
 
       <div class="contact-type">
         <picture class="mail-icon">
-          <source
-            media="(min-width: 1199px)"
-            srcset="/images/contact-us/mail-icon.png"
-          />
-          <img
-            src="/images/contact-us/mail-icon-lg.png"
-            alt="Mail icon"
-            style="width:auto;"
-          />
+          <source media="(min-width: 1199px)" srcset="/images/contact-us/mail-icon.png" />
+          <img src="/images/contact-us/mail-icon-lg.png" alt="Mail icon" style="width:auto;" />
         </picture>
         <div class="address">
           <h4>Address</h4>
@@ -187,15 +146,8 @@
 
       <div class="contact-type">
         <picture class="phone-icon">
-          <source
-            media="(min-width: 1199px)"
-            srcset="/images/contact-us/phone-icon.png"
-          />
-          <img
-            src="/images/contact-us/phone-icon-lg.png"
-            alt="Phone icon"
-            style="width:auto;"
-          />
+          <source media="(min-width: 1199px)" srcset="/images/contact-us/phone-icon.png" />
+          <img src="/images/contact-us/phone-icon-lg.png" alt="Phone icon" style="width:auto;" />
         </picture>
         <div>
           <div class="phone-contact">
@@ -210,9 +162,7 @@
 
           <div class="phone-contact">
             <p><strong>International</strong></p>
-            <a class="phone-number" href="tel:+4401242538475"
-              >+44 (0)1242 538 475</a
-            >
+            <a class="phone-number" href="tel:+4401242538475">+44 (0)1242 538 475</a>
           </div>
 
           <div class="phone-contact">
@@ -232,12 +182,7 @@
     {% include "./partials/trust-box.njk" %}
 
     <button class="back-to-top js-back-to-top">
-      <img
-        src="./images/return-to-top-arrow.png"
-        alt="Return to top arrow"
-        width="42"
-        height="43"
-      />
+      <img src="./images/return-to-top-arrow.png" alt="Return to top arrow" width="42" height="43" />
     </button>
   </section>
   <!--//.reviews-->
