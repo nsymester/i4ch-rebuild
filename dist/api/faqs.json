@@ -1,187 +1,177 @@
 [
-  {
-    "id": "faqTab1",
-    "title": "Car & Van Hire Excess Insurance",
-    "shortTitle": "Vehicle Hire Excess Insurance",
-    "qas" :[
-      {
-        "id": "1",
-        "question": "What is an excess/deductible?",
-        "answer": "<p> The excess, known as a deductible in some countries, is the amount you are liable to pay to the car rental company should you have an accident or return the car damaged. When you hire a car, even if your rental agreement includes insurance, there will almost certainly be an excess to pay. Buying excess insurance from us means that if you are asked to pay an excess by your car hire company, we'll reimburse you provided it’s covered by the policy. Full details of what is and isn’t covered can be found in the policy wording. </p> <p> Many of our customers ask us to clarify what exactly an excess/deductible is. It is a fixed amount that the insured is liable to pay in the event of a claim. For example, let’s say your car gets damaged which costs £2,000 for repair, and you have a deductible of £500. You would be liable for the first £500 of the claim, and the car rental companies insurance would cover the remaining £1,500. </p> <p> An excess/deductible for your rental car can vary and will be dependent on the vehicle you’re hiring. Deductibles can typically range from £500 up to £1,500*, even for a small prang. If you decline the car rental company’s excess insurance, you may be required to leave a deposit on your Credit Card equal to the amount of excess you’ll be liable for.</p><p>In the event of damage or theft, the excess/deductible will be charged to that card. If you hold an insurance4carhire policy, you’ll be able to claim this back. Just be sure to check our terms and conditions to see whether it’s covered. </p><p>*Based on findings for quotes with Budget, Avis and Hertz in August 2015 </p>"
-      },
-      {
-        "id": "2",
-        "question": "Must I take out excess insurance?",
-        "answer": "<p>No, excess is a voluntary insurance. You have three options:</p><ol><li><strong>Choose not to purchase</strong>. If you do subsequently damage the vehicle or if it is stolen, you will be liable for the excess charge.</li><li><strong>You can purchase it from the car rental company</strong>, at the counter when you collect the car, but the costs can be quite high. It can cost you between £9 and £20 a day and covers the excess on theft and damage to the vehicle. It generally excludes: damage to the undercarriage, windows, roof and tyres, the parts of the car which are most likely to get damaged should you have accident.</li><li><strong>You can purchase a policy from insurance4carhire</strong>. Our wide range of policies are cheaper than over the counter car hire company excess cover. Plus, in addition to the car hire excess, our policies cover damage to the roof, windows, tyres and undercarriage, something most car hire companies don’t cover.</li></ol>"
-      },
-      {
-        "id": "3",
-        "question": "What is excess reimbursement insurance and how does it work?",
-        "answer": "<p>Many people are often confused as to what excess reimbursement insurance actually is. Does it cover the full insurance of the vehicle for example? Or is it covering Collision Damage Waiver?</p><p>Excess insurance is designed to reimburse excess charges imposed by the car rental company, following damage or theft of the vehicle. Say your excess for your car rental were 700 EUR; your vehicle got damaged and the cost of repair were 1,000 EUR. In this instance, you would pay your excess of 700 EUR to the car rental company and the car rental company’s insurance would cover the rest. You’d then need to collate documentation to support and submit your claim.</p><p>You may find that car rental companies do not provide cover for damage to the windows, headlights, roof, tyres and undercarriage. This means that you may be left liable for the full cost of these. But don’t worry, your insurance4carhire policy will cover you for them. Just be aware that we don't provide cover for any accidental damage you may have to the interior of the vehicle.</p>"
-      },
-      {
-        "id": "4",
-        "question": "What is van hire excess insurance?",
-        "answer": "<p>When you hire a van, your van rental company will include insurance cover for the duration of the rental period. However, this cover will typically include a large excess should an accident occur. For vans, this excess limit can be thousands of pounds. For this reason, you will usually be offered excess cover when you arrive at the rental desk to pick up your van.</p><p>Our daily van hire excess policy can be purchased at a competitive price, all online, and up to a year in advance, so that you may be reimbursed your excess should your rental van be damaged or stolen during the rental period. For daily commercial vehicle hire excess insurance, visit our van hire excess insurance page.</p>"
-      },
-      {
-        "id": "5",
-        "question": "How much is the excess on a hire car?",
-        "answer": "<p>The excess varies depending on the car rental company, the type of vehicle you are hiring and the destination you are travelling to. insurance4carhire can reimburse you up to the value of £6,500.</p>"
-      },
-      {
-        "id": "6",
-        "question": "What do I need to hire a car?",
-        "answer": "<p><p>First of all, you’ll need to have a driving licence and for most car rental firms, you need to be over the age of 25. In some cases, if you’re under the age of 25, a ‘young driver fee’ may apply which can cost more.</p><p>The lead driver will also need a credit card for the rental company to put a ‘hold’ or a ‘block’ on; equal to the amount of excess you’ll be liable for. Most car rental firms will not accept Debit Cards, and will not accept anybody else’s Credit Card.</p><p>You may want to consider covering your excess with insurance4carhire. In the event that you’re charged your excess for damage or theft, you’ll be able to claim this back – just make sure you check our terms and conditions to see whether it’s covered.</p><p>Another tip is to check the fuelling policy!</p>"
-      },
-      {
-        "id": "6",
-        "question": "What is the difference between Super CDW, non waiver and the deductible?",
-        "answer": "<p>The answer is none. All the above mean the same thing - excess insurance. Different car rental companies use different phrases to describe excess insurance which can often be confusing.</p>"
-      },
-      {
-        "id": "6",
-        "question": "What is Collision Damage Waiver (CDW) or Loss Damage Waiver (LDW)?",
-        "answer": "<p>A ‘Collision Damage Waiver', sometimes referred to as Collision Damage Cover or Loss Damage Waiver (LDW) is a basic insurance cover which covers the rental vehicle against damage and theft.</p><p>Not all car rental companies will include Collision Damage Waiver when you hire a car, so it’s always worth checking ‘what’s included’ before you hire. Without this, you may be left liable for the full cost of the vehicle.</p><p>Collision Damage Waiver is often subject to an excess, which can range between 500 EUR and 1,500 EUR*. Your insurance4carhire policy is designed to cover the excess you are liable for. It will also include damage to the windows, tyres, undercarriage, roof and headlights which may be excluded from the car rental company’s insurance. Just be aware, we won’t provide cover for any accidental damage you might have to the interior of the vehicle.</p><p>*Based on findings for quotes with Budget, Avis and Hertz in August 2015.</p>"
-      },
-      {
-        "id": "6",
-        "question": "How much is Collision Damage Waiver (CDW) insurance?",
-        "answer": "<p>Each rental company will operate in their own way, and charges will vary. Some rental companies will include CDW as standard, and some will not.</p><p>If you are visiting North America or the Caribbean, then CDW insurance doesn’t always come as standard. For this reason it's worth checking before you get to the car rental desk to avoid any unexpected charges.</p><p>In the case that Collision Damage Waiver is not provided to you by the rental company, we can offer it to you under our USA and Canada (plus The Americas) policy. For anywhere else in the World, it normally comes included but in some cases you may have to pay extra. So check before you buy!</p><p>Tip: Try booking your rental vehicle on a ‘.co.uk’ website rather than a ‘.com’ website where you’ll find CDW is normally included as standard.</p>"
-      },
-      {
-        "id": "6",
-        "question": "What is SLI/ALI?",
-        "answer": "<p>SLI (Supplemental Liability Insurance), also known as ALI (Additional Liability Insurance) is a form of insurance that protects you (the driver) and your passengers against large third-party claims. Should you have an accident and this results in third-party claims for damages or injuries, then the car rental policy will protect you (the driver).</p>"
-      },
-      {
-        "id": "6",
-        "question": "Do I need a credit card when renting a car?",
-        "answer": "<p>The answer is yes. Even if you have pre-paid your car hire in full in the UK you will need a credit card when collecting your vehicle. This is for deposit purposes and should have sufficient credit on it to cover the excess. If you don’t have a credit card you should inform your car rental company, as they could refuse to rent you a car at the car rental desk.</p>"
-      },
-      {
-        "id": "6",
-        "question": "Do I have to have car insurance in America?",
-        "answer": "<p>It’s not a legal requirement to have insurance for your vehicle in America. However, it is compulsory to have a minimum level of cover for third-party insurance. For example, in California the minimum requirement for individual bodily injury is $15,000 whereas it’s only $5,000 for property damage. The minimum can vary from state to state.</p><p>In the UK, the minimum requirement for car insurance is third-party cover which tends to provide cover for millions of pounds.</p><p>You can top up your third-party insurance with our Worldwide Plus policy which, in addition to car hire excess cover, will cover you for Supplemental Liability Insurance and for Collision Damage Waiver, for damage and theft of the rental vehicle.</p>"
-      }
-    ]
-  },
-  {
-    "id": "faqTab2",
-    "title": "Making a Claim",
-    "shortTitle": "Making a Claim",
-    "qas": [
-      {
-        "id": "8",
-        "question": "If I make a claim on an insurance4carhire policy, should I tell (on renewal) my normal car insurance company - and if so, is there any chance it will affect my no claims bonus?",
-        "answer": "If you make a claim with insurance4carhire, you do not need to tell your car insurance company as the claim is for the excess charged by the rental company only and not connected to your car insurance."
-      },
-      {
-        "id": "9",
-        "question": "How long will it take from submitting my claim to receiving reimbursement?",
-        "answer": "Once you have successfully submitted your claim online, the insurer (AIG) will aim to pay your money into your account within 12-15 working days."
-      },
-      {
-        "id": "10",
-        "question": "How long do I have to make a claim?",
-        "answer": "Please follow the instructions on our dedicated claims page within 31 days of any payment made in relation to your claim. "
-      }
-    ]
-  },
-  {
-    "id": "faqTab3",
-    "title": "Policy Specific",
-    "shortTitle": "Policy Specific",
-    "qas": [
-      {
-        "id": "12",
-        "question": "What is covered?",
-        "answer": "Officiis deserunt excepturi, repellat quam quidem accusantium dolorum delectus fuga assumenda asperiores vero a voluptates praesentium non reiciendis iure obcaecati atque quos? Odio exercitationem sequi fugiat delectus ab, sed laborum."
-      },
-      {
-        "id": "22",
-        "question": "Where in the world will insurance4carhire cover me?",
-        "answer": "<p>Our <strong>Europe annual excess policy</strong> is valid for trips in all European countries to the West of the Ural Mountains including the United Kingdom, the Channel Islands, Isle of Man, Republic of Ireland, Iceland, islands in the Mediterranean, Morocco, Tunisia, Turkey, Canary Islands, Madeira, and the Azores.</p><p>Our <strong>Worldwide annual excess policy</strong> covers trips anywhere in the world excluding any trip in, to, or through Cuba, Iran, North Korea, Region of Crimea, Sudan and Syria.</p><p>Our <strong>Worldwide Plus policy</strong> is valid for trips worldwide - excluding any trip in, to, or through Cuba, Iran, North Korea, Region of Crimea, Sudan and Syria - and combines excess, CDW and SLI in one policy.</p><p><strong>Our Single Trip policy</strong> is valid worldwide - excluding any trip in, to, or through Cuba, Iran, North Korea, Region of Crimea, Sudan and Syria. </p><p>Our <strong>van excess policy</strong> is valid only in the UK, Isle of Man and the Channel Islands.</p>"
-      },
-      {
-        "id": "23",
-        "question": "What is meant by a 'Joint' policy?",
-        "answer": "<p>Our <strong>Joint</strong> policies, formerly known as 'Family & Partner' policies, enable two family members* to purchase car hire excess insurance as one policy. This means that each of these two family members have lead driver status and can hire cars separately.</p><p>As with a standard annual policy, each lead driver is entitled to add up to seven additional drivers (provided they are named on the rental agreement), per rental agreement. insurance4carhire does not need to be provided with the names or details of these additional drivers.</p><p>*Family member means your spouse, civil partner or fiancé/fiancée, parents, parents-in-law, brother or sister, brother or sister-in-law, children or sons and daughters-in-law.</p>"
-      }
-    ]
-  },
-  {
-    "id": "faqTab4",
-    "title": "My Policy",
-    "shortTitle": "My Policy",
-    "qas": [
-      {
-        "id": "18",
-        "question": "Can I purchase an insurance4carhire policy if I am not a UK resident?",
-        "answer": "<p>To purchase an insurance4carhire car hire excess policy you must be resident in the UK, the Republic of Ireland, France, Italy, Spain, Germany, the Netherlands or Sweden.</p><p>Our van hire excess policies are available only to residents of the UK, the Isle of Man and the Channel Islands.</p>"
-      },
-      {
-        "id": "22",
-        "question": "How will Brexit affect my insurance4carhire policy?",
-        "answer": "<p><strong>Living in the UK, Channel Islands and Isle of Man</strong> – your policy will not be affected.</p><p><strong>Non-UK residents </strong>– At the moment we cannot confirm what will happen with your policy after Brexit.</p>"
-      },
-      {
-        "id": "23",
-        "question": "Does my insurance4carhire policy cover vehicles such as vans, campervans and motorbikes?",
-        "answer": "<p>Our Europe, Worldwide and Worldwide Plus CDW &amp; SLI policies do not cover camper vans, caravans, motor bikes, vintage cars or commercial vehicles. For van hire excess cover (UK, Isle of Man and Channel Islands only), we offer Single Trip Van Hire Excess Insurance.</p>"
-      },
-      {
-        "id": "24",
-        "question": "Can I upgrade my insurance4carhire to include vans?",
-        "answer": "<p>We cannot upgrade policies to include vans. We have a daily van hire excess policy which offers the same level of cover as our Daily Policy for £10.99 a day (available for residents of and rentals in the UK, Isle of Man and Channel Islands only).</p>"
-      },
-      {
-        "id": "25",
-        "question": "Is my courtesy or loan car covered?",
-        "answer": "Yes, when you are provided with a courtesy car because your own car or a rental car is being serviced or repaired for damage, we will pay you the costs of repairs or excess relating to the courtesy car for up to £6500 for any one incident and no more than £6500 in any one period of insurance. Please note that the maximum number of days for each loan period must not exceed 60 continuous days."
-      },
-      {
-        "id": "26",
-        "question": "Who do I contact in the event of a breakdown?",
-        "answer": "<p>Best practice has always been to contact your rental company in the first instance as they can advise you on what the next steps you should take, and what your rental agreement covers in the event of a breakdown.</p>"
-      },
-      {
-        "id": "26",
-        "question": "What happens if I need to cancel my policy?",
-        "answer": "<p>You have 14 days cooling off period to cancel your policy. You can either <a href=\"mailto:info@insurance4carhire.com\" title=\"Email insurance4carhire\">email</a> or telephone us and our friendly customer service team will be happy to assist you. If you cancel outside of the cooling off period, you will receive a pro rata refund of any premium less the customer service charge, providing you do not intend to make a claim.</p>"
-      },
-      {
-        "id": "26",
-        "question": "How can I check whether or not I have a current policy?",
-        "answer": "<p>You can check whether you have a current policy by:</p><ul><li>Logging in to our <a href=\"https://secure.insurance4carhire.com/Existing_Customers.asp?pageID=2&amp;subrefID=0&amp;curID=1&amp;langID=1&amp;refID=100&amp;_ga=2.119391305.1388300897.1541668615-470746187.1537883319\" title=\"Customer login area\">customer portal</a> using your policy number and four digit pin (both of which would have been included in your welcome email)</li><li><a href=\"/contact-us\" title=\"Contact us\">Contacting us</a></li></ul>"
-      }
-    ]
-  },
-  {
-    "id": "faqTab5",
-    "title": "Other",
-    "shortTitle": "Other",
-    "qas": [
-      {
-        "id": "24",
-        "question": "Do your car hire excess insurance policies cover four-wheel drive cars?",
-        "answer": "Our policies do cover four-wheel drive cars on the road, provided the vehicle is being used to drive on public thoroughfares. We will not cover any cars off road."
-      },
-      {
-        "id": "25",
-        "question": "If I make a claim on an insurance4carhire policy, should I tell (on renewal) my normal car insurance company - and if so, is there any chance it will affect my no claims bonus?",
-        "answer": "If you make a claim under the insurance4carhire policy you do not need to tell your car insurance company as the claim is for the excess charged by the rental company only and not connected to your car insurance."
-      },
-      {
-        "id": "26",
-        "question": "Can I use a regular car hire excess insurance policy for car clubs as well such as Zipcar?",
-        "answer": "<p>Yes, you can use our car hire excess insurance policies for car clubs such as Zipcar.</p>"
-      },
-      {
-        "id": "26",
-        "question": "Can I use a regular car hire excess insurance policy for car clubs as well such as Zipcar?",
-        "answer": "<p>Yes, you can use our car hire excess insurance policies for car clubs such as Zipcar.</p>"
-      }
-    ]
-  }
+    {
+        "id": "faqTab1",
+        "title": "Car & Van Hire Excess Insurance",
+        "shortTitle": "Vehicle Hire Excess Insurance",
+        "qas": [
+            {
+                "id": "1",
+                "question": "What is an excess/deductible?",
+                "answer": "<p> The excess, known as a deductible in some countries, is the amount you are liable to pay to the car rental company should you have an accident or return the car damaged. When you hire a car, even if your rental agreement includes insurance, there will almost certainly be an excess to pay. Buying excess insurance from us means that if you are asked to pay an excess by your car or van hire company, we'll reimburse you provided it’s covered by the policy. Full details of what is and isn’t covered can be found in the policy wording. </p> <p> Many of our customers ask us to clarify what exactly an excess/deductible is. It is a fixed amount that the insured is liable to pay in the event of a claim. For example, let’s say your car gets damaged which costs £2,000 for repair, and you have a deductible of £500. You would be liable for the first £500 of the claim, and the car rental companies insurance would cover the remaining £1,500. </p> <p> An excess/deductible for your rental car can vary and will be dependent on the vehicle you’re hiring. Deductibles can typically range from £500 up to £1,500*, even for a small prang. If you decline the car rental company’s excess insurance, you may be required to leave a deposit on your Credit Card equal to the amount of excess you’ll be liable for.</p><p>In the event of damage or theft, the excess/deductible will be charged to that card. If you hold an insurance4carhire policy, you’ll be able to claim this back. Just be sure to check our terms and conditions to see whether it’s covered. </p><p>*Based on findings for quotes with Budget, Hertz, Avis, Firefly, Goldcar, Dollar and Sixt in May 2019.</p>"
+            },
+            {
+                "id": "2",
+                "question": "Must I take out excess insurance?",
+                "answer": "<p>No, excess is a voluntary insurance. You have three options:</p><ol><li><strong>Choose not to purchase</strong>. If you do subsequently damage the vehicle or if it is stolen, you will be liable for the excess charge.</li><li><strong>You can purchase it from the car rental company</strong>, at the counter when you collect the car, but the costs can be quite high. It generally excludes: damage to the undercarriage, windows, roof and tyres, the parts of the car which are most likely to get damaged should you have accident.</li><li><strong>You can purchase a policy from insurance4carhire</strong>. Our wide range of policies are cheaper than over the counter car hire company excess cover. Plus, in addition to the car hire excess, our policies cover damage to the roof, windows, tyres and undercarriage, something most car hire companies don’t cover.</li></ol>"
+            },
+            {
+                "id": "3",
+                "question": "What is excess reimbursement insurance and how does it work?",
+                "answer": "<p>Many people are often confused as to what excess reimbursement insurance actually is. Does it cover the full insurance of the vehicle for example? Or is it covering Collision Damage Waiver?</p><p>Excess insurance is designed to reimburse excess charges imposed by the car rental company, following damage or theft of the vehicle. Say your excess for your car rental were 700 EUR; your vehicle got damaged and the cost of repair were 1,000 EUR. In this instance, you would pay your excess of 700 EUR to the car rental company and the car rental company’s insurance would cover the rest. You’d then need to collate documentation to support and submit your claim.</p><p>You may find that car rental companies do not provide cover for damage to the windows, headlights, roof, tyres and undercarriage. This means that you may be left liable for the full cost of these. But don’t worry, your insurance4carhire policy will cover you for them. Just be aware that we don't provide cover for any accidental damage you may have to the interior of the vehicle.</p>"
+            },
+            {
+                "id": "4",
+                "question": "What is van hire excess insurance?",
+                "answer": "<p>When you hire a van, your van rental company will include insurance cover for the duration of the rental period. However, this cover will typically include a large excess should an accident occur. For vans, this excess limit can be thousands of pounds. For this reason, you will usually be offered excess cover when you arrive at the rental desk to pick up your van.</p><p>Our daily van hire excess policy can be purchased up to a year in advance, so that you may be reimbursed your excess should your rental van be damaged or stolen during the rental period. For daily commercial vehicle hire excess insurance, visit our van hire excess insurance page.</p>"
+            },
+            {
+                "id": "5",
+                "question": "How much is the excess on a hire car?",
+                "answer": "<p>The excess varies depending on the car rental company, the type of vehicle you are hiring and the destination you are travelling to. With a policy from insurance4carhire, you can be reimbursed up to the value of £6,500 per year.</p>"
+            },
+            {
+                "id": "6",
+                "question": "What do I need to hire a car?",
+                "answer": "<p><p>First of all, you’ll need to have a driving licence and for most car rental firms, you need to be over the age of 25. In some cases, if you’re under the age of 25, a ‘young driver fee’ may apply which can cost more.</p><p>The lead driver will also need a credit card for the rental company to put a ‘hold’ or a ‘block’ on; equal to the amount of excess you’ll be liable for. Most car rental firms will not accept Debit Cards, and will not accept anybody else’s Credit Card.</p><p>You may want to consider covering your excess with insurance4carhire. In the event that you’re charged your excess for damage or theft, you’ll be able to claim this back – just make sure you check our terms and conditions to see whether it’s covered.</p><p>Another tip is to check the fuelling policy!</p>"
+            },
+            {
+                "id": "6",
+                "question": "What is the difference between Super CDW, non waiver and the deductible?",
+                "answer": "<p>The answer is none. All the above mean the same thing. Different car rental companies use different terminology which can be confusing.</p>"
+            },
+            {
+                "id": "6",
+                "question": "What is Collision Damage Waiver (CDW) or Loss Damage Waiver (LDW)?",
+                "answer": "<p>A ‘Collision Damage Waiver', sometimes referred to as Collision Damage Cover or Loss Damage Waiver (LDW) is a basic insurance cover which covers the rental vehicle against damage and theft.</p><p>Not all car rental companies will include Collision Damage Waiver when you hire a car, so it’s always worth checking ‘what’s included’ before you hire. Without this, you may be left liable for the full cost of the vehicle.</p><p>Collision Damage Waiver is often subject to an excess, which can range between 500 EUR and 1,500 EUR*. Your insurance4carhire policy is designed to cover the excess you are liable for. It will also include damage to the windows, tyres, undercarriage, roof and headlights which may be excluded from the car rental company’s insurance. Just be aware, we won’t provide cover for any accidental damage you might have to the interior of the vehicle.</p><p>*Based on findings for quotes with Budget, Hertz, Avis, Firefly, Goldcar, Dollar and Sixt in May 2019.</p>"
+            },
+            {
+                "id": "6",
+                "question": "How much is Collision Damage Waiver (CDW) insurance?",
+                "answer": "<p>Each rental company will operate in their own way, and charges will vary. Some rental companies will include CDW as standard, and some will not.</p><p>If you are visiting Canada,the Caribbean, Central America, South America or the USA, then CDW insurance doesn’t always come as standard. For this reason it's worth checking before you get to the car rental desk to avoid any unexpected charges.</p><p>In the case that Collision Damage Waiver is not provided to you by the rental company, we can offer it to you under our <a href=\"/products/annual-worldwide-car-hire-excess-insurance-plus-cdw-sli\"> Annual Worldwide Plus CDW & SLI policy</a>. For anywhere else in the World, it normally comes included but in some cases you may have to pay extra. So check before you buy!</p><p>Tip: If you're booking your car hire through a US site rather than a UK site, you will likely find that CDW and SLI are not covered.</p>"
+            },
+            {
+                "id": "6",
+                "question": "What is SLI/ALI?",
+                "answer": "<p>SLI (Supplemental Liability Insurance), also known as ALI (Additional Liability Insurance) is a form of insurance that protects you (the driver) and your passengers against large third-party claims. Should you have an accident and this results in third-party claims for damages or injuries, then the car rental policy will protect you (the driver).</p>"
+            },
+            {
+                "id": "6",
+                "question": "Do I need a credit card when renting a car?",
+                "answer": "<p>The answer is yes. Even if you have pre-paid your car hire in full in the UK you will need a credit card when collecting your vehicle. This is for deposit purposes and should have sufficient credit on it to cover the excess. If you don’t have a credit card you should inform your car rental company, as they could refuse to rent you a car at the car rental desk.</p>"
+            },
+            {
+                "id": "6",
+                "question": "Do I have to have car insurance in America?",
+                "answer": "<p>It’s not a legal requirement to have insurance for your vehicle in America. However, it is compulsory to have a minimum level of cover for third-party insurance. For example, in California the minimum requirement for individual bodily injury is $15,000 whereas it’s only $5,000 for property damage. The minimum can vary from state to state.</p><p>In the UK, the minimum requirement for car insurance is third-party cover which tends to provide cover for millions of pounds.</p><p>You can top up your third-party insurance with our Annual Worldwide Plus CDW & SLI policy which, in addition to car hire excess cover, will cover you for Supplemental Liability Insurance and for Collision Damage Waiver, for damage and theft of the rental vehicle.</p>"
+            }
+        ]
+    },
+    {
+        "id": "faqTab2",
+        "title": "Making a Claim",
+        "shortTitle": "Making a Claim",
+        "qas": [
+            {
+                "id": "8",
+                "question": "If I make a claim on an insurance4carhire policy, should I tell (on renewal) my normal car insurance company - and if so, is there any chance it will affect my no claims bonus?",
+                "answer": "If you make a claim with insurance4carhire, you do not need to tell your car insurance company as the claim is for the excess charged by the rental company only and not connected to your car insurance."
+            },
+            {
+                "id": "9",
+                "question": "How long will it take from submitting my claim to receiving reimbursement?",
+                "answer": "Once you have successfully submitted your claim online, the insurer (AIG) will aim to pay your money into your account within 12-15 working days."
+            },
+            {
+                "id": "10",
+                "question": "How long do I have to make a claim?",
+                "answer": "Please follow the instructions on our dedicated claims page within 31 days of any payment made in relation to your claim. "
+            }
+        ]
+    },
+    {
+        "id": "faqTab3",
+        "title": "Policy Specific",
+        "shortTitle": "Policy Specific",
+        "qas": [
+            {
+                "id": "22",
+                "question": "Where in the world will insurance4carhire cover me?",
+                "answer": "<p>Our <strong><a href=\"/products/annual-worldwide-car-hire-excess-insurance-plus-cdw-sli>Annual Europe</a> excess policy</strong> is valid for trips in all European countries to the West of the Ural Mountains including the United Kingdom, the Channel Islands, Isle of Man, Republic of Ireland, Iceland, islands in the Mediterranean, Morocco, Tunisia, Turkey, Canary Islands, Madeira, and the Azores.</p><p>Our <strong>Worldwide annual excess policy</strong> covers trips anywhere in the world excluding any trip in, to, or through Cuba, Iran, North Korea, the region of Crimea, Sudan and Syria.</p><p>Our <strong>Worldwide Plus policy</strong> is valid for trips worldwide - excluding any trip in, to, or through Cuba, Iran, North Korea, the region of Crimea, Sudan and Syria - and combines excess, CDW and SLI in one policy.</p><p><strong>Our Single Trip policy</strong> is valid worldwide - excluding any trip in, to, or through Cuba, Iran, North Korea, the region of Crimea, Sudan and Syria. </p><p>Our <strong>van excess policy</strong> is valid only in the UK, Isle of Man and the Channel Islands.</p>"
+            },
+            {
+                "id": "23",
+                "question": "What is meant by a 'Joint' policy?",
+                "answer": "<p>Our <strong>Joint</strong> policies, formerly known as 'Family & Partner' policies, enable two family members* to purchase car hire excess insurance as one policy. This means that each of these two family members have lead driver status and can hire cars separately.</p><p>As with a standard annual policy, each lead driver is entitled to add up to seven additional drivers (provided they are named on the rental agreement), per rental agreement. insurance4carhire does not need to be provided with the names or details of these additional drivers.</p><p>*Family member means your spouse, civil partner or fiancé/fiancée, parents, parents-in-law, brother or sister, brother or sister-in-law, children or sons and daughters-in-law.</p>"
+            }
+        ]
+    },
+    {
+        "id": "faqTab4",
+        "title": "My Policy",
+        "shortTitle": "My Policy",
+        "qas": [
+            {
+                "id": "18",
+                "question": "Can I purchase an insurance4carhire policy if I am not a UK resident?",
+                "answer": "<p>To purchase an insurance4carhire car hire excess policy you must be resident in the UK, the Republic of Ireland, France, Italy, Spain, Germany, the Netherlands or Sweden.</p><p>Our van hire excess policies are available only to residents of the UK, the Isle of Man and the Channel Islands.</p>"
+            },
+            {
+                "id": "22",
+                "question": "How will Brexit affect my insurance4carhire policy?",
+                "answer": "<p><strong>If you are a resident of the UK, Channel Islands and Isle of Man</strong> – your policy will not be affected.</p><p><strong>Non-UK residents </strong>– At the moment we cannot confirm what will happen with your policy after Brexit.</p>"
+            },
+            {
+                "id": "23",
+                "question": "Does my insurance4carhire policy cover vehicles such as vans, campervans and motorbikes?",
+                "answer": "<p>Our Annual Europe, Annual Worldwide and Annual Worldwide Plus CDW &amp; SLI car hire excess policies do not cover camper vans, caravans, motor bikes, vintage cars or commercial vehicles. For van hire excess cover (UK, Isle of Man and Channel Islands only), we offer Single Trip Van Hire Excess Insurance.</p>"
+            },
+            {
+                "id": "24",
+                "question": "Can I upgrade my insurance4carhire to include vans?",
+                "answer": "<p>We cannot upgrade policies to include vans. We have a daily van hire excess policy which offers the same level of cover as our Daily Policy for £10.99 a day (available for residents of and rentals in the UK, Isle of Man and Channel Islands only).</p>"
+            },
+            {
+                "id": "25",
+                "question": "Is my courtesy or loan car covered?",
+                "answer": "Yes, when you are provided with a courtesy car because your own car or a rental car is being serviced or repaired for damage, we will pay you the costs of repairs or excess relating to the courtesy car for up to £6500 for any one incident and no more than £6500 in any one period of insurance. Please note that the maximum number of days for each loan period must not exceed 60 continuous days."
+            },
+            {
+                "id": "26",
+                "question": "Who do I contact in the event of a breakdown?",
+                "answer": "<p>Best practice has always been to contact your rental company in the first instance as they can advise you on what the next steps you should take, and what your rental agreement covers in the event of a breakdown.</p>"
+            },
+            {
+                "id": "26",
+                "question": "What happens if I need to cancel my policy?",
+                "answer": "<p>You have 14 days cooling off period to cancel your policy. You can either <a href=\"mailto:info@insurance4carhire.com\" title=\"Email insurance4carhire\">email</a> or telephone us and our friendly customer service team will be happy to assist you. If you cancel outside of the cooling off period, you will receive a pro rata refund of any premium less the customer service charge, providing you do not intend to make a claim.</p>"
+            },
+            {
+                "id": "26",
+                "question": "How can I check whether or not I have a current policy?",
+                "answer": "<p>You can check whether you have a current policy by:</p><ul><li>Logging in to our <a href=\"https://secure.insurance4carhire.com/Existing_Customers.asp?pageID=2&amp;subrefID=0&amp;curID=1&amp;langID=1&amp;refID=100&amp;_ga=2.119391305.1388300897.1541668615-470746187.1537883319\" title=\"Customer login area\">customer portal</a> using your policy number and four digit pin (both of which would have been included in your welcome email)</li><li><a href=\"/contact-us\" title=\"Contact us\">Contacting us</a></li></ul>"
+            }
+        ]
+    },
+    {
+        "id": "faqTab5",
+        "title": "Other",
+        "shortTitle": "Other",
+        "qas": [
+            {
+                "id": "24",
+                "question": "Do your car hire excess insurance policies cover four-wheel drive cars?",
+                "answer": "Our policies do cover four-wheel drive cars on the road, provided the vehicle is being used to drive on public thoroughfares. We will not cover any cars off road."
+            },
+            {
+                "id": "25",
+                "question": "If I make a claim on an insurance4carhire policy, should I tell (on renewal) my normal car insurance company - and if so, is there any chance it will affect my no claims bonus?",
+                "answer": "If you make a claim under the insurance4carhire policy you do not need to tell your car insurance company as the claim is for the excess charged by the rental company only and not connected to your car insurance."
+            },
+            {
+                "id": "26",
+                "question": "Can I use a regular car hire excess insurance policy for car clubs as well such as Zipcar?",
+                "answer": "<p>Yes, you can use our car hire excess insurance policies for car clubs such as Zipcar.</p>"
+            }
+        ]
+    }
 ]

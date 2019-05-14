@@ -340,12 +340,12 @@
   }
 }
 
-.blog-header {
-  h1 {
-    position: relative;
-    top: 20px;
-  }
-}
+/*.blog-header {
+    h1{
+        position: relative;
+        top: 20px;
+    }
+}*/
 
 .contact-us-header {
   @media (min-width: 1199px) {
@@ -428,39 +428,43 @@
 }
 
 // .currency {
-//   width: auto;
-//   right: 15px;
-//   top: 1em;
-//   margin: 0 0 0 0;
+//     width: auto;
+//     right: 15px;
+//     top: -2.5em;
+//     margin: 0 0 0 0;
 
-//   & > p:first-child {
-//     display: none;
-//   }
-
-//   ul {
-//     display: inline-block;
-//     vertical-align: top;
-//     margin-bottom: 0;
-
-//     li {
-//       display: inline-block;
-//       margin-right: 10px;
-
-//       a {
-//         color: #fff;
-//         border: 0;
-//         outline: 0;
-//         //font-size: 1rem;
-//         margin-top: 0;
-//         height: 100%;
-//         text-align: center;
-
-//         .selCurrency {
-//           outline-width: 2px;
-//           outline-style: solid;
-//           outline-color: #95daf4;
-//         }
-//       }
+//     & > p:first-child {
+//         display: none;
 //     }
-//   }
+
+//     ul {
+//         display: inline-block;
+//         vertical-align: top;
+//         margin-bottom:0;
+
+//         li {
+//             display: inline-block;
+//             margin-right:10px;
+
+//             a {
+//                 color: #fff;
+//                 border: 0;
+//                 outline: 0;
+//                 //font-size: 1rem;
+//                 margin-top: 0;
+//                 height: 100%;
+//                 text-align: center;
+
+//                 .selCurrency {
+//                     outline-width: 2px;
+//                     outline-style: solid;
+//                     outline-color: #95daf4;
+//                 }
+//             }
+//         }
+//     }
 // }
+
+.autocomplete {
+  border: 1px solid $midGrey;
+}

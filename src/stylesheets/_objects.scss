@@ -38,6 +38,7 @@
     'ibc ibc ibc ibc ibc ibc ibc ibc ibc ibc ibc ibc';
   justify-content: center;
   margin: 0 auto;
+    align-items: center;
 
   @media (min-width: 991px) {
     /* IE11 hack */
@@ -54,12 +55,22 @@
 
   .tab-container {
     grid-area: tc;
-    margin: 0 auto;
-  }
+        margin: 60px auto;
+        @medi(min-width:991px) {
+            margin: 0 auto;
+        }
+    }
 
   .info-box-container {
     grid-area: ibc;
     margin: 0 auto;
+        .info-box {
+            padding-top:25;
+        }
+
+        h2 { 
+        padding-top:0
+        }
   }
 }
 
@@ -303,19 +314,27 @@
   margin-top: 0;
   padding: 15px;
 
-  @media (min-width: 1199px) {
-    margin-top: 30px;
-  }
+    .inner {
+        max-width: 600px;
+        margin: 0 auto;
+        width:100%
+    }
+
+    @media (min-width: 1199px) {
+        margin-top: 30px;
+    }
 }
 
 section.article-header {
   @media (min-width: 1199px) {
     background-color: $white;
 
-    h1 {
-      color: $mainTextColour;
+        h1 {
+            color: $mainTextColour;
+            position: relative;
+            top: 20px;
+        }
     }
-  }
 }
 
 .articles {
@@ -444,6 +463,7 @@ footer .container {
     'fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3 fl3'
     'fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4 fl4'
     'si si si si si si si si si si si si'
+    'p p p p p p p p p p p p'
     'fi fi fi fi fi fi fi fi fi fi fi fi';
   justify-content: center;
   // margin-bottom: 80px;
@@ -455,6 +475,7 @@ footer .container {
     grid-template-rows: auto auto;
     grid-template-areas:
       'fl1 fl1 fl2 fl2 fl3 fl3 fl4 fl4 si si si si'
+      'p p p p p p p p p p p p'
       'fi fi fi fi fi fi fi fi fi fi fi fi';
   }
 
@@ -486,6 +507,16 @@ footer .container {
   .social-icons {
     grid-area: si;
     padding: 15px 30px;
+  }
+
+  .partners{
+    grid-area: p;
+    margin: 10px auto;
+
+    @media(min-width:1199px){
+        margin: 0 0 0 auto;
+    }
+
   }
 
   .footer-info {
