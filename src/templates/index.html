@@ -122,6 +122,14 @@
   {% include './partials/footer-links.njk' %}
 </footer>
 
-{% include './partials/help-icon.njk' %} {% block corejavascript %} {% include
-'./partials/core-javascript.njk' %} {%endblock %} {% block footer %} {% include
-'./partials/footer.njk' %} {% endblock %}
+
+
+{% include './partials/help-icon.njk' %}
+
+{% block corejavascript %}
+{% include './partials/core-javascript.njk' %}
+{% endblock %}
+
+{% block footer %}
+{% include './partials/footer.njk' %}
+{% endblock %}
