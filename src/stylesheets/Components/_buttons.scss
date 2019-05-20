@@ -130,13 +130,13 @@ a.btn {
     margin-bottom: 20px;
     font-size: inherit;
 
-    :after {
+    /*:after {
       // content: '\25BA';
       content: url(../images/green-right-arrow.png);
       position: absolute;
       right: 10px;
       color: $vividCyan;
-    }
+    }*/
 
     span {
       color: $darkCyan;
@@ -153,10 +153,10 @@ a.btn {
         color: $white;
       }
 
-      :after {
+      /*:after {
         content: url(../images/white-right-arrow.png);
         color: $white;
-      }
+      }*/
     }
   }
 

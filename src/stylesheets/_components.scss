@@ -646,7 +646,7 @@ section h2 {
 
         @media (min-width: 1199px) {
             flex-flow: row nowrap;
-            justify-content: space-around;
+            justify-content: center;
             align-items: stretch;
         }
 
@@ -675,14 +675,16 @@ section h2 {
 }
 
 .help-options-card {
-    max-width: 95%;
-    width: 100%;
-    padding-bottom: 40px;
-    flex: 0 1 100%;
-    margin-bottom: -1px;
+  max-width: 95%;
+  width: 100%;
+  padding-bottom: 40px;
+  flex: 0 1 100%;
+  margin-bottom: -1px;
 
   @media (min-width: 1199px) {
-    max-width: 306px;
+    max-width: 400px;
+    margin-right: 20px;
+    height: 295px;
   }
 
   h3,
@@ -742,7 +744,7 @@ section h2 {
   &:nth-child(2) {
     @media (max-width: 1200px) {
       padding-top: 0;
-            padding-bottom: 30px;
+      padding-bottom: 30px;
       border-radius: 0;
     }
   }
@@ -803,6 +805,12 @@ section h2 {
   }
 }
 
+.phone-numbers {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
 .contact-type {
   display: flex;
   flex-flow: row nowrap;
@@ -828,6 +836,8 @@ section h2 {
 
   .phone-contact {
     margin-bottom: 30px;
+    flex: 1;
+    margin-right: 20px;
   }
 
   .phone-number {
@@ -837,6 +847,7 @@ section h2 {
     text-align: left;
     margin-bottom: 20px;
     display: block;
+    line-height: 40px;
 
     @media (min-width: 1199px) {
       font-size: 1.5rem;

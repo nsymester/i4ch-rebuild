@@ -39,7 +39,7 @@ function start() {
   //  AutoComplete(document.getElementById('myInput'), countriesCovered);
   //}
   LoadFAQs();
-  // RevealDocs();
+  RevealDocs();
   CoverOptions();
   PolicySummary();
   SelectTrip();
