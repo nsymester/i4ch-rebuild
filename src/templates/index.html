@@ -3,16 +3,16 @@
 {% endblock %}
 
 <!-- <div class="container-fluid"> -->
-{% include "./partials/navigation.njk" %}
+{% include "./partials/I4CHNavigation/navigation.njk" %}
 <section class="hero">
   <div class="container">
-    {% include "./partials/tabs.njk" %} {% include "./partials/info-box.njk" %}
+    {% include "./partials/I4CHNavigation/tabs.njk" %} {% include "./partials/I4CHComponents/info-box.njk" %}
   </div>
 </section>
 <!-- </div> -->
 
 <section class="reviews">
-  {% include "./partials/reviews.njk" %}
+  {% include "./partials/I4CHComponents/reviews.njk" %}
 </section>
 
 <section id="excess" class="excess">
@@ -34,12 +34,7 @@
       an accident or your car being stolen.
     </p>
 
-    <iframe
-      class="video"
-      width="100%"
-      height="250"
-      src="https://www.youtube.com/embed/wjGjQSrJyvI"
-    ></iframe>
+    <iframe class="video" width="100%" height="250" src="https://www.youtube.com/embed/wjGjQSrJyvI"></iframe>
   </div>
 
   <div class="excess-image-bottom">
@@ -70,11 +65,7 @@
   </div>
 
   <div class="cover-image">
-    <img
-      class="img-responsive cover-image"
-      src="./images/cover-image.jpg"
-      alt="Samller Section Image size"
-    />
+    <img class="img-responsive cover-image" src="./images/cover-image.jpg" alt="Samller Section Image size" />
   </div>
 </section>
 
@@ -83,11 +74,7 @@
 </section>
 
 <section class="more-info">
-  <img
-    class="scale-icon img-responsive"
-    src="/images/scale-icon.png"
-    alt="More info image"
-  />
+  <img class="scale-icon img-responsive" src="/images/scale-icon.png" alt="More info image" />
   <p class="more-info-text">
     Accusantium inventore, maxime, eveniet esse repudiandae porro commodi
     assumenda obcaecati voluptatibus <a href="">rerum temporibus</a>
@@ -96,7 +83,7 @@
 
 <section class="related-articles">
   <h2 class="text-center">Releated Articles</h2>
-  {% include "./partials/articles.njk" %}
+  {% include "./partials/I4CHComponents/articles.njk" %}
 
   <a class="btn btn-default btn-articles" href="other.html">
     <span>More Articles</span>
@@ -105,31 +92,26 @@
 
 <section class="trust">
   <div class="trust-content">
-    {% include "./partials/trust-box.njk" %}
+    {% include "./partials/I4CHComponents/trust-box.njk" %}
   </div>
   <button class="back-to-top js-back-to-top">
-    <img
-      src="./images/return-to-top-arrow.png"
-      alt="Return to top arrow"
-      width="42"
-      height="43"
-    />
+    <img src="./images/return-to-top-arrow.png" alt="Return to top arrow" width="42" height="43" />
   </button>
 </section>
 <!--//.trut-->
 
 <footer>
-  {% include './partials/footer-links.njk' %}
+  {% include './partials/I4CHNavigation/footer-links.njk' %}
 </footer>
 
 
 
-{% include './partials/help-icon.njk' %}
+{% include './partials/I4CHNavigation/help-icon.njk' %}
 
 {% block corejavascript %}
 {% include './partials/core-javascript.njk' %}
 {% endblock %}
 
 {% block footer %}
-{% include './partials/footer.njk' %}
+{% include './partials/I4CHNavigation/footer.njk' %}
 {% endblock %}

@@ -1,3 +1,5 @@
+import { events } from './PubSub';
+
 // module "Accordion.js"
 
 function Accordion() {
@@ -18,6 +20,7 @@ function Accordion() {
 
     /* Toggle between hiding and showing the active panel */
     let panel = evt.currentTarget.nextElementSibling;
+
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
       panel.style.marginTop = '0';
@@ -27,6 +30,9 @@ function Accordion() {
       panel.style.marginTop = '-11px';
       panel.style.marginBottom = '18px';
     }
+
+    // tell the parent accordion to adjust its height
+    events.emit('heightChanged', panel.style.maxHeight);
   }
 }
 export { Accordion };

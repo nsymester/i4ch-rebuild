@@ -14,6 +14,7 @@
 .was-validated .custom-control-input:invalid ~ .invalid-tooltip {
   display: block;
 }
+
 .invalid-feedback {
   display: none;
   width: 100%;
@@ -41,7 +42,7 @@
     border: 2px solid $vividCyan;
     border-radius: 50%;
     padding: 2px 19px;
-    margin: 0px;
+    margin: 0;
     width: 28px;
     height: 28px;
     text-align: center;
@@ -136,71 +137,6 @@
         padding-right: 0;
         width: 100%;
         margin-bottom: 20px;
-      }
-    }
-  }
-
-  .cover-options {
-    .inner {
-      @media (min-width: 1199px) {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: flex-start;
-      }
-
-      .info-box-container,
-      .info-box-container .info-box {
-        @media (min-width: 1199px) {
-          margin-top: 0;
-        }
-      }
-
-      .product-options-days-cover {
-        max-width: 280px;
-        width: 100%;
-      }
-
-      .policy-summary {
-        a.btn {
-          margin-bottom: 20px;
-        }
-      }
-    }
-
-    .cover-options-container {
-      @media (min-width: 1199px) {
-        margin-right: 25px;
-      }
-    }
-
-    .card-cover-option {
-      padding: 35px 45px 25px;
-
-      &:hover {
-        border: 3px solid #01dbab;
-        padding: 32px 42px 22px !important;
-      }
-
-      .card-icons {
-        display: none;
-
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-
-      &.active {
-        padding: 32px 42px 22px !important;
-
-        .card-icons {
-          display: block;
-        }
-      }
-
-      .inner {
-        display: flex;
-        justify-content: space-between;
       }
     }
   }
@@ -467,4 +403,8 @@
 
 .autocomplete {
   border: 1px solid $midGrey;
+}
+
+a {
+  color: black;
 }

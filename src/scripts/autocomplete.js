@@ -4,7 +4,7 @@ import { Ready } from './components/Utils';
 
 
 function start() {
-  if (countriesCovered != null) {
+  if (countriesCovered !== null) {
     AutoComplete(document.getElementById('allowedCountries'), countriesCovered);
   }
 }

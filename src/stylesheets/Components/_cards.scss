@@ -1,6 +1,7 @@
 /* -------------------------------------------------------------------------
  Standard Card
 ---------------------------------------------------------------------------- */
+
 /**
  * Standard Card styles for home page.
  */
@@ -42,6 +43,7 @@
 /* -------------------------------------------------------------------------
  Article Card
 ---------------------------------------------------------------------------- */
+
 /**
  * Article Card styles for home page.
  */
@@ -87,10 +89,41 @@
     padding: 20px;
   }
 }
+
 .card-cover-option {
   .card-title {
     text-align: left;
     margin-bottom: 10px !important; // 30px;
+  }
+
+  .card-price-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding-right: 3px;
+  }
+
+  .btn-mobile {
+    display: block;
+    height: auto;
+    width: auto;
+    display: block;
+    flex: 0 1 auto;
+    padding: 10px;
+
+    @media (min-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .btn-info-mobile {
+    display: block;
+    color: $darkCyan;
+    border-color: $darkCyan;
+
+    @media (min-width: 1199px) {
+      display: none;
+    }
   }
 
   .card-price {
@@ -100,7 +133,8 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-align: right;
-    width: 250px;
+    max-width: 250px;
+    width: 100%;
   }
 
   .card-text {
@@ -113,11 +147,13 @@
   }
 
   .warning-text,
+  .warning-text-60,
   .warning {
     color: $darkGrey;
   }
 
-  .warning-text {
+  .warning-text,
+  .warning-text-60 {
     display: none;
     font-weight: normal;
     font-size: 16px;
@@ -126,9 +162,11 @@
     text-align: right;
   }
 }
+
 /* -------------------------------------------------------------------------
  Card Info
 ---------------------------------------------------------------------------- */
+
 /**
  * Card Info styles for home page.
  */

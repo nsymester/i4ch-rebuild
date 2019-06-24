@@ -3,7 +3,7 @@
 {% endblock %}
 
 <div class="container-fluid">
-  {% include "./partials/navigation.njk" %}
+  {% include "./partials/I4CHNavigation/navigation.njk" %}
 </div>
 <div class="container-fluid bg-light-green">
   <div class="container">
@@ -390,7 +390,7 @@
   </section>
 
   <section class="trust row">
-    {% include "./partials/trust-box.njk" %}
+    {% include "./partials/I4CHComponents/trust-box.njk" %}
 
     <button class="back-to-top js-back-to-top">
       <img src="./images/return-to-top-arrow.png" alt="Return to top arrow" width="42" height="43" />
@@ -401,14 +401,14 @@
 <div class="container-fluid bg-dark-cyan">
   <div class="container">
     <footer class="row">
-      {% include './partials/footer-links.njk' %}
+      {% include './partials/I4CHNavigation/footer-links.njk' %}
     </footer>
 
-    {% include './partials/help-icon.njk' %}
+    {% include './partials/I4CHNavigation/help-icon.njk' %}
   </div>
 </div>
 <!--//.container-->
 
 {% block corejavascript %} {% include './partials/core-javascript.njk' %}
-{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+{%endblock %} {% block footer %} {% include './partials/I4CHNavigation/footer.njk' %} {%
 endblock %}

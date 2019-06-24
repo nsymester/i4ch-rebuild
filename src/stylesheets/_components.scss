@@ -8,6 +8,7 @@
 /* -------------------------------------------------------------------------
  Alert
 ---------------------------------------------------------------------------- */
+
 /**
  * Alert styles for home page.
  */
@@ -37,20 +38,21 @@
 /* -------------------------------------------------------------------------
  Info Box
 ---------------------------------------------------------------------------- */
+
 /**
  * Info Box styles for home page.
  */
 
 .info-box-container {
-  width: 435px;
+  width: 369px;
   min-width: 360px;
   margin: 55px 10px 40px;
 
   .info-box {
     background-color: $veryDarkCyan;
-    padding: 35px;
+    padding: 20px;
     border-radius: 5px;
-    max-width: 435px;
+    max-width: 369px;
     width: 100%;
     // margin: 0 auto 10px;
     margin-top: 95px;
@@ -73,11 +75,11 @@
         border-left: 3px solid $white;
         box-sizing: border-box;
         border-radius: 0;
-        content: '';
+        content: "";
         padding-left: 20px;
-        padding-right: 0px;
+        padding-right: 0;
         padding-bottom: 15px;
-        padding-top: 0px;
+        padding-top: 0;
         line-height: 24px;
       }
 
@@ -98,7 +100,7 @@
         border-radius: 50%;
         background-color: $vividCyan;
         color: #555;
-        content: '';
+        content: "";
         border: 3px solid $white;
         display: block;
         float: left;
@@ -121,7 +123,7 @@
 
       p {
         display: inline-block;
-        margin-top: 0px;
+        margin-top: 0;
         padding-left: 10px;
         color: $white;
       }
@@ -129,10 +131,10 @@
 
     a.btn {
       padding: 12px 0;
-      @media(min-width:1199px){
-          padding: 7px 0;
-      }
 
+      @media (min-width: 1199px) {
+        padding: 7px 0;
+      }
     }
   }
 }
@@ -163,6 +165,7 @@
 
   dl {
     display: block;
+
     dt,
     dd {
       color: $white;
@@ -175,20 +178,21 @@
       color: $vividCyan;
       float: left;
     }
+
     dd {
       text-align: right;
     }
   }
 
-    .btn-cta {
-        height: 60px;
-        margin-bottom: 0;
-        border-radius: 2px;
-    }
+  .btn-cta {
+    height: 60px;
+    margin-bottom: 0;
+    border-radius: 2px;
+  }
 
-    .info-box a.btn {
-        padding: 12px 0;
-    }
+  .info-box a.btn {
+    padding: 12px 0;
+  }
 }
 
 .back-to-top {
@@ -205,6 +209,7 @@
 /* -------------------------------------------------------------------------
  Alerts
 ---------------------------------------------------------------------------- */
+
 /**
  * Alert styles.
  */
@@ -272,10 +277,9 @@
   //width: 72px;
   //height: 72px;
   //margin-right: 15px;
-  width:125px;
-  height:100%;
-  padding:0;
-
+  width: 125px;
+  height: 100%;
+  padding: 0;
 }
 
 .video {
@@ -287,6 +291,7 @@
 /* -------------------------------------------------------------------------
  Help icon
 ---------------------------------------------------------------------------- */
+
 /**
  * Help icon styles.
  */
@@ -295,7 +300,7 @@
   bottom: 100px;
   right: 20px;
   text-align: left;
-  padding: 0px 7px;
+  padding: 0 7px;
   margin: 0;
   background-color: white;
   border-radius: 20px;
@@ -313,7 +318,7 @@
   }
 
   &:before {
-    content: '?';
+    content: "?";
     font-weight: bold;
     font-size: 16px;
     color: black;
@@ -327,6 +332,7 @@
 /* -------------------------------------------------------------------------
  Section
 ---------------------------------------------------------------------------- */
+
 /**
  * Section styles.
  */
@@ -337,8 +343,8 @@ section h2 {
 }
 
 .reviews {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .excess {
@@ -419,14 +425,15 @@ section h2 {
     @media (min-width: 991px) {
       background: linear-gradient(0, $white 7%, rgba(0, 0, 0, 0) 7%),
         linear-gradient(0, $darkCyan 94%, $white 94%);
+
       /* IE10 Consumer Preview */
       background-image: -ms-linear-gradient(top, $white 7%, rgba(0, 0, 0, 0) 7%),
-        -ms-linear-gradient(bottom, #ffffff 10%, $darkCyan 94%);
+        -ms-linear-gradient(bottom, #fff 10%, $darkCyan 94%);
     }
   }
 
   .card {
-    box-shadow: 0px 0px 6px 2px #e7e8ed;
+    box-shadow: 0 0 6px 2px #e7e8ed;
     background-color: $white !important;
   }
 }
@@ -467,7 +474,7 @@ section h2 {
   }
 
   h2 {
-    padding: 0px 30px;
+    padding: 0 30px;
 
     @media (min-width: 1199px) {
       text-align: center;
@@ -476,7 +483,7 @@ section h2 {
   }
 
   h3 {
-    margin-bottom:15px;
+    margin-bottom: 15px;
   }
 
   .inner {
@@ -517,8 +524,8 @@ section h2 {
 }
 
 .hero {
-    margin-bottom: 30px;
-    padding-bottom: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .sub-title {
@@ -542,6 +549,7 @@ section h2 {
     }
   }
 }
+
 .article-categories {
   // width:400px;
   display: flex;
@@ -550,7 +558,7 @@ section h2 {
 
   @media (min-width: 1199px) {
     // justify-content: space-evenly;
-    padding: 15px 0px;
+    padding: 15px 0;
   }
 
   a {
@@ -592,7 +600,7 @@ section h2 {
 
   .inner {
     @media (min-width: 1199px) {
-      padding: 100px 0px 70px !important;
+      padding: 100px 0 70px !important;
     }
   }
 }
@@ -635,43 +643,41 @@ section h2 {
 }
 
 .help-options {
-    margin-bottom: 50px;
-    padding-bottom: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
 
-    .inner {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+  .inner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
-        @media (min-width: 1199px) {
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: stretch;
-        }
-
-        picture {
-            height: 45px;
-            display: block;
-        }
-
-        .help-options-card {
-
-            .body {
-
-                @media(min-width:991px) {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: stretch;
-                    height: 100%;
-                }
-
-                p {
-                    flex: 1 0 60%;
-                }
-            }
-        }
+    @media (min-width: 1199px) {
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: stretch;
     }
+
+    picture {
+      height: 45px;
+      display: block;
+    }
+
+    .help-options-card {
+      .body {
+        @media (min-width: 991px) {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: stretch;
+          height: 100%;
+        }
+
+        p {
+          flex: 1 0 60%;
+        }
+      }
+    }
+  }
 }
 
 .help-options-card {

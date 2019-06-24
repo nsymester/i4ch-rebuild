@@ -2,7 +2,9 @@
 
 function CoverOptions() {
   // cache DOM
+  const costPrefixText = $('.js-cost-prefix');
   const warningText = $('.card-cover-option:nth-of-type(1) .warning-text');
+  const warningText60 = $('.card-cover-option:nth-of-type(1) .warning-text-60');
   const coverOptionPrice = $('.card-cover-option:nth-of-type(1) .card-price');
   // Get single trip price
   const initialCoverPrice = $('.card-cover-option:nth-of-type(1) .amount');
@@ -37,34 +39,63 @@ function CoverOptions() {
     // get value
     inputValue = parseInt(evt.currentTarget.value);
 
-    if (inputValue > 0) {
+    // hide "from" text
+    if (inputValue > 3) {
+      costPrefixText.hide();
+    } else {
+      costPrefixText.show();
+    }
+
+    if (inputValue > 0 && Number.isInteger(inputValue)) {
       // calculate with intital cover price
+      // d_initialCoverPrice = 11.99
       if (inputValue > 0 && inputValue <= 3) {
-        totalInitialPrice = inputValue * d_initialCoverPrice;
-        totalSinglePrice = 0;
+        totalInitialPrice = d_initialCoverPrice;
+        totalSinglePrice = totalInitialPrice;
       }
 
-      if (
-        (inputValue > 3 && finalPrice < priceLimit) ||
-        priceLimit < finalPrice
-      ) {
-        totalSinglePrice = (inputValue - 3) * d_initialSingleTripPrice;
+      // if ((inputValue > 3 && inputValue <= 60) || priceLimit < finalPrice) {
+      if (inputValue > 3) {
+        totalInitialPrice = d_initialCoverPrice;
+        // double up on the string values to use a unary plus to convert and have it added to the previous value
+        totalSinglePrice =
+          +totalInitialPrice + (+inputValue - 3) * +d_initialSingleTripPrice;
       }
     }
-    finalPrice = parseFloat(totalInitialPrice + totalSinglePrice).toFixed(2);
 
-    if (finalPrice > priceLimit) {
-      initialCoverPrice.text(
-        currencySymbol + parseFloat(priceLimit).toFixed(2)
-      );
+    finalPrice = parseFloat(totalSinglePrice).toFixed(2);
+
+    if (inputValue > 11 && inputValue <= 60) {
+      initialCoverPrice.text(currencySymbol + finalPrice);
       // change color of price
       coverOptionPrice.addClass('warning');
       // show warning text
       warningText.show();
-    } else {
+      warningText60.hide();
+      coverOptionPrice.show();
+    } else if (inputValue > 3 && inputValue <= 60) {
       initialCoverPrice.text(currencySymbol + finalPrice);
       warningText.hide();
+      warningText60.hide();
       coverOptionPrice.removeClass('warning');
+      coverOptionPrice.show();
+    } else if (inputValue <= 3) {
+      initialCoverPrice.text(currencySymbol + finalPrice);
+      warningText.hide();
+      warningText60.hide();
+      coverOptionPrice.removeClass('warning');
+      coverOptionPrice.show();
+    } else if (inputValue > 60) {
+      initialCoverPrice.text(currencySymbol + finalPrice);
+      coverOptionPrice.addClass('warning');
+      warningText60.show();
+      warningText.hide();
+      coverOptionPrice.hide();
+    } else {
+      initialCoverPrice.text(currencySymbol + totalSinglePrice);
+      warningText60.hide();
+      warningText.hide();
+      coverOptionPrice.show();
     }
 
     //console.log(`${inputValue} = ${finalPrice}`);

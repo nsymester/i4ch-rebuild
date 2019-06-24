@@ -2,7 +2,7 @@
 {{ header.config('/css/styles.css', 'faqs') }}
 {% endblock %}
 
-{% include "./partials/navigation.njk" %}
+{% include "./partials/I4CHNavigation/navigation.njk" %}
 <div class="container-fluid">
   <!-- <div class="container"> -->
   <section class="blog-header generic-heaader row">
@@ -69,7 +69,7 @@
   </section>
 
   <section class="trust row">
-    {% include "./partials/trust-box.njk" %}
+    {% include "./partials/I4CHComponents/trust-box.njk" %}
 
     <button class="back-to-top js-back-to-top">
       <img src="./images/return-to-top-arrow.png" alt="Return to top arrow" width="42" height="43" />
@@ -77,13 +77,13 @@
   </section>
   <!--//.reviews-->
   <footer class="row">
-    {% include './partials/footer-links.njk' %}
+    {% include './partials/I4CHNavigation/footer-links.njk' %}
   </footer>
 
-  {% include './partials/help-icon.njk' %}
+  {% include './partials/I4CHNavigation/help-icon.njk' %}
 </div>
 <!--//.container-->
 
 {% block corejavascript %} {% include './partials/core-javascript.njk' %}
-{%endblock %} {% block footer %} {% include './partials/footer.njk' %} {%
+{%endblock %} {% block footer %} {% include './partials/I4CHNavigation/footer.njk' %} {%
 endblock %}

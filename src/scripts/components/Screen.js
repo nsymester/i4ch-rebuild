@@ -62,8 +62,6 @@ function ScrollToTop() {
 }
 
 function WindowWidth() {
-  console.log('WindowWidth');
-
   // cache DOM
   const accordionBtns = document.querySelectorAll(
     '.card-products .accordion-btn'

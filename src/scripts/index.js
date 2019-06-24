@@ -1,4 +1,3 @@
-import { Goodbye, World } from './components/GoodbyeWorld';
 import { ScrollToTop, WindowWidth } from './components/Screen';
 import { Accordion } from './components/Accordion';
 import { CountrySelector } from './components/CountrySelector';
@@ -16,10 +15,12 @@ import { LoadFAQs } from './components/faqs';
 import { RevealDocs } from './components/RevealDocs';
 import { CoverOptions } from './components/CoverOptions';
 import { Ready } from './components/Utils';
-import { PolicySummary } from './components/PolicySummary';
+import {
+  PolicySummaryDeviceResize,
+  PolicySummaryMobile,
+  PolicySummaryDesktop
+} from './components/PolicySummary';
 import { log } from 'util';
-
-console.log(`${Goodbye()} ${World} Index file`);
 
 let countriesCovered = null;
 
@@ -34,14 +35,17 @@ function start() {
   WindowWidth();
   ScrollTo();
 
-  //console.log(`countriesCovered: ${countriesCovered}`);
-  //if (countriesCovered != null) {
-  //  AutoComplete(document.getElementById('myInput'), countriesCovered);
-  //}
+  // console.log(`countriesCovered: ${countriesCovered}`);
+  // if (countriesCovered != null) {
+  //   AutoComplete(document.getElementById('myInput'), countriesCovered);
+  // }
+
   LoadFAQs();
   RevealDocs();
   CoverOptions();
-  PolicySummary();
+  // PolicySummaryMobile();
+  // PolicySummaryDesktop();
+  PolicySummaryDeviceResize();
   SelectTrip();
   RevealCurrency();
 }

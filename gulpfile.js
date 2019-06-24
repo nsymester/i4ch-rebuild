@@ -191,8 +191,8 @@ gulp.task('css', function() {
       )
     )
     .pipe(gulp.dest('dist/css'))
-    .pipe($.size())
-    .pipe(browserSync.stream());
+    .pipe($.size());
+  // .pipe(browserSync.stream());
 });
 
 /**
@@ -234,12 +234,12 @@ gulp.task('js', function() {
             })
           )
           .pipe(gulp.dest('dist/scripts')) // Output path
-          .pipe(
-            reload({
-              stream: true,
-              once: true
-            })
-          )
+        // .pipe(
+        //   reload({
+        //     stream: true,
+        //     once: true
+        //   })
+        // )
       );
     };
 

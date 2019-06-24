@@ -21,11 +21,13 @@
   width: 15px;
   height: 30px;
 }
+
 .twitter {
   background: url(../images/twitter-icon.png) no-repeat center center;
   width: 28px;
   height: 23px;
 }
+
 .instagram {
   background: url(../images/instagram-icon.png) no-repeat center center;
   width: 30px;
@@ -69,17 +71,18 @@
   width: 13px;
   height: 22px;
 }
+
 .twitter-black {
   background: url(../images/twitter-icon-black.png) no-repeat center center;
   width: 22px;
   height: 17px;
 }
+
 .instagram-black {
   background: url(../images/instagram-icon-black.png) no-repeat center center;
   width: 22px;
   height: 22px;
 }
-
 
 /*
 ** @group share--buttons
@@ -90,7 +93,7 @@
   margin: 1em;
   padding-bottom: 1em;
 
-  @media(min-width: 1199px) {
+  @media (min-width: 1199px) {
     position: fixed;
     top: 200px;
     right: 0;
@@ -99,16 +102,16 @@
   }
 }
 
-.share-buttons .sharing-buttons{
+.share-buttons .sharing-buttons {
   transform: none;
   text-align: center;
 
-  @media (min-width: 1199px){
+  @media (min-width: 1199px) {
     text-align: initial;
     transition: background-color 0.5s;
   }
 
-   a {
+  a {
     display: inline-block;
     overflow: hidden;
     width: 2em;
@@ -121,13 +124,12 @@
     font-size: 130%;
     border-radius: 2px;
 
-    @media (min-width: 1199px){
+    @media (min-width: 1199px) {
       display: block;
       border-radius: 4px 0 0 4px;
     }
   }
 }
-
 
 .share-buttons .sharing-buttons a.fb {
   background-image: url(/images/svg/logo-facebook.svg);

@@ -12,10 +12,12 @@
 /* -------------------------------------------------------------------------
  Menu
 ---------------------------------------------------------------------------- */
+
 /**
  * Menu styles.
  */
 .navbar {
+
   /*position: relative;*/
   height: 10%;
   margin-bottom: 0;
@@ -73,7 +75,7 @@
     margin: 15px auto;
 
     &:before {
-      content: '';
+      content: "";
     }
 
     a {
@@ -93,8 +95,8 @@
 
 .navbar-toggle {
   position: absolute;
-  top: 7px;
-  right: 20px;
+  top: 17px;
+  right: 10px;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
@@ -144,12 +146,12 @@
     padding-bottom: 0;
     // align-items: center;
     padding-right: 15px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     // height: 100%;
   }
+
   .navbar-nav {
     display: flex;
     margin-right: 0;
@@ -161,11 +163,13 @@
       + li:before {
         display: none;
       }
+
       &:before {
         display: none;
       }
     }
   }
+
   .navbar-nav li {
     margin: 0 0 0 20px;
     flex: 1 0 auto;
@@ -203,16 +207,20 @@
       display: inline;
     }
   }
+
   .nav-links {
     margin-left: 40px;
   }
+
   .logo {
     margin-top: 0;
     vertical-align: baseline;
   }
+
   .navbar-toggle {
     display: none;
   }
+
   .logo:hover,
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
@@ -239,23 +247,28 @@
 
 .navbar-nav {
   float: none !important;
-  margin-top: 0px;
+  margin-top: 0;
 }
+
 @media (max-width: 1199px) {
   .navbar-header {
     float: none;
   }
+
   .navbar-left,
   .navbar-right {
     float: none !important;
   }
+
   .navbar-toggle {
     display: block;
   }
+
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
+
   .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
@@ -275,13 +288,16 @@
     margin-top: 0;
     // margin-top: 7.5px;
   }
+
   .navbar-nav > li {
     float: none;
   }
+
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   .collapse.in {
     display: block !important;
   }
@@ -291,8 +307,8 @@
 .currency-mobile {
   display: block;
   position: absolute;
-  right: 3em;
-  top: 0.4em;
+  right: 2.2em;
+  top: 0.8em;
   font-size: 1.5em;
   cursor: pointer;
   padding: 0 0.5em;
@@ -369,7 +385,7 @@
     padding: 0;
     width: auto;
     position: absolute;
-    left: 39em;
+    left: 44em;
     top: -1.15em;
     margin: 0 0 0 0;
     text-align: left;

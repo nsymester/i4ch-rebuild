@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "id": "1",
+      "title": "Single Trip Car Hire Excess Insurance",
+      "price": "£11.99",
+      "input1": {
+        "question": "How many days do you need cover for?"
+      },
+      "warning": "You may find that an annual product is better value, see below",
+      "policy-info": "<p class=\"card-text\">Single Trip Worldwide car hire excess cover is suitable for short car rental periods. If you’re hiring multiple cars this year, one of our annual policies may be better value for you!</p><p><small>Note that this policy does not include Collision Damage Waiver (CDW). CDW is usually included as standard with car rentals, but often isn't included for car hires in The Americas. If you do need CDW cover or SLI our Worldwide Plus CDW &amp; SLI policy is for you.&nbsp;</small></p>",
+      "policy-summary": {
+        "title": "Single-Trip Worldwide",
+        "text": "<dl class=\"itinerary\"><dt>Duration</dt><dd>Single Trip</dd><dt>Territory</dt><dd>Europe</dd><dt>Start date</dt><dd>25/02/2019</dd><dt>End date</dt><dt>Drivers</dt><dd>24/02/2020</dd><dd>1</dd></dl>",
+        "accordion": {
+          "section1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nihil. Tenetur at sunt porro vero facere excepturi omnis.",
+          "section2": "<ul class=\"tick-list\"> <li>Excess on damageand theft up t0 £6,500 per year</li> <li> Damage caused by using the wrong type of fuel: up to £500 per claim and £2,00 per year </li> <li>Content</li> <li>Insurance</li> <li>Towergate</li> </ul> <ul class=\"cross-list\"> <li>Excess on damageand theft up t0 £6,500 per year</li> <li> Damage caused by using the wrong type of fuel: up to £500 per claim and £2,00 per year </li> <li>Content</li> <li>Insurance</li> <li>Towergate</li> </ul>"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "alt": "Image two alt text"
+    }
+  ]
+}
