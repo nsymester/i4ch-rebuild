@@ -48,6 +48,7 @@ function start() {
   PolicySummaryDeviceResize();
   SelectTrip();
   RevealCurrency();
+  // LazyLoad();
 }
 
 Ready(start);
