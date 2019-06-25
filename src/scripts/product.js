@@ -1,3 +1,3 @@
-import { Hello, World } from "./components/HelloWorld";
+import { Hello, World } from './components/HelloWorld';
 
-// console.log(`${Hello()} ${World} NAS Application`);
+console.log(`${Hello()} ${World} NAS Application`);

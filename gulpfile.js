@@ -203,8 +203,8 @@ gulp.task('js', function() {
 
   // start fresh
   $.del.sync([
-    '/dist/scripts/product.bundle.js',
-    '/dist/scripts/index.bundle.js'
+    './dist/scripts/product.bundle.js',
+    './dist/scripts/index.bundle.js'
   ]);
 
   var tasks = files.map(function(entry) {
@@ -212,7 +212,7 @@ gulp.task('js', function() {
       entries: [entry], // Entry point
       debug: true // Output source maps
     }).transform($.babelify, {
-      presets: ['env']
+      presets: ['@babel/preset-env']
     });
 
     var bundle = function() {

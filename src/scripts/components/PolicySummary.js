@@ -130,6 +130,8 @@ function PolicySummaryMobile() {
     if (activeCardOption === 'selected') {
       // console.log('Close');
 
+      evt.currentTarget.innerText = 'More information';
+
       // remove active border
       for (let i = 0; i < cardCoverOption.length; i++) {
         cardCoverOption[i].classList.remove('active');
@@ -141,7 +143,7 @@ function PolicySummaryMobile() {
         .querySelectorAll(
           '.card-cover-option[data-policy^="policy-summary-"] .policy-info'
         )
-        .forEach(function(element, index) {
+        .forEach(function(element) {
           element.style.display = 'none';
         });
 
@@ -154,6 +156,8 @@ function PolicySummaryMobile() {
       activeCardOption = '';
     } else {
       // console.log('Open');
+
+      evt.currentTarget.innerText = 'View other options';
 
       // move more information arrow
       evt.currentTarget.classList.add('active');
