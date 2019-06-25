@@ -70,6 +70,11 @@
           width: 100%;
         }
 
+        .card-body {
+          flex-flow: row wrap;
+          width: 100%;
+        }
+
         .card-text {
           flex-flow: column nowrap;
         }

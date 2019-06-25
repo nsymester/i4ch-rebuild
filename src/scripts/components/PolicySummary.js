@@ -1,5 +1,16 @@
 import { events } from './PubSub';
 
+Array.prototype.forEach = function(callback, thisArg) {
+  thisArg = thisArg || window;
+  for (var i = 0; i < this.length; i++) {
+    callback.call(thisArg, this[i], i, this);
+  }
+};
+
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 // module "PolicySummary.js"
 // module "PolicySummaryAccordion.js"
 
@@ -208,18 +219,16 @@ function PolicySummaryMobile() {
         panel.style.marginBottom = '18px';
       }
 
-      events.on('heightChanged', adjustPanelHeight);
-    }
+      events.on('heightChanged', newHeight => {
+        let newTotal =
+          parseInt(
+            panel.style.maxHeight.substring(0, panel.style.maxHeight.length - 2)
+          ) +
+          parseInt(newHeight.substring(0, newHeight.length - 2)) +
+          'px';
 
-    function adjustPanelHeight(newHeight) {
-      let newTotal =
-        parseInt(
-          panel.style.maxHeight.substring(0, panel.style.maxHeight.length - 2)
-        ) +
-        parseInt(newHeight.substring(0, newHeight.length - 2)) +
-        'px';
-
-      panel.style.maxHeight = newTotal;
+        panel.style.maxHeight = newTotal;
+      });
     }
   } // accordionHandler
 } // PolicySummaryMobile
