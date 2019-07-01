@@ -1,4 +1,5 @@
 import { events } from './PubSub';
+import { Sticky } from './Screen';
 
 Array.prototype.forEach = function(callback, thisArg) {
   thisArg = thisArg || window;
@@ -10,6 +11,8 @@ Array.prototype.forEach = function(callback, thisArg) {
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
+
+Sticky();
 
 // module "PolicySummary.js"
 // module "PolicySummaryAccordion.js"
@@ -165,6 +168,13 @@ function PolicySummaryMobile() {
       });
 
       activeCardOption = '';
+
+      if( window.removeEventListener ) {
+        window.removeEventListener('scroll', function(evt) {
+          console.log({evt});
+          evt.currentTarget.classList.remove("sticky");
+        });
+      }
     } else {
       // console.log('Open');
 

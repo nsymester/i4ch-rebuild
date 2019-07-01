@@ -88,4 +88,23 @@ function WindowWidth() {
   });
 }
 
-export { ScrollToTop, WindowWidth };
+function Sticky(){
+
+  console.log('running Sticky()');
+
+  window.addEventListener('scroll', function() {
+    console.log('checking');
+    if (document.querySelector('.more-information.active')) {
+      const moreInfoBtn = document.querySelector('.more-information.active');
+      const sticky = moreInfoBtn.offsetTop;
+      if (window.pageYOffset > sticky) {
+        moreInfoBtn.parentNode.parentNode.classList.add("sticky");
+      } else {
+        moreInfoBtn.parentNode.parentNode.classList.remove("sticky");
+      }
+    }
+
+  });
+}
+
+export { ScrollToTop, WindowWidth, Sticky };

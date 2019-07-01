@@ -14,9 +14,9 @@
 // Gulp.js configuration
 const gulp = require('gulp');
 const fs = require('fs');
-const path = require('path');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
+// const path = require('path');
+const _browserSync = require('browser-sync').create();
+// const reload = browserSync.reload;
 
 // load all plugins in 'devDependencies' into the variable $
 // pattern: include '*' for non gulp files
@@ -95,7 +95,7 @@ let fileList = [];
 // =======================================================================
 // Index Task (Generate pages from template *.html files.)
 // =======================================================================
-gulp.task('pages', function() {
+function pages(cb) {
   // Gets .html files. see file layout at bottom
   var env = new $.nunjucks.Environment(
     new $.nunjucks.FileSystemLoader(templates)
@@ -119,28 +119,29 @@ gulp.task('pages', function() {
   //  let data = JSON.parse({ files: getData('markup') });
   let data = { files: getData('markup') };
 
-  return (
-    gulp
-      .src([templates + '/*.html'])
-      // Renders template with nunjucks and marked
-      .pipe($.data(data))
-      .pipe($.gulpnunjucks.compile('', { env: env }))
-      // Uncomment the following if your source pages are something other than *.html.
-      // .pipe(rename(function (path) { path.extname=".html" }))
-      // output files in dist folder
-      .pipe(gulp.dest(dist))
-    // .pipe(browserSync.stream())
-  );
-});
+  gulp
+    .src([templates + '/*.html'])
+    // Renders template with nunjucks and marked
+    .pipe($.data(data))
+    .pipe($.gulpnunjucks.compile('', { env: env }))
+    // Uncomment the following if your source pages are something other than *.html.
+    // .pipe(rename(function (path) { path.extname=".html" }))
+    // output files in dist folder
+    .pipe(gulp.dest(dist))
+  // .pipe(browserSync.stream())
+  cb();
+}
 
 /**
  * @desc browserSync, start the server
- */ gulp.task('browserSync', function() {
+ */
+
+function browserSync() {
   // check for operating system
   // - for WINDOWS 10 use "Chrome"
   // - for MAC OS X use 'Google Chrome'
   var browser = isWin ? 'Chrome' : 'Google Chrome';
-  browserSync.init({
+  _browserSync.init({
     // injectChanges: true,
     server: {
       baseDir: './dist'
@@ -149,14 +150,25 @@ gulp.task('pages', function() {
     browser: browser,
     directory: false
   });
-});
+}
+
+exports.browserSync = browserSync;
+
+
+function reload(cb) {
+  _browserSync.reload();
+  cb();
+}
+
+exports.reload = reload;
 
 /**
  * @desc css task - compile sass to css, compress and add prefixes
  */
-gulp.task('css', function() {
+
+function css(cb) {
   var postCssOpts = [
-    $.autoprefixer({ browsers: ['> 0.5%', 'last 4 versions'] })
+    $.autoprefixer()
   ];
 
   if (!devBuild) {
@@ -165,40 +177,42 @@ gulp.task('css', function() {
     sassOptions.comments = false;
   }
 
-  return gulp
-    .src(`${folder.src}/stylesheets/**/*.scss`)
-    .pipe(
-      $.plumber({
-        errorHandler: onError
+  gulp
+  .src(`${folder.src}/stylesheets/**/*.scss`)
+  .pipe(
+    $.plumber({
+      errorHandler: onError
+    })
+  )
+  .pipe($.if(devBuild, $.sourcemaps.init()))
+  .pipe(
+    $.sass({
+      outputStyle: sassOptions.style,
+      sourceComments: false,
+      imagePath: 'images/',
+      errLogToConsole: true
+    }).on('error', $.log)
+    )
+  .pipe($.postcss(postCssOpts))
+  .pipe(
+    $.if(
+      devBuild,
+      $.sourcemaps.write('maps', {
+        includeContent: false
       })
     )
-    .pipe($.if(devBuild, $.sourcemaps.init()))
-    .pipe(
-      $.sass({
-        outputStyle: sassOptions.style,
-        sourceComments: false,
-        imagePath: 'images/',
-        errLogToConsole: true
-      }).on('error', $.log)
-    )
-    .pipe($.postcss(postCssOpts))
-    .pipe(
-      $.if(
-        devBuild,
-        $.sourcemaps.write('maps', {
-          includeContent: false
-        })
-      )
-    )
-    .pipe(gulp.dest('dist/css'))
-    .pipe($.size());
-  // .pipe(browserSync.stream());
-});
+  )
+  .pipe(gulp.dest('dist/css'))
+  .pipe($.size());
+    cb();
+}
+
+exports.css = css;
 
 /**
  * @desc bundles js into multiple files and watches for changes
  */
-gulp.task('js', function() {
+function js(cb) {
   let files = ['./src/scripts/index.js', './src/scripts/product.js'];
 
   // start fresh
@@ -215,7 +229,7 @@ gulp.task('js', function() {
       presets: ['@babel/preset-env']
     });
 
-    var bundle = function() {
+    const bundle = function() {
       return (
         bundler
           .bundle() // Start bundle
@@ -234,12 +248,6 @@ gulp.task('js', function() {
             })
           )
           .pipe(gulp.dest('dist/scripts')) // Output path
-        // .pipe(
-        //   reload({
-        //     stream: true,
-        //     once: true
-        //   })
-        // )
       );
     };
 
@@ -252,58 +260,65 @@ gulp.task('js', function() {
   });
 
   //create a merged stream
-  return $.es.merge.apply(null, tasks);
-});
+  $.es.merge(tasks).on('end', cb);
+}
 
 /**
  * @desc bootlint task -  A gulp wrapper for Bootlint, the HTML linter for Bootstrap projects
  */
-gulp.task('bootlint', function() {
-  return gulp.src('./build/*.html').pipe($.bootlint());
-});
+exports.bootlint = function(cb) {
+  gulp.src('./build/*.html').pipe($.bootlint());
+  cb
+}
 
 /**
  * @desc build - run all tasks
  */
-gulp.task('build', function(callback) {
+exports.build = function(cb) {
   isWatching = false;
-  $.runSequence(['nunjucks', 'css', 'js'], callback);
-});
+  gulp.series('nunjucks', 'css', 'js');
+  cb();
+}
 
 /**
  * @desc watch - watch for changes
  */
-gulp.task('watch', function() {
-  // nunjuck changes
-  gulp
-    .watch(folder.src + '+(templates)/**/*.njk', ['pages'])
-    .on('change', browserSync.reload);
+// gulp.task('watch', function() {
 
-  gulp
-    .watch(folder.src + '+(templates)/**/*.md', ['pages'])
-    .on('change', browserSync.reload);
-
-  gulp
-    .watch(folder.src + '+(templates)/**/*.html', ['pages'])
-    .on('change', browserSync.reload);
-
-  // css changes
-  gulp
-    .watch(folder.src + 'stylesheets/**/*.scss', ['css'])
-    .on('change', browserSync.reload);
-
-  // js changes
-  gulp
-    .watch(folder.src + 'scripts/**/*.js', ['js'])
-    .on('change', browserSync.reload);
-});
+// });
 
 /**
  * @desc default task
  */
-gulp.task('default', function(callback) {
-  $.runSequence(['pages', 'css', 'browserSync', 'watch'], callback);
-});
+// gulp.task('default', function(cb) {
+//   gulp.series('pages', 'css', 'browserSync', 'watch');
+//   cb()
+// });
+
+/**
+ * @desc watch - watch for changes
+ */
+exports.default = function(){
+  browserSync();
+
+  // nunjuck changes
+  gulp
+  .watch(folder.src + '+(templates)/**/*.njk', pages);
+
+  gulp
+  .watch(folder.src + '+(templates)/**/*.md', pages);
+
+  gulp
+  .watch(folder.src + '+(templates)/**/*.html', pages);
+
+  // css changes
+  gulp
+  .watch(folder.src + 'stylesheets/**/*.scss', gulp.series(css, reload));
+
+  // js changes
+  gulp
+  .watch(folder.src + 'scripts/**/*.js', gulp.series(js, reload));
+}
 
 // return a json file with list of folders and directories
 function getData(folderPath, fileList) {
