@@ -9,6 +9,22 @@
     "gulp-cli": "^2.2.0",
     "lodash": "^4.17.11"
   },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "pretty-quick",
+    "lint": "eslint ./",
+    "lint2": "gulp bootlint && eslint --cache --fix ./src/scripts",
+    "pa11y": "node a11y.js --files './dist/index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsymester/i4ch-rebuild.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
@@ -67,22 +83,6 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.1"
-  },
-  "scripts": {
-    "start": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "pretty-quick",
-    "lint": "eslint ./",
-    "lint2": "gulp bootlint && eslint --cache --fix ./src/scripts",
-    "pa11y": "node a11y.js --files './dist/index.html'"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nsymester/i4ch-rebuild.git"
   },
   "bugs": {
     "url": "https://github.com/nsymester/i4ch-rebuild/issues"

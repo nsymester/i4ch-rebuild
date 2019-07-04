@@ -3134,12 +3134,10 @@ footer .footer-info {
     padding: 10px;
     background-color: #023742;
     padding: 0; }
-    #productOptions .cover-options .card-cover-option .card-icons > .sticky,
-    #blog .cover-options .card-cover-option .card-icons > .sticky,
-    #blogPage .cover-options .card-cover-option .card-icons > .sticky {
-      top: 74px;
-      left: 0;
-      z-index: 999999; }
+    #productOptions .cover-options .card-cover-option .card-icons > .navbar-fixed-top,
+    #blog .cover-options .card-cover-option .card-icons > .navbar-fixed-top,
+    #blogPage .cover-options .card-cover-option .card-icons > .navbar-fixed-top {
+      top: 90px; }
     @media (min-width: 1199px) {
       #productOptions .cover-options .card-cover-option .card-icons,
       #blog .cover-options .card-cover-option .card-icons,

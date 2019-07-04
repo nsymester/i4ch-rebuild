@@ -98,10 +98,8 @@
         background-color: $veryDarkCyan;
         padding: 0;
 
-        > .sticky {
-          top: 74px;
-          left: 0;
-          z-index: 999999;
+        > .navbar-fixed-top {
+          top: 90px;
         }
 
         @media (min-width: 1199px) {

@@ -1,5 +1,4 @@
 import { events } from './PubSub';
-import { Sticky } from './Screen';
 
 Array.prototype.forEach = function(callback, thisArg) {
   thisArg = thisArg || window;
@@ -11,8 +10,6 @@ Array.prototype.forEach = function(callback, thisArg) {
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
-
-Sticky();
 
 // module "PolicySummary.js"
 // module "PolicySummaryAccordion.js"
@@ -136,10 +133,15 @@ function PolicySummaryMobile() {
 
   // Event Handlers
   function accordionHandler(evt) {
+
+    evt.preventDefault();
+    evt.stopPropagation();
     // console.log(evt.currentTarget);
-    /* hide the other options */
+    // hide the other options
     evt.currentTarget.classList.remove('active');
 
+    // remove navbar-fixed-top
+    evt.currentTarget.parentNode.parentNode.classList.remove('navbar-fixed-top');
     // more information button has been clicked
     if (activeCardOption === 'selected') {
       // console.log('Close');
@@ -169,12 +171,6 @@ function PolicySummaryMobile() {
 
       activeCardOption = '';
 
-      if( window.removeEventListener ) {
-        window.removeEventListener('scroll', function(evt) {
-          console.log({evt});
-          evt.currentTarget.classList.remove("sticky");
-        });
-      }
     } else {
       // console.log('Open');
 
@@ -241,6 +237,39 @@ function PolicySummaryMobile() {
       });
     }
   } // accordionHandler
+
+  window.addEventListener("touchstart", handleStart, false);
+
+  function handleStart(evt) {
+    evt.preventDefault();
+    console.log('touch event');
+    evt.stopPropagation();
+  }
+
+  window.addEventListener("touchend", handleEnd, false);
+
+  function handleEnd(evt) {
+    evt.preventDefault();
+    console.log('touch event');
+    evt.stopPropagation();
+  }
+
+  window.addEventListener("touchcancel", handleCancel, false);
+
+  function handleCancel(evt) {
+    evt.preventDefault();
+    console.log('touch event');
+    evt.stopPropagation();
+  }
+
+  window.addEventListener("touchmove", handleMove, false);
+
+  function handleMove(evt) {
+    evt.preventDefault();
+    console.log('touch event');
+    evt.stopPropagation();
+  }
+
 } // PolicySummaryMobile
 
 /**

@@ -89,18 +89,21 @@ function WindowWidth() {
 }
 
 function Sticky(){
+  console.log('Sticky');
 
-  console.log('running Sticky()');
+  window.addEventListener('scroll', function(evt) {
 
-  window.addEventListener('scroll', function() {
-    console.log('checking');
+    evt.preventDefault();
+
     if (document.querySelector('.more-information.active')) {
+      console.log('checking');
+
       const moreInfoBtn = document.querySelector('.more-information.active');
       const sticky = moreInfoBtn.offsetTop;
       if (window.pageYOffset > sticky) {
-        moreInfoBtn.parentNode.parentNode.classList.add("sticky");
+        moreInfoBtn.parentNode.parentNode.classList.add("navbar-fixed-top");
       } else {
-        moreInfoBtn.parentNode.parentNode.classList.remove("sticky");
+        moreInfoBtn.parentNode.parentNode.classList.remove("navbar-fixed-top");
       }
     }
 

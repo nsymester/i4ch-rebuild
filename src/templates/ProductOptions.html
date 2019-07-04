@@ -1,4 +1,5 @@
-{% block headerContent %} {% import './macros/header.njk' as header %}
+{% block headerContent %}
+{% import './macros/header.njk' as header %}
 {{ header.config('/css/styles.css', 'productOptions') }}
 {% endblock %}
 
@@ -468,9 +469,13 @@
   {% include './partials/I4CHNavigation/footer-links.njk' %}
 </footer>
 
-{% include './partials/I4CHNavigation/help-icon.njk' %}
+{# {% include './partials/I4CHNavigation/help-icon.njk' %} #}
 <!--//.container-->
 
-{% block corejavascript %} {% include './partials/core-javascript.njk' %}
-{%endblock %} {% block footer %} {% include
-'./partials/I4CHNavigation/footer.njk' %} {% endblock %}
+{% block corejavascript %}
+{% include './partials/core-javascript.njk' %}
+{%endblock %}
+
+{% block footer %}
+{% include './partials/I4CHNavigation/footer.njk' %}
+{% endblock %}
