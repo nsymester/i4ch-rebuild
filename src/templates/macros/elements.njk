@@ -14,17 +14,17 @@
   {% endif %}
 {% endmacro %}
 
-{% macro renderFile(pPath, pDirectoryName) %}
+{% macro renderFile(pPath, pDirectoryName, suffix='') %}
   <div class="sg-section">
     {{ renderTitleFromPath(pPath, 'h2') }}
-    {{ renderFileDoc(pPath, pDirectoryName) }}
-    {{ renderFileExample(pPath, pDirectoryName) }}
-    {{ renderFileSource(pPath, pDirectoryName) }}
+    {{ renderFileDoc(pPath, pDirectoryName, suffix) }}
+    {{ renderFileExample(pPath, pDirectoryName, suffix) }}
+    {{ renderFileSource(pPath, pDirectoryName, suffix) }}
   </div>
 {% endmacro %}
 
-{%- macro renderFileDoc(pPath, pDirectoryName) %}
-  {% set doc = "./doc/" + pDirectoryName + "/" + pPath | replace(".html",".md") %}
+{%- macro renderFileDoc(pPath, pDirectoryName, suffix='') %}
+  {% set doc = "./doc" + suffix + "/" + pDirectoryName + "/" + pPath | replace(".html",".md") %}
   <div class="sg-sub-section sg-doc">
     <div class="markdown-body">
       {%- markdown doc -%}
@@ -32,16 +32,16 @@
   </div>
 {% endmacro -%}
 
-{% macro renderFileExample(pPath, pDirectoryName) %}
-  {% set doc = "../markup/" + pDirectoryName + "/" + pPath %}
+{% macro renderFileExample(pPath, pDirectoryName, suffix='') %}
+  {% set doc = "../markup" + suffix + "/" + pDirectoryName + "/" + pPath %}
   <div class="sg-sub-section sg-example">
     <h3 class="sg-h3 sg-title">Example</h3>
     {%- include doc -%}
   </div>
 {% endmacro %}
 
-{%- macro renderFileSource(pPath, pDirectoryName) %}
-  {% set doc = "./markup/" + pDirectoryName + "/" + pPath %}
+{%- macro renderFileSource(pPath, pDirectoryName, suffix='') %}
+  {% set doc = "./markup" + suffix + "/" + pDirectoryName + "/" + pPath %}
   <div class="sg-sub-section">
     <div class="sg-markup-controls">
       <button type="button" class="sg-btn sg-btn--source">View Source</button>

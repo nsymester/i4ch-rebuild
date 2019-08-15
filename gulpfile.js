@@ -118,6 +118,7 @@ function pages(cb) {
 
   //  let data = JSON.parse({ files: getData('markup') });
   let data = { files: getData('markup') };
+  let cData = { cFiles: getData('markup-c') };
 
   gulp
     .src([templates + '/*.html'])
@@ -127,8 +128,19 @@ function pages(cb) {
     // Uncomment the following if your source pages are something other than *.html.
     // .pipe(rename(function (path) { path.extname=".html" }))
     // output files in dist folder
-    .pipe(gulp.dest(dist))
+    .pipe(gulp.dest(dist));
   // .pipe(browserSync.stream())
+
+  gulp
+    .src([templates + '/*.html'])
+    // Renders template with nunjucks and marked
+    .pipe($.data(cData))
+    .pipe($.gulpnunjucks.compile('', { env: env }))
+    // Uncomment the following if your source pages are something other than *.html.
+    // .pipe(rename(function (path) { path.extname=".html" }))
+    // output files in dist folder
+    .pipe(gulp.dest(dist));
+
   cb();
 }
 
@@ -154,7 +166,6 @@ function browserSync() {
 
 exports.browserSync = browserSync;
 
-
 function reload(cb) {
   _browserSync.reload();
   cb();
@@ -167,9 +178,7 @@ exports.reload = reload;
  */
 
 function css(cb) {
-  var postCssOpts = [
-    $.autoprefixer()
-  ];
+  var postCssOpts = [$.autoprefixer()];
 
   if (!devBuild) {
     $.log.info('css build ', devBuild);
@@ -178,33 +187,33 @@ function css(cb) {
   }
 
   gulp
-  .src(`${folder.src}/stylesheets/**/*.scss`)
-  .pipe(
-    $.plumber({
-      errorHandler: onError
-    })
-  )
-  .pipe($.if(devBuild, $.sourcemaps.init()))
-  .pipe(
-    $.sass({
-      outputStyle: sassOptions.style,
-      sourceComments: false,
-      imagePath: 'images/',
-      errLogToConsole: true
-    }).on('error', $.log)
-    )
-  .pipe($.postcss(postCssOpts))
-  .pipe(
-    $.if(
-      devBuild,
-      $.sourcemaps.write('maps', {
-        includeContent: false
+    .src(`${folder.src}/stylesheets/**/*.scss`)
+    .pipe(
+      $.plumber({
+        errorHandler: onError
       })
     )
-  )
-  .pipe(gulp.dest('dist/css'))
-  .pipe($.size());
-    cb();
+    .pipe($.if(devBuild, $.sourcemaps.init()))
+    .pipe(
+      $.sass({
+        outputStyle: sassOptions.style,
+        sourceComments: false,
+        imagePath: 'images/',
+        errLogToConsole: true
+      }).on('error', $.log)
+    )
+    .pipe($.postcss(postCssOpts))
+    .pipe(
+      $.if(
+        devBuild,
+        $.sourcemaps.write('maps', {
+          includeContent: false
+        })
+      )
+    )
+    .pipe(gulp.dest('dist/css'))
+    .pipe($.size());
+  cb();
 }
 
 exports.css = css;
@@ -268,8 +277,8 @@ function js(cb) {
  */
 exports.bootlint = function(cb) {
   gulp.src('./build/*.html').pipe($.bootlint());
-  cb
-}
+  cb;
+};
 
 /**
  * @desc build - run all tasks
@@ -278,7 +287,7 @@ exports.build = function(cb) {
   isWatching = false;
   gulp.series('nunjucks', 'css', 'js');
   cb();
-}
+};
 
 /**
  * @desc watch - watch for changes
@@ -298,27 +307,22 @@ exports.build = function(cb) {
 /**
  * @desc watch - watch for changes
  */
-exports.default = function(){
+exports.default = function() {
   browserSync();
 
   // nunjuck changes
-  gulp
-  .watch(folder.src + '+(templates)/**/*.njk', pages);
+  gulp.watch(folder.src + '+(templates)/**/*.njk', pages);
 
-  gulp
-  .watch(folder.src + '+(templates)/**/*.md', pages);
+  gulp.watch(folder.src + '+(templates)/**/*.md', pages);
 
-  gulp
-  .watch(folder.src + '+(templates)/**/*.html', pages);
+  gulp.watch(folder.src + '+(templates)/**/*.html', pages);
 
   // css changes
-  gulp
-  .watch(folder.src + 'stylesheets/**/*.scss', gulp.series(css, reload));
+  gulp.watch(folder.src + 'stylesheets/**/*.scss', gulp.series(css, reload));
 
   // js changes
-  gulp
-  .watch(folder.src + 'scripts/**/*.js', gulp.series(js, reload));
-}
+  gulp.watch(folder.src + 'scripts/**/*.js', gulp.series(js, reload));
+};
 
 // return a json file with list of folders and directories
 function getData(folderPath, fileList) {

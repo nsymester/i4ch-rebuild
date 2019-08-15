@@ -58,23 +58,21 @@
       </ul>
 
       <ul class="sg-nav-group">
-
         {% import "macros/elements.njk" as elements %}
         {# listFilesInFolder #}
         {% block navigation %}
-          {% for file in files %}
-            {% if file.type == 'd' %}
+          {% for file in cFiles %}
+            {%if file.type == 'd' %}
               <li class="sg-subnav-parent">
                 {{ elements.renderTitleFromPath(file.name, 'h2') }}
               </li>
-              {% else %}
+            {% else %}
               <li>
                 {{ elements.renderTitleFromPath(file.name, '') }}
               </li>
             {% endif %}
           {% endfor %}
         {% endblock %}
-
       </ul>
     </div>
     <!--/.sg-sidebar-->
@@ -151,74 +149,23 @@
             <!--/.sg-color-grid-->
           </div>
           <!--/.sg-colors-->
-
-          <!-- Manually add your fonts here. -->
-          <div class="sg-font-stacks sg-section">
-            <h2 id="sg-fontStacks" class="sg-h2">Font Stacks</h2>
-            <dl class="sg-font-list">
-              <dt>Primary Font:</dt>
-              <dd style="font-family: Lato, Helvetica, Arial, sans-serif;">
-                Lato, <span style="font-family:Helvetica">Helvetica</span>,
-                <span style="font-family:Arial">Arial</span>,
-                <span style="font-family:sans-serif">sans-serif</span>
-              </dd>
-
-              <dt>Primary Font Italic:</dt>
-              <dd style="font-family: Lato, Helvetica, Arial, sans-serif; font-style: italic;">
-                Lato, <span style="font-family:Helvetica">Helvetica</span>,
-                <span style="font-family:Arial">Arial</span>,
-                <span style="font-family:sans-serif">sans-serif</span>
-              </dd>
-
-              <dt>Primary Font Bold:</dt>
-              <dd style="font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 900;">
-                Lato, <span style="font-family:Helvetica">Helvetica</span>,
-                <span style="font-family:Arial">Arial</span>,
-                <span style="font-family:sans-serif">sans-serif</span>
-              </dd>
-
-              <dt>Secondary Font:</dt>
-              <dd style="font-family: Oswald, Times,  'Times New Roman', serif;">
-                Oswald, <span style="font-family:Times">Times</span>,
-                <span style="font-family: 'Times New Roman'">'Times New Roman'</span>, <span
-                  style="font-family:serif">serif</span>
-              </dd>
-
-              <dt>Secondary Font Italic:</dt>
-              <dd style="font-family: Oswald, Times,  'Times New Roman', serif; font-style: italic;">
-                Oswald, <span style="font-family:Times">Times</span>,
-                <span style="font-family: 'Times New Roman'">'Times New Roman'</span>, <span
-                  style="font-family:serif">serif</span>
-              </dd>
-
-              <dt>Secondary Font Bold:</dt>
-              <dd style="font-family: Oswald, Times,  'Times New Roman', serif; font-weight: 700;">
-                Oswald, <span style="font-family:Times">Times</span>,
-                <span style="font-family: 'Times New Roman'">'Times New Roman'</span>, <span
-                  style="font-family:serif">serif</span>
-              </dd>
-            </dl>
-            <div class="sg-markup-controls">
-              <a class="sg-btn--top" href="#top">Back to Top</a>
-            </div>
-          </div>
-          <!--/.sg-font-stacks-->
         </div>
         <!--/.sg-info-->
 
         <!-- <?php renderFilesInFolder('markup'); ?> -->
-        {% block content %} {# renderFilesInFolder #}
+        {% block content %}
+          {# renderFilesInFolder #}
 
           <div class="sg-section-group">
             {% set directoryName = '' %}
-            {% for file in files -%}
+            {% for file in cFiles -%}
               {% if file.type == 'd' %}
                 {{ elements.renderTitleFromPath(file.name, 'h1') }}
-                  {% set directoryName = file.name %}
-                {% else %}
-                  {{ elements.renderFile(file.name, directoryName) }}
-                {% endif %}
-              {%- endfor %}
+                {% set directoryName = file.name %}
+              {% else %}
+                {{ elements.renderFile(file.name, directoryName, '-c') }}
+              {% endif %}
+            {%- endfor %}
           </div>
 
         {% endblock %}
