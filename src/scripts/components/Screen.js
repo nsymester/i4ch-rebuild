@@ -88,26 +88,26 @@ function WindowWidth() {
   });
 }
 
-function Sticky(){
-  console.log('Sticky');
+// function Sticky(){
+//   console.log('Sticky');
 
-  window.addEventListener('scroll', function(evt) {
+//   window.addEventListener('scroll', function(evt) {
 
-    evt.preventDefault();
+//     if (document.querySelector('.more-information.active')) {
+//       evt.preventDefault();
 
-    if (document.querySelector('.more-information.active')) {
-      console.log('checking');
+//       console.log('checking');
 
-      const moreInfoBtn = document.querySelector('.more-information.active');
-      const sticky = moreInfoBtn.offsetTop;
-      if (window.pageYOffset > sticky) {
-        moreInfoBtn.parentNode.parentNode.classList.add("navbar-fixed-top");
-      } else {
-        moreInfoBtn.parentNode.parentNode.classList.remove("navbar-fixed-top");
-      }
-    }
+//       const moreInfoBtn = document.querySelector('.more-information.active');
+//       const sticky = moreInfoBtn.offsetTop;
+//       if (window.pageYOffset > sticky) {
+//         moreInfoBtn.parentNode.parentNode.classList.add("navbar-fixed-top");
+//       } else {
+//         moreInfoBtn.parentNode.parentNode.classList.remove("navbar-fixed-top");
+//       }
+//     }
 
-  });
-}
+//   });
+// }
 
-export { ScrollToTop, WindowWidth, Sticky };
+export { ScrollToTop, WindowWidth };

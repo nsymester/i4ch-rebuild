@@ -1,11 +1,13 @@
 // import { Hello, World } from './components/HelloWorld';
-import { Ready } from './components/Utils';
-import { Sticky } from './components/Screen';
+import { Ready } from "./components/Utils";
+import { loadProductPageFAQs } from "./components/faqs";
+// import { Sticky } from './components/Screen';
 
 // console.log(`${Hello()} ${World} NAS Application`);
 
 function start() {
-  Sticky();
+  // Sticky();
+  // loadProductPageFAQs();
 }
 
 Ready(start);

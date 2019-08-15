@@ -35,6 +35,18 @@
   }
 }
 
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
 /* -------------------------------------------------------------------------
  Info Box
 ---------------------------------------------------------------------------- */
@@ -75,7 +87,7 @@
         border-left: 3px solid $white;
         box-sizing: border-box;
         border-radius: 0;
-        content: "";
+        content: '';
         padding-left: 20px;
         padding-right: 0;
         padding-bottom: 15px;
@@ -100,7 +112,7 @@
         border-radius: 50%;
         background-color: $vividCyan;
         color: #555;
-        content: "";
+        content: '';
         border: 3px solid $white;
         display: block;
         float: left;
@@ -126,12 +138,12 @@
         margin-top: 0;
         padding-left: 10px;
         color: $white;
+        font-size: 18px;
       }
     }
 
     a.btn {
       padding: 12px 0;
-
       @media (min-width: 1199px) {
         padding: 7px 0;
       }
@@ -318,7 +330,7 @@
   }
 
   &:before {
-    content: "?";
+    content: '?';
     font-weight: bold;
     font-size: 16px;
     color: black;
@@ -491,6 +503,10 @@ section h2 {
     background: linear-gradient(0, $white 7%, rgba(0, 0, 0, 0) 7%),
       linear-gradient(0, $darkCyan 94%, $white 94%);
 
+    /* IE10 Consumer Preview */
+    background-image: -ms-linear-gradient(top, $white 7%, rgba(0, 0, 0, 0) 7%),
+      -ms-linear-gradient(bottom, #fff 10%, $darkCyan 94%);
+
     .card {
       box-shadow: none;
 
@@ -508,14 +524,24 @@ section h2 {
     @media (min-width: 1199px) {
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
       padding-bottom: 0;
+      justify-content: space-between;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+      }
     }
   }
 }
 
 .policy-info {
   .btn-default {
+    display: table;
+    padding: 12px;
+
     @media (min-width: 1199px) {
       color: $vividCyan;
       border-color: $vividCyan;
@@ -671,7 +697,7 @@ section h2 {
           justify-content: stretch;
           height: 100%;
         }
-
+        a { text-decoration: none }
         p {
           flex: 1 0 60%;
         }

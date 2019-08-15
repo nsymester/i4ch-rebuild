@@ -238,37 +238,37 @@ function PolicySummaryMobile() {
     }
   } // accordionHandler
 
-  window.addEventListener("touchstart", handleStart, false);
+  // window.addEventListener("touchstart", handleStart, false);
 
-  function handleStart(evt) {
-    evt.preventDefault();
-    console.log('touch event');
-    evt.stopPropagation();
-  }
+  // function handleStart(evt) {
+  //   evt.preventDefault();
+  //   console.log('touch event');
+  //   evt.stopPropagation();
+  // }
 
-  window.addEventListener("touchend", handleEnd, false);
+  // window.addEventListener("touchend", handleEnd, false);
 
-  function handleEnd(evt) {
-    evt.preventDefault();
-    console.log('touch event');
-    evt.stopPropagation();
-  }
+  // function handleEnd(evt) {
+  //   evt.preventDefault();
+  //   console.log('touch event');
+  //   evt.stopPropagation();
+  // }
 
-  window.addEventListener("touchcancel", handleCancel, false);
+  // window.addEventListener("touchcancel", handleCancel, false);
 
-  function handleCancel(evt) {
-    evt.preventDefault();
-    console.log('touch event');
-    evt.stopPropagation();
-  }
+  // function handleCancel(evt) {
+  //   evt.preventDefault();
+  //   console.log('touch event');
+  //   evt.stopPropagation();
+  // }
 
-  window.addEventListener("touchmove", handleMove, false);
+  // window.addEventListener("touchmove", handleMove, false);
 
-  function handleMove(evt) {
-    evt.preventDefault();
-    console.log('touch event');
-    evt.stopPropagation();
-  }
+  // function handleMove(evt) {
+  //   evt.preventDefault();
+  //   console.log('touch event');
+  //   evt.stopPropagation();
+  // }
 
 } // PolicySummaryMobile
 

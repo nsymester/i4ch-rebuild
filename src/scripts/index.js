@@ -40,7 +40,7 @@ function start() {
   //   AutoComplete(document.getElementById('myInput'), countriesCovered);
   // }
 
-  LoadFAQs();
+  // LoadFAQs();
   RevealDocs();
   CoverOptions();
   // PolicySummaryMobile();

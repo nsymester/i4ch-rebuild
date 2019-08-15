@@ -24,10 +24,14 @@
   &-img-top {
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
-    // height: 100%; // 180px;
+    height: auto; // 180px;
     width: 100%; // 286px;
     display: block;
     margin-bottom: 15px;
+
+    @media (min-width: 1191px) {
+      height: 100%;
+    }
   }
 
   &-body {

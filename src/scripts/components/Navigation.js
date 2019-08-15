@@ -7,8 +7,13 @@ function ToggleNavigation() {
   const currencyMenuToggle = document.getElementById('js-navbar-toggle');
 
   // bind events
-  navBarToggle.addEventListener('click', toggleMenu);
-  currencyMenuToggle.addEventListener('click', toggleCurrencyMenu);
+  if(navBarToggle != null) {
+    navBarToggle.addEventListener('click', toggleMenu);
+  }
+
+  if(currencyMenuToggle){
+    currencyMenuToggle.addEventListener('click', toggleCurrencyMenu);
+  }
 
   // event handlers
   function toggleMenu() {

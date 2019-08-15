@@ -96,23 +96,10 @@
   top: 15px;
 }
 
-.dropdown-menu--block {
-  width: 100%;
-}
-
-.open > .dropdown-toggle.btn-car {
-  &:hover {
-    color: $veryDarkCyan;
-    background-color: white;
-    border-color: transparent;
-  }
-}
-
-.open > .dropdown-toggle.btn-car {
-  color: $veryDarkCyan;
-  background-color: white;
-  border-color: transparent;
-  background-image: none;
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .bdr-dark-grey {
@@ -201,13 +188,6 @@
   }
 }
 
-/*.blog-header {
-    h1{
-        position: relative;
-        top: 20px;
-    }
-}*/
-
 .contact-us-header {
   @media (min-width: 1199px) {
     margin-bottom: 40px;
@@ -269,73 +249,82 @@
   }
 }
 
-.navbar-fixed-top {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  z-index: 1030;
-
-  // .navbar-collapse {
-  //   @media (min-width: 991px) {
-  //     padding-right: 8rem;
-  //   }
-  // }
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.navbar-fixed-top + .content {
-  padding-top: 102px;
-}
-
-// .currency {
-//     width: auto;
-//     right: 15px;
-//     top: -2.5em;
-//     margin: 0 0 0 0;
-
-//     & > p:first-child {
-//         display: none;
-//     }
-
-//     ul {
-//         display: inline-block;
-//         vertical-align: top;
-//         margin-bottom:0;
-
-//         li {
-//             display: inline-block;
-//             margin-right:10px;
-
-//             a {
-//                 color: #fff;
-//                 border: 0;
-//                 outline: 0;
-//                 //font-size: 1rem;
-//                 margin-top: 0;
-//                 height: 100%;
-//                 text-align: center;
-
-//                 .selCurrency {
-//                     outline-width: 2px;
-//                     outline-style: solid;
-//                     outline-color: #95daf4;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .autocomplete {
   border: 1px solid $midGrey;
-}
-
-a {
-  color: black;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.more-info {
+  flex-flow: column nowrap;
+
+  h3 {
+    color: white;
+    text-align: center;
+  }
+
+  .more-info__body {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+.traffic-share {
+  background-color: #01dbab;
+  color: black;
+  padding: 8px;
+  text-align: center;
+
+  &__body {
+    margin: 0;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.promotion {
+  background-color: #e33101;
+  color: white;
+  padding: 8px;
+  text-align: center;
+
+  @media (min-width: 1199px) {
+    padding: 16px;
+  }
+
+  &__body {
+    margin: 0;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.summer-sale-text {
+  color: #e33101;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Oswald';
+  font-size: 37px;
+  font-weight: bold;
+}
+
+.previous-cost {
+  text-align: center;
+  text-decoration: line-through;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #b7b7b7;
+}
+
+// testing CSS
+
+* {
+  // outline: 1px solid red;
 }

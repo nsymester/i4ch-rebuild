@@ -54,6 +54,7 @@
       @media (max-width: 1199px) {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
         &.active {
           border: 3px solid transparent;
         }
@@ -136,7 +137,7 @@
             text-decoration: underline;
 
             &:after {
-              content: "";
+              content: '';
               display: inline-block;
               position: absolute;
               top: 50%;
@@ -149,7 +150,7 @@
             }
 
             &.active:after {
-              content: "";
+              content: '';
               border-top-color: transparent;
               margin-top: -10px;
               border-bottom-color: #18d9ac;
@@ -241,7 +242,7 @@
   }
 
   .info-box-container {
-    width:100%;
+    width: 100%;
     min-width: 360px;
     margin: 10px auto 40px;
 
@@ -258,4 +259,8 @@
       }
     }
   }
+}
+
+#productOptions .cover-options .card-cover-option .inner .card-text {
+  flex-flow: row nowrap;
 }

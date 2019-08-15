@@ -2,3 +2,9 @@
   * @desc tools include mixins
   * @author Neil Symester neil.symester@towergate.co.uk
   */
+
+  // Usefull mixin but can not be used because the body has a set font size of 18px it should be 100%
+  @mixin fontsize($size) {
+    font-size: ($size / 16) * 100%;
+    font-size: ($size / 16) + rem;
+  }
