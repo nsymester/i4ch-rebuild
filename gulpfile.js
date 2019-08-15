@@ -12,7 +12,7 @@
 // process.argv[1] = gulp.js
 
 // Gulp.js configuration
-const gulp = require('gulp');
+const { series, parallel, src, dest, task, watch } = require('gulp');
 const fs = require('fs');
 // const path = require('path');
 const _browserSync = require('browser-sync').create();
@@ -34,6 +34,7 @@ const $ = require('gulp-load-plugins')({
   },
   scope: ['devDependencies']
 });
+const pkg = require('./package.json');
 
 // is this a development build?
 const devBuild = process.env.NODE_ENV !== 'production';
@@ -57,40 +58,40 @@ var onError = function(err) {
 };
 
 // fetch command line arguments
-const arg = (argList => {
-  let arg = {},
-    a,
-    opt,
-    thisOpt,
-    curOpt;
-  for (a = 0; a < argList.length; a++) {
-    thisOpt = argList[a].trim();
-    opt = thisOpt.replace(/^\-+/, '');
+// const arg = (argList => {
+//   let arg = {},
+//     a,
+//     opt,
+//     thisOpt,
+//     curOpt;
+//   for (a = 0; a < argList.length; a++) {
+//     thisOpt = argList[a].trim();
+//     opt = thisOpt.replace(/^\-+/, '');
 
-    if (opt === thisOpt) {
-      // argument value
-      if (curOpt) arg[curOpt] = opt;
-      curOpt = null;
-    } else {
-      // argument name
-      curOpt = opt;
-      arg[curOpt] = null;
-    }
-  }
+//     if (opt === thisOpt) {
+//       // argument value
+//       if (curOpt) arg[curOpt] = opt;
+//       curOpt = null;
+//     } else {
+//       // argument name
+//       curOpt = opt;
+//       arg[curOpt] = null;
+//     }
+//   }
 
-  return arg;
-})(process.argv);
+//   return arg;
+// })(process.argv);
 
 // =======================================================================
 // ENV Vars
 // =======================================================================
 var dist = 'dist'; //Set this as your target you be compiling into
-var src = 'src'; //Set this as the location of your source files
-var templates = src + '/templates'; //Set this as the folder that contains your nunjuck files
+var source = 'src'; //Set this as the location of your source files
+var templates = source + '/templates'; //Set this as the folder that contains your nunjuck files
 
 // Create an new nunjuck envroment. This seemed to be the problem for me. Didn't work for me until I specified the FileSystemLoader.
 // The templates folder tells the nunjuck renderer where to find any *.njk files you source in your *.html files.
-let fileList = [];
+// let fileList = [];
 
 // =======================================================================
 // Index Task (Generate pages from template *.html files.)
@@ -120,34 +121,30 @@ function pages(cb) {
   let data = { files: getData('markup') };
   let cData = { cFiles: getData('markup-c') };
 
-  gulp
-    .src([templates + '/*.html'])
+  // get styles data
+  src([templates + '/*.html'])
     // Renders template with nunjucks and marked
     .pipe($.data(data))
     .pipe($.gulpnunjucks.compile('', { env: env }))
     // Uncomment the following if your source pages are something other than *.html.
     // .pipe(rename(function (path) { path.extname=".html" }))
     // output files in dist folder
-    .pipe(gulp.dest(dist));
-  // .pipe(browserSync.stream())
+    .pipe(dest(dist));
 
-  gulp
-    .src([templates + '/*.html'])
+  // get components data
+  src([templates + '/*.html'])
     // Renders template with nunjucks and marked
     .pipe($.data(cData))
     .pipe($.gulpnunjucks.compile('', { env: env }))
-    // Uncomment the following if your source pages are something other than *.html.
-    // .pipe(rename(function (path) { path.extname=".html" }))
-    // output files in dist folder
-    .pipe(gulp.dest(dist));
+    .pipe(dest(dist));
 
   cb();
 }
+exports.pages = pages;
 
 /**
  * @desc browserSync, start the server
  */
-
 function browserSync() {
   // check for operating system
   // - for WINDOWS 10 use "Chrome"
@@ -163,20 +160,22 @@ function browserSync() {
     directory: false
   });
 }
-
 exports.browserSync = browserSync;
 
+/**
+ * @desc reload the browser
+ * @param {func} cb  - error-first callback to signal completion.
+ */
 function reload(cb) {
   _browserSync.reload();
   cb();
 }
-
 exports.reload = reload;
 
 /**
  * @desc css task - compile sass to css, compress and add prefixes
+ * @param {func} cb  - error-first callback to signal completion.
  */
-
 function css(cb) {
   var postCssOpts = [$.autoprefixer()];
 
@@ -186,8 +185,7 @@ function css(cb) {
     sassOptions.comments = false;
   }
 
-  gulp
-    .src(`${folder.src}/stylesheets/**/*.scss`)
+  src(`${folder.src}/stylesheets/**/*.scss`)
     .pipe(
       $.plumber({
         errorHandler: onError
@@ -211,15 +209,15 @@ function css(cb) {
         })
       )
     )
-    .pipe(gulp.dest('dist/css'))
+    .pipe(dest(pkg.paths.stylesheets.dist))
     .pipe($.size());
   cb();
 }
-
-exports.css = css;
+//exports.css = css;
 
 /**
  * @desc bundles js into multiple files and watches for changes
+ * @param {func} cb  - error-first callback to signal completion.
  */
 function js(cb) {
   let files = ['./src/scripts/index.js', './src/scripts/product.js'];
@@ -256,7 +254,7 @@ function js(cb) {
               extname: '.bundle.js' // Output file
             })
           )
-          .pipe(gulp.dest('dist/scripts')) // Output path
+          .pipe(dest('dist/scripts')) // Output path
       );
     };
 
@@ -271,60 +269,62 @@ function js(cb) {
   //create a merged stream
   $.es.merge(tasks).on('end', cb);
 }
+exports.js = js;
 
 /**
  * @desc bootlint task -  A gulp wrapper for Bootlint, the HTML linter for Bootstrap projects
+ * @param {func} cb  - error-first callback to signal completion.
  */
 exports.bootlint = function(cb) {
-  gulp.src('./build/*.html').pipe($.bootlint());
+  src('./build/*.html').pipe($.bootlint());
   cb;
 };
 
 /**
- * @desc build - run all tasks
+ * @desc set watching JavaScript to false
+ * @param {func} cb  - error-first callback to signal completion.
  */
-exports.build = function(cb) {
+function watchingJS(cb){
+  isWatching = true;
+  cb()
+}
+
+/**
+ * @desc set watching JavaScript to false
+ * @param {func} cb  - error-first callback to signal completion.
+ */
+function notWatchingJS(cb){
   isWatching = false;
-  gulp.series('nunjucks', 'css', 'js');
-  cb();
-};
+  cb()
+}
+
 
 /**
- * @desc watch - watch for changes
+ * @desc watch for changes, add browserSync.reload to the tasks array to make
+ *       all browsers reload after tasks are complete.
  */
-// gulp.task('watch', function() {
+function watchTasks(cb) {
 
-// });
-
-/**
- * @desc default task
- */
-// gulp.task('default', function(cb) {
-//   gulp.series('pages', 'css', 'browserSync', 'watch');
-//   cb()
-// });
-
-/**
- * @desc watch - watch for changes
- */
-exports.default = function() {
-  browserSync();
-
-  // nunjuck changes
-  gulp.watch(folder.src + '+(templates)/**/*.njk', pages);
-
-  gulp.watch(folder.src + '+(templates)/**/*.md', pages);
-
-  gulp.watch(folder.src + '+(templates)/**/*.html', pages);
+ // nunjuck changes
+  watch(folder.src + '+(templates)/**/*.njk', series(pages, reload));
+  watch(folder.src + '+(templates)/**/*.md', series(pages, reload));
+  watch(folder.src + '+(templates)/**/*.html', series(pages, reload));
 
   // css changes
-  gulp.watch(folder.src + 'stylesheets/**/*.scss', gulp.series(css, reload));
+  watch(folder.src + 'stylesheets/**/*.scss', series(css, reload));
 
   // js changes
-  gulp.watch(folder.src + 'scripts/**/*.js', gulp.series(js, reload));
-};
+  watch(folder.src + 'scripts/**/*.js', series(js, reload));
 
-// return a json file with list of folders and directories
+  cb();
+}
+
+/**
+ * @desc create a list of files and directories
+ * @param {string} folderPath - path to the folder
+ * @param {array} fileList - list of files
+ * @return {object} - a json file with list of folders and directories
+ */
 function getData(folderPath, fileList) {
   let files = fs.readdirSync(`src/templates/${folderPath}`);
 
@@ -352,7 +352,6 @@ function getData(folderPath, fileList) {
 }
 
 /**
-
  This gist assumes a file layout similar to:
 
 
@@ -377,5 +376,10 @@ function getData(folderPath, fileList) {
  {% markdown %}
  # Hello Markdown
  {% endmarkdown %}
-
 **/
+
+// build for production
+exports.build = series(css, notWatchingJS, js);
+
+ // process pages, css and js; then watch files; then launch Browsersync
+exports.default = series(pages, css, watchingJS, js, watchTasks, browserSync);

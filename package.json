@@ -91,5 +91,19 @@
   "browserslist": [
     "> 0.5%",
     "last 4 versions"
-  ]
+  ],
+  "paths": {
+    "stylesheets": {
+      "src": "src/stylesheets/sass/**/*.scss",
+      "dist": "dist/css/"
+    },
+    "scripts": {
+      "src": "src/scripts/**/*.js",
+      "dist": "dist/scripts/"
+    },
+    "html": {
+      "src": "src/*.html",
+      "dist": "dist/"
+    }
+  }
 }

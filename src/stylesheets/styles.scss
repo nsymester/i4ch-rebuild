@@ -5,28 +5,22 @@
 */
 
 /* @group settings */
-
 @import 'settings';
 
 /* @group tools */
-
 @import 'tools';
 
 /* @group generic */
-
 @import 'generic';
 @import 'normalize';
 
 /* @group elements */
-
 @import 'elements';
 
 /* @group objects */
-
 @import 'objects';
 
 /* @group components */
-
 @import 'Components/navigation';
 @import 'Components/dropdown';
 @import 'Components/tabs';
@@ -44,5 +38,4 @@
 @import 'components';
 
 /* @group overrides */
-
 @import 'overrides';
