@@ -7,7 +7,7 @@
     "babel-eslint": "^10.0.2",
     "eslint-config-defaults": "^9.0.0",
     "gulp-cli": "^2.2.0",
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
